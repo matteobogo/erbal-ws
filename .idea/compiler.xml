@@ -23,7 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="auth-service" />
-        <module name="automatization-service" />
+        <module name="collect-data-service" />
         <module name="environmental-conditions" />
         <module name="manual-override-service" />
         <module name="monitoring" />
@@ -35,6 +35,7 @@
     <bytecodeTargetLevel>
       <module name="auth-service" target="1.5" />
       <module name="automatization-service" target="1.5" />
+      <module name="collect-data-service" target="1.5" />
       <module name="environmental-conditions" target="1.5" />
       <module name="erbal-ws" target="1.5" />
       <module name="manual-override-service" target="1.5" />

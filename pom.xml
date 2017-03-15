@@ -19,6 +19,7 @@
         <module>sensors-data-service</module>
         <module>manual-override-service</module>
         <module>automatization-service</module>
+        <module>collect-data-service</module>
     </modules>
 
 </project>

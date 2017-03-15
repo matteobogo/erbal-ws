@@ -14,9 +14,9 @@ public class SensorsDataController {
     @Autowired
     SensorDataService sensorDataService;
 
-    @RequestMapping(value = "/{TerrainSectorId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public TerrainSector getSensorsDataByTerrainSectorId(
-            @PathVariable String terrainSectorId) {
-        return sensorDataService.findByTerrainSectorId(terrainSectorId);
+            @PathVariable String id) {
+        return sensorDataService.findByTerrainSectorId(id);
     }
 }
