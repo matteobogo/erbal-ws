@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/auth-service/auth-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/collect-sensor-data-service/collect-sensor-data-service.iml" filepath="$PROJECT_DIR$/collect-sensor-data-service/collect-sensor-data-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collect-sensors-data-service/collect-sensor-data-service.iml" filepath="$PROJECT_DIR$/collect-sensors-data-service/collect-sensor-data-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-ws.iml" filepath="$PROJECT_DIR$/erbal-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/manual-override-service/manual-override-service.iml" filepath="$PROJECT_DIR$/manual-override-service/manual-override-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitoring/monitoring.iml" filepath="$PROJECT_DIR$/monitoring/monitoring.iml" />
