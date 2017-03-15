@@ -16,10 +16,9 @@
         <module>notification-service</module>
         <module>statistics-service</module>
         <module>auth-service</module>
-        <module>sensors-data-service</module>
+        <module>retrieve-sensors-data-service</module>
         <module>manual-override-service</module>
-        <module>automatization-service</module>
-        <module>collect-data-service</module>
+        <module>collect-sensors-data-service</module>
     </modules>
 
 </project>

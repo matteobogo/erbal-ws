@@ -24,11 +24,15 @@
         <processorPath useClasspath="true" />
         <module name="auth-service" />
         <module name="collect-data-service" />
+        <module name="collect-sensors-data-service" />
         <module name="environmental-conditions" />
         <module name="manual-override-service" />
         <module name="monitoring" />
         <module name="notification-service" />
+        <module name="retrieve-sensors-data-service" />
+        <module name="retrieve-sensors-data-servie" />
         <module name="sensors-data-service" />
+        <module name="sensors-data-servie" />
         <module name="statistics-service" />
       </profile>
     </annotationProcessing>
@@ -36,12 +40,16 @@
       <module name="auth-service" target="1.5" />
       <module name="automatization-service" target="1.5" />
       <module name="collect-data-service" target="1.5" />
+      <module name="collect-sensors-data-service" target="1.5" />
       <module name="environmental-conditions" target="1.5" />
       <module name="erbal-ws" target="1.5" />
       <module name="manual-override-service" target="1.5" />
       <module name="monitoring" target="1.5" />
       <module name="notification-service" target="1.5" />
+      <module name="retrieve-sensors-data-service" target="1.5" />
+      <module name="retrieve-sensors-data-servie" target="1.5" />
       <module name="sensors-data-service" target="1.5" />
+      <module name="sensors-data-servie" target="1.5" />
       <module name="statistics" target="1.5" />
       <module name="statistics-service" target="1.5" />
     </bytecodeTargetLevel>

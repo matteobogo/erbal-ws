@@ -1,6 +1,6 @@
-package repository;
+package com.erbal.repository;
 
-import domain.TerrainSector;
+import com.erbal.domain.TerrainSector;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

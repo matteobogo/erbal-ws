@@ -1,8 +1,7 @@
-package domain;
+package com.erbal.domain;
 
 import lombok.Data;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -10,10 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document(collection = "sectors")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class TerrainSector {
-
-    @Id
-    private String id;
+public class TerrainSector extends BaseEntity<String> {
 
     @Field("temperature")
     private double temperature;

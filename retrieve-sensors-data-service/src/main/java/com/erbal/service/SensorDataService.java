@@ -1,9 +1,9 @@
-package service;
+package com.erbal.service;
 
-import domain.TerrainSector;
+import com.erbal.domain.TerrainSector;
+import com.erbal.repository.SensorDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.SensorDataRepository;
 
 @Service
 public class SensorDataService {

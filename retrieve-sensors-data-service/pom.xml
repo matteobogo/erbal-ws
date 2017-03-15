@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.erbal.ws</groupId>
-    <artifactId>sensors-data-servie</artifactId>
+    <artifactId>retrieve-sensors-data-service</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>sensors-data-service</name>
+    <name>retrieve-sensors-data-service</name>
 
     <parent>
         <artifactId>erbal-ws</artifactId>
@@ -31,6 +31,26 @@
     </dependencyManagement>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>1.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
+            <version>1.5.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <!-- da sistemare le dipendenze -->
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
