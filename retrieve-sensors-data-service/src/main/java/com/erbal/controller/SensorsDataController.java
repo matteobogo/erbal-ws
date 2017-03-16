@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.erbal.service.SensorDataService;
 
 @RestController
+@RequestMapping(value = "/sectors")
 public class SensorsDataController {
 
     @Autowired

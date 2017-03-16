@@ -1,0 +1,6 @@
+spring:
+  profiles: default
+  data:
+    mongodb.host: localhost
+    mongodb.port: 27017
+    mongodb.uri: mongodb://localhost/erbaldbos
