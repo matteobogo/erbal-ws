@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.erbal</groupId>
-    <artifactId>collect-sensors-data-service</artifactId>
+    <artifactId>retrieve-sensors-data-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>collect-sensors-data-service</name>
-    <description>Erbal Service for collecting data from sensors</description>
+    <name>retrieve-sensors-data-service</name>
+    <description>Erbal Service for retrieving data from sensors</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -24,22 +24,22 @@
         <processorPath useClasspath="true" />
         <module name="auth-service" />
         <module name="collect-sensors-data-service" />
-        <module name="retrieve-sensors-data-service" />
         <module name="manual-override-service" />
         <module name="monitoring" />
         <module name="notification-service" />
+        <module name="retrieve-sensors-data-service" />
         <module name="statistics-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="auth-service" target="1.8" />
+      <module name="auth-service" target="1.5" />
       <module name="collect-sensors-data-service" target="1.8" />
+      <module name="erbal-ws" target="1.5" />
+      <module name="manual-override-service" target="1.5" />
+      <module name="monitoring" target="1.5" />
+      <module name="notification-service" target="1.5" />
       <module name="retrieve-sensors-data-service" target="1.8" />
-      <module name="erbal-ws" target="1.8" />
-      <module name="manual-override-service" target="1.8" />
-      <module name="monitoring" target="1.8" />
-      <module name="notification-service" target="1.8" />
-      <module name="statistics-service" target="1.8" />
+      <module name="statistics-service" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
