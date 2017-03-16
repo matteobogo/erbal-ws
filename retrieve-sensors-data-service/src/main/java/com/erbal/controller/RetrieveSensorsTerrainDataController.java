@@ -19,7 +19,6 @@ public class RetrieveSensorsTerrainDataController extends RetrieveSensorsDataCon
     public TerrainSensorsData getSensorsDataByTerrainSectorId(
             @PathVariable String id) {
 
-        TerrainSensorsData tmp = retrieveSensorsDataService.findByTerrainSectorId(id);
-        return tmp;
+        return retrieveSensorsDataService.findByTerrainSectorId(id);
     }
 }
