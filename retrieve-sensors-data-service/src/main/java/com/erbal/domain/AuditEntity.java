@@ -1,9 +1,9 @@
 package com.erbal.domain;
 
 import lombok.Data;
-import org.joda.time.DateTime;
 import org.springframework.data.annotation.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 public abstract class AuditEntity<ID extends Serializable> implements Serializable, Cloneable {
@@ -13,9 +13,9 @@ public abstract class AuditEntity<ID extends Serializable> implements Serializab
     @Version
     private Long version;
     @CreatedDate
-    private DateTime createdAt;
+    private LocalDateTime createdAt;
     @LastModifiedDate
-    private DateTime lastModified;
+    private LocalDateTime lastModified;
     @CreatedBy
     private String createdBy;
     @LastModifiedBy

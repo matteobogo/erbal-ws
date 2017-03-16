@@ -46,7 +46,7 @@
       <module name="manual-override-service" target="1.5" />
       <module name="monitoring" target="1.5" />
       <module name="notification-service" target="1.5" />
-      <module name="retrieve-sensors-data-service" target="1.5" />
+      <module name="retrieve-sensors-data-service" target="1.8" />
       <module name="retrieve-sensors-data-servie" target="1.5" />
       <module name="sensors-data-service" target="1.5" />
       <module name="sensors-data-servie" target="1.5" />
