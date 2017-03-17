@@ -9,8 +9,12 @@ import javax.validation.constraints.NotNull;
 @Service
 public class TerrainNodeDataService extends BaseNodeDataService<TerrainNodeData> {
 
+    private final NodeDataRepository nodeDataRepository;
+
     @Autowired
-    NodeDataRepository nodeDataRepository;
+    public TerrainNodeDataService(NodeDataRepository nodeDataRepository) {
+        this.nodeDataRepository = nodeDataRepository;
+    }
 
     @Override
     public void collect(@NotNull TerrainNodeData terrainNodeData) {

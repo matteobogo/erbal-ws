@@ -10,8 +10,12 @@ import javax.validation.constraints.NotNull;
 @Service
 public class AirNodeDataService extends BaseNodeDataService<AirNodeData> {
 
+    private final NodeDataRepository nodeDataRepository;
+
     @Autowired
-    NodeDataRepository nodeDataRepository;
+    public AirNodeDataService(NodeDataRepository nodeDataRepository) {
+        this.nodeDataRepository = nodeDataRepository;
+    }
 
     @Override
     public void collect(@NotNull AirNodeData airNodeData) {

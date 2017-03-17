@@ -14,11 +14,16 @@ import javax.validation.Valid;
 @RequestMapping(value = "/sensors/collect")
 public class SensorsDataController extends ExceptionHandlerController {
 
-    @Autowired
-    TerrainNodeDataService terrainNodeDataService;
+    private final TerrainNodeDataService terrainNodeDataService;
+    private final AirNodeDataService airNodeDataService;
 
     @Autowired
-    AirNodeDataService airNodeDataService;
+    public SensorsDataController(
+            TerrainNodeDataService terrainNodeDataService,
+            AirNodeDataService airNodeDataService) {
+        this.terrainNodeDataService = terrainNodeDataService;
+        this.airNodeDataService = airNodeDataService;
+    }
 
     @RequestMapping(
             value = "/terrain",
@@ -26,7 +31,6 @@ public class SensorsDataController extends ExceptionHandlerController {
             consumes = {"application/json"})
     @ResponseStatus(HttpStatus.CREATED)
     public void collectTerrainNodeData(@Valid @RequestBody TerrainNodeData terrainNodeData) {
-
         terrainNodeDataService.collect(terrainNodeData);
     }
 
@@ -36,7 +40,6 @@ public class SensorsDataController extends ExceptionHandlerController {
             consumes = {"application/json"})
     @ResponseStatus(HttpStatus.CREATED)
     public void collectAirNodeData(@Valid @RequestBody AirNodeData airNodeData) {
-
         airNodeDataService.collect(airNodeData);
     }
 }
