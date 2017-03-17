@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import javax.validation.constraints.NotNull;
 
 @Service
-public class TerrainNodeDataService extends BaseNodeDataService<TerrainNodeData> {
+public class TerrainNodeDataService implements NodeDataService<TerrainNodeData> {
 
     private final NodeDataRepository nodeDataRepository;
 
@@ -18,6 +18,7 @@ public class TerrainNodeDataService extends BaseNodeDataService<TerrainNodeData>
 
     @Override
     public void collect(@NotNull TerrainNodeData terrainNodeData) {
+
         nodeDataRepository.save(terrainNodeData);
     }
 }

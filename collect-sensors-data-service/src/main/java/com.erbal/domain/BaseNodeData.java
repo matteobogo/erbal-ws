@@ -1,5 +1,13 @@
 package com.erbal.domain;
 
-public abstract class BaseNodeData extends AuditEntity<String> {
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "NodesData")
+@Data
+public abstract class BaseNodeData {
+
+    @Id
+    private String id;
 }

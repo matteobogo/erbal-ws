@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import javax.validation.constraints.NotNull;
 
 @Service
-public class AirNodeDataService extends BaseNodeDataService<AirNodeData> {
+public class AirNodeDataService implements NodeDataService<AirNodeData> {
 
     private final NodeDataRepository nodeDataRepository;
 

@@ -1,33 +1,32 @@
 package com.erbal.domain;
 
+import com.erbal.utils.SensorsDataParams;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.data.annotation.PersistenceConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "terrain_nodes_data")
 @Data
-public class TerrainNodeData extends BaseNodeData {
+public class TerrainNodeData extends BaseNodeData{
 
-    @Field("sensor_type")
+    @Field(SensorsDataParams.SENSOR_TYPE)
     private int sensorType;
 
-    @Field("terrain_temperature")
+    @Field(SensorsDataParams.TERRAIN_TEMPERATURE)
     private double temperature;
 
-    @Field("terrain_humidity")
+    @Field(SensorsDataParams.TERRAIN_HUMIDITY)
     private double humidity;
 
-    @Field("node_id")
+    @Field(SensorsDataParams.NODE_ID)
     private String nodeId;
 
     @PersistenceConstructor
     public TerrainNodeData(
-            @JsonProperty("sensorType") int sensorType,
-            @JsonProperty("temperature") double temperature,
-            @JsonProperty("humidity") double humidity,
-            @JsonProperty("nodeId") String nodeId) {
+            @JsonProperty(SensorsDataParams.SENSOR_TYPE) int sensorType,
+            @JsonProperty(SensorsDataParams.TERRAIN_TEMPERATURE) double temperature,
+            @JsonProperty(SensorsDataParams.TERRAIN_HUMIDITY) double humidity,
+            @JsonProperty(SensorsDataParams.NODE_ID) String nodeId) {
 
         this.sensorType = sensorType;
         this.temperature = temperature;
