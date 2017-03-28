@@ -19,6 +19,10 @@
         <module>retrieve-sensors-data-service</module>
         <module>manual-override-service</module>
         <module>collect-sensors-data-service</module>
+        <module>erbal-core</module>
+        <module>erbal-gateway</module>
+        <module>account-service</module>
+        <module>sync-nodes-sensors-service</module>
     </modules>
 
 </project>

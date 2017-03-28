@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/account-service/account-service.iml" filepath="$PROJECT_DIR$/account-service/account-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/auth-service/auth-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/collect-sensors-data-service/collect-sensors-data-service.iml" filepath="$PROJECT_DIR$/collect-sensors-data-service/collect-sensors-data-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/erbal-gateway/erbal-gateway.iml" filepath="$PROJECT_DIR$/erbal-gateway/erbal-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-ws.iml" filepath="$PROJECT_DIR$/erbal-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/manual-override-service/manual-override-service.iml" filepath="$PROJECT_DIR$/manual-override-service/manual-override-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitoring/monitoring.iml" filepath="$PROJECT_DIR$/monitoring/monitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification-service/notification-service.iml" filepath="$PROJECT_DIR$/notification-service/notification-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrieve-sensors-data-service/retrieve-sensors-data-service.iml" filepath="$PROJECT_DIR$/retrieve-sensors-data-service/retrieve-sensors-data-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/statistics-service/statistics-service.iml" filepath="$PROJECT_DIR$/statistics-service/statistics-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sync-nodes-sensors-service/sync-nodes-sensors-service.iml" filepath="$PROJECT_DIR$/sync-nodes-sensors-service/sync-nodes-sensors-service.iml" />
     </modules>
   </component>
 </project>

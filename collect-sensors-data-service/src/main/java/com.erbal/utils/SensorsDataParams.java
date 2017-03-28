@@ -4,6 +4,7 @@ public abstract class SensorsDataParams {
 
     public static final String SENSOR_TYPE = "sensor_type";
     public static final String NODE_ID = "node_id";
+    public static final String SENSOR_ID = "sensor_id";
 
     //TERRAIN
     public static final String TERRAIN_TEMPERATURE = "terrain_temperature";
