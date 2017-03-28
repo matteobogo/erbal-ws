@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/collect-sensors-data-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logging-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/monitoring" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/retrieve-sensors-data-service" charset="UTF-8" />
   </component>
