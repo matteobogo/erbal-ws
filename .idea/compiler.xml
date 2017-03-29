@@ -20,6 +20,7 @@
         <module name="retrieve-sensors-data-service" />
         <module name="statistics-service" />
         <module name="sync-nodes-sensors-service" />
+        <module name="users-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,6 +39,7 @@
       <module name="retrieve-sensors-data-service" target="1.8" />
       <module name="statistics-service" target="1.5" />
       <module name="sync-nodes-sensors-service" target="1.5" />
+      <module name="users-service" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

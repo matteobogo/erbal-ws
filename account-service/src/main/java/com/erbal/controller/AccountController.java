@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccountController extends BaseController<Account, String> {
 
     @Autowired
-    protected AccountController(AccountService baseService) {
+    public AccountController(AccountService baseService) {
         super(baseService);
     }
 }

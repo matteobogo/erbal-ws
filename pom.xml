@@ -24,6 +24,7 @@
         <module>account-service</module>
         <module>sync-nodes-sensors-service</module>
         <module>logging-service</module>
+        <module>users-service</module>
     </modules>
 
 </project>

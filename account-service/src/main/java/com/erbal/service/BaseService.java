@@ -1,5 +1,6 @@
 package com.erbal.service;
 
+import com.google.common.collect.Lists;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.Repository;
 
@@ -27,21 +28,24 @@ public abstract class BaseService<T, ID extends Serializable> {
 
     public List<T> findAll() {
         //TODO
-        return null;
+        return Lists.newArrayList(repository.findAll());
     }
 
     public T findOne(ID id) {
         //TODO
-        return null;
+        return repository.findOne(id);
     }
 
     public T delete(T entity) {
         //TODO
-        return null;
+        repository.delete(entity);
+        return entity;
     }
 
     public T deleteById(ID id) {
         //TODO
-        return null;
+        T entity = repository.findOne(id);
+        repository.delete(id);
+        return entity;
     }
 }

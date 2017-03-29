@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: default
+---
+spring:
+  profiles: default
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      uri: mongodb://localhost/erbaldb
+      repositories.enabled: true
