@@ -14,11 +14,13 @@ This README would normally document whatever steps are necessary to get your app
 * Configuration
 * Dependencies
 * Database configuration
+
 * How to run tests
--Dspring.profiles.active=testing (VM argument)
-- activate testing profile
-
-
+*
+* VM argument: -Dspring.profiles.active=testing
+* 
+* activate testing profile -> context-path: "/erbal-test" on port: 9090 with Embedded MongoDB
+*
 * Deployment instructions
 
 ### Contribution guidelines ###
