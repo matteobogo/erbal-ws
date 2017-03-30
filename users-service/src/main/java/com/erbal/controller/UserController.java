@@ -14,6 +14,8 @@ import java.util.List;
 @RequestMapping(value = "/api/users")
 public class UserController {
 
+    //TODO: http code response, validation, requestboy, exception handling of http errors, ecc...
+
     private UserService userService;
 
     @Autowired

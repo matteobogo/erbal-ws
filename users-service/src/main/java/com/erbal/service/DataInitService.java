@@ -3,11 +3,13 @@ package com.erbal.service;
 import com.erbal.domain.User;
 import com.erbal.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 
+@Profile("testing")
 @Service
 public class DataInitService {
 
