@@ -34,9 +34,9 @@ public class DataInitService {
         if(userExist == null) {
             //ADMIN
             User user = new User();
-            user.setFirstname("Mario");
-            user.setLastname("Rossi");
-            user.setEmail("mario.rossi@email.com");
+            user.setFirstname("Federico");
+            user.setLastname("Errica");
+            user.setEmail("f.errica@protonmail.com");
             user.setPasswordHash(passwordEncoder.encode("password"));
             user.setRole("ADMIN");
 

@@ -1,10 +1,22 @@
 spring:
-  profiles: default
+  profiles: production
   data:
     mongodb:
       host: localhost
       port: 27017
-      database: erbaldb
-  server:
-    port: 8080
-    context-path: /erbal
+      database: erbaldb-users
+server:
+  port: 8080
+  context-path: /erbal
+
+---
+spring:
+  profiles: testing
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/erbaldb-test
+      repositories:
+        enabled: true
+server:
+  port: 9090
+  context-path: /erbal-test
