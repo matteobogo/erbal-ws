@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/api/info")
+@RequestMapping(value = "/auth/info")
 public class InfoController {
 
     @RequestMapping(method = RequestMethod.GET)

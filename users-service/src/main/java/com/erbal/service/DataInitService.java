@@ -31,16 +31,29 @@ public class DataInitService {
 
     private void populateDb() {
 
-        User userExist = userRepository.findByEmail("mario.rossi@email.com");
+        User user1 = userRepository.findByEmail("mario.rossi@email.com");
+        User user2 = userRepository.findByEmail("f.errica@protonmail.com");
 
-        if(userExist == null) {
+        if(user1 == null) {
             //ADMIN
-            User user = new User();
-            user.setFirstname("Federico");
-            user.setLastname("Errica");
-            user.setEmail("f.errica@protonmail.com");
+            User user = new User(
+                    "Federico",
+                    "Errica",
+                    "f.errica@protonmail.com",
+                    "ADMIN");
             user.setPasswordHash(passwordEncoder.encode("password"));
-            user.setRole("ADMIN");
+
+            userRepository.save(user);
+        }
+
+        if(user2 == null) {
+            //USER
+            User user = new User(
+                    "Mario",
+                    "Rossi",
+                    "mario.rossi@email.com",
+                    "USER");
+            user.setPasswordHash(passwordEncoder.encode("password"));
 
             userRepository.save(user);
         }
