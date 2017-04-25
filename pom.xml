@@ -5,21 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.erbal.ws</groupId>
-    <artifactId>erbal-ws</artifactId>
+    <artifactId>erbal-ws-parent</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <name>erbal-ws</name>
-    <description>erbal web services system</description>
+    <description>erBal Micro-services System</description>
 
     <modules>
-        <module>monitoring</module>
+        <module>erbal-monitoring</module>
         <module>notification-service</module>
         <module>statistics-service</module>
         <module>auth-service</module>
         <module>retrieve-sensors-data-service</module>
-        <module>manual-override-service</module>
         <module>collect-sensors-data-service</module>
         <module>erbal-gateway</module>
+        <module>erbal-discovering</module>
+        <module>erbal-config</module>
         <module>account-service</module>
         <module>sync-nodes-sensors-service</module>
         <module>logging-service</module>

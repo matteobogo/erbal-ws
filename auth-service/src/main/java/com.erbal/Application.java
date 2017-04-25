@@ -19,13 +19,6 @@ public class Application {
     SpringApplication.run(Application.class, args);
   }
 
-  /**
-   * /me strategy return the principal authenticated with the system
-   * associated to the token.
-   *
-   * @param principal
-   * @return
-   */
   @RequestMapping({ "/user", "/me" })
   public Map<String, String> user(Principal principal) {
     Map<String, String> map = new LinkedHashMap<>();

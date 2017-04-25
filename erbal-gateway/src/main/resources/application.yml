@@ -1,9 +1,22 @@
 spring:
   application:
     name: erbal-gateway
-  cloud:
-    config:
-      uri: http://config:8888
-      fail-fast: true
-      password: ${CONFIG_SERVICE_PASSWORD}
-      username: user
+
+server:
+  port: 9999
+
+zuul:
+  prefix: /api
+  routes:
+    erbal-collect:
+      path: /erbal-collect/**
+      url: http://localhost:9000
+
+security:
+  basic:
+    enabled: false  #disable http basic auth
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

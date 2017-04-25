@@ -1,42 +1,21 @@
 spring:
-  profiles: development
+  application:
+    name: erbal-collect
+
 server:
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: erbaldb
-  port: 8081
+  port: 9000
+
 security:
-  user:
-    name: admin
-    password: password
-  oauth2:
-    client:
-      id: collect
-      client-secret: collect
-      access-token-uri: http://localhost:9090/oauth/token
-      user-authorization-uri: http://localhost:9090/oauth/authorize
-    resource:
-      user-info-uri: http://localhost:9090/me
+  basic:
+    enabled: false
 
----
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
 
-spring:
-  profiles: production
-server:
-  port: 8080
-
-
-  security:
-    oauth2:
-      client:
-        clientId: 233668646673605
-        clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
-        accessTokenUri: https://graph.facebook.com/oauth/access_token
-        userAuthorizationUri: https://www.facebook.com/dialog/oauth
-        tokenName: oauth_token
-        authenticationScheme: query
-        clientAuthenticationScheme: form
-      resource:
-        userInfoUri: https://graph.facebook.com/me
+ribbon:
+  eureka:
+    enabled: true

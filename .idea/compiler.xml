@@ -11,7 +11,10 @@
         <module name="collect-sensors-data-service" />
         <module name="erbal-config" />
         <module name="erbal-core" />
+        <module name="erbal-discovering" />
+        <module name="erbal-eureka-server" />
         <module name="erbal-gateway" />
+        <module name="erbal-monitoring" />
         <module name="erbalcore" />
         <module name="logging-service" />
         <module name="monitoring" />
@@ -26,9 +29,12 @@
       <module name="account-service" target="1.8" />
       <module name="auth-service" target="1.8" />
       <module name="collect-sensors-data-service" target="1.8" />
-      <module name="erbal-config" target="1.8" />
+      <module name="erbal-config" target="1.5" />
       <module name="erbal-core" target="1.5" />
+      <module name="erbal-discovering" target="1.8" />
+      <module name="erbal-eureka-server" target="1.8" />
       <module name="erbal-gateway" target="1.8" />
+      <module name="erbal-monitoring" target="1.8" />
       <module name="erbal-ws" target="1.5" />
       <module name="erbalcore" target="1.5" />
       <module name="logging-service" target="1.8" />

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping(value = "/sensors/collect")
 public class SensorsDataController {
 
     private final TerrainNodeDataService terrainNodeDataService;
@@ -36,7 +35,15 @@ public class SensorsDataController {
     }
 
     @RequestMapping(
-            value = "/terrain",
+            value = "/",
+            method = RequestMethod.GET)
+    public String welcome() {
+
+        return "erBal-collect works";
+    }
+
+    @RequestMapping(
+            value = "/collect/terrain",
             method = RequestMethod.POST,
             consumes = {"application/json"})
     @ResponseStatus(HttpStatus.CREATED)
@@ -53,7 +60,7 @@ public class SensorsDataController {
     }
 
     @RequestMapping(
-            value = "/air",
+            value = "/collect/air",
             method = RequestMethod.POST,
             consumes = {"application/json"})
     @ResponseStatus(HttpStatus.CREATED)
