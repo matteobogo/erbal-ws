@@ -40,7 +40,7 @@ public class SensorsDataController {
             method = RequestMethod.POST,
             consumes = {"application/json"})
     @ResponseStatus(HttpStatus.CREATED)
-    public void collectTerrainNodeData(
+    public void collectSoilNodeData(
             @RequestBody TerrainNodeData terrainNodeData,
             BindingResult bindingResult) {
 

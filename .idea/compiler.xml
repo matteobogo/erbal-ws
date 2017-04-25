@@ -14,7 +14,6 @@
         <module name="erbal-gateway" />
         <module name="erbalcore" />
         <module name="logging-service" />
-        <module name="manual-override-service" />
         <module name="monitoring" />
         <module name="notification-service" />
         <module name="retrieve-sensors-data-service" />
@@ -25,7 +24,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account-service" target="1.8" />
-      <module name="auth-service" target="1.5" />
+      <module name="auth-service" target="1.8" />
       <module name="collect-sensors-data-service" target="1.8" />
       <module name="erbal-config" target="1.8" />
       <module name="erbal-core" target="1.5" />
