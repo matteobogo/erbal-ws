@@ -10,7 +10,7 @@ zuul:
   routes:
     erbal-collect:
       path: /erbal-collect/**
-      url: http://localhost:9000
+      url: http://localhost:9001
 
 security:
   basic:

@@ -35,6 +35,7 @@ public class ExceptionHandlerController {
     @ResponseStatus(value= HttpStatus.INTERNAL_SERVER_ERROR, reason="Server fault")
     @ExceptionHandler(Exception.class)
     public void exception(Exception e) {
+        e.printStackTrace();
         //log.error(e.getMessage(), e);
     }
 }

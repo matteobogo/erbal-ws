@@ -1,9 +1,14 @@
 spring:
   application:
     name: erbal-collect
+  data:
+      mongodb:
+        host: localhost
+        port: 27017
+        database: erbal_db
 
 server:
-  port: 9000
+  port: 9001
 
 security:
   basic:

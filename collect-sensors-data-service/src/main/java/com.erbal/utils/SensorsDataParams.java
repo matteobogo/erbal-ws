@@ -2,15 +2,25 @@ package com.erbal.utils;
 
 public abstract class SensorsDataParams {
 
-    public static final String SENSOR_TYPE = "sensor_type";
-    public static final String NODE_ID = "node_id";
-    public static final String SENSOR_ID = "sensor_id";
+    //SINK
+    public static final String SINK_ID = "sink_id";
+    public static final String SINK_SAMPLES = "sink_samples";
 
-    //TERRAIN
-    public static final String TERRAIN_TEMPERATURE = "terrain_temperature";
-    public static final String TERRAIN_HUMIDITY = "terrain_humidity";
+    //NODE
+    public static final String NODE_ID = "node_id";
+    public static final String NODE_TIMESTAMP = "node_timestamp";
+    public static final String NODE_VOLTAGE = "node_voltage";
+    public static final String NODE_SAMPLE = "node_sample";
+
+    //SAMPLES
+
+    //SOIL
+    public static final String SOIL_TEMPERATURE = "soil_temperature";
+    public static final String SOIL_MOISTURE = "soil_moisture";
 
     //AIR
     public static final String AIR_TEMPERATURE = "air_temperature";
     public static final String AIR_HUMIDITY = "air_humidity";
+    public static final String AIR_PHOTO = "air_photo";
+    public static final String AIR_RADIATION = "air_radiation";
 }
