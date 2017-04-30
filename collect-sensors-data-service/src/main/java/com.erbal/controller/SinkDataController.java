@@ -52,6 +52,7 @@ public class SinkDataController {
                 "20/01/2017 03:00",
                 123,
                 new AirSampleData(
+                        "AirSampleData",
                         20,
                         21,
                         22,
@@ -64,6 +65,7 @@ public class SinkDataController {
                 "20/01/2017 3:15",
                 321,
                 new SoilSampleData(
+                        "SoilSampleData",
                         30,
                         35
                 )
