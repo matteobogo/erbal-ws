@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/account-service/account-service.iml" filepath="$PROJECT_DIR$/account-service/account-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/auth-service/auth-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-collector/erbal-collector.iml" filepath="$PROJECT_DIR$/erbal-collector/erbal-collector.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-config/erbal-config.iml" filepath="$PROJECT_DIR$/erbal-config/erbal-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-discovering/erbal-discovering.iml" filepath="$PROJECT_DIR$/erbal-discovering/erbal-discovering.iml" />

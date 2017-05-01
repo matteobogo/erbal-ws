@@ -16,7 +16,6 @@
         <module>erbal-uaa</module>
         <module>notification-service</module>
         <module>statistics-service</module>
-        <module>auth-service</module>
         <module>retrieve-sensors-data-service</module>
         <module>erbal-collector</module>
         <module>erbal-gateway</module>

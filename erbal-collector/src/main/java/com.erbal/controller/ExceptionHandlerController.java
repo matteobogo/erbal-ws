@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import javax.persistence.EntityNotFoundException;
+//import javax.persistence.EntityNotFoundException;
 
 @ControllerAdvice
 @Slf4j
@@ -26,10 +26,10 @@ public class ExceptionHandlerController {
     }
 
     // 404
-    @ResponseStatus(value= HttpStatus.NOT_FOUND, reason="Document not found")
-    @ExceptionHandler(EntityNotFoundException.class)
-    public void notFound() {
-    }
+//    @ResponseStatus(value= HttpStatus.NOT_FOUND, reason="Document not found")
+//    @ExceptionHandler(EntityNotFoundException.class)
+//    public void notFound() {
+//    }
 
     // 500
     @ResponseStatus(value= HttpStatus.INTERNAL_SERVER_ERROR, reason="Server fault")

@@ -1,0 +1,39 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    erbal-uaa:
+        path: /erbal-uaa/**
+        url: http://localhost:9090
+        stripPrefix: false
+        sensitiveHeaders:
+
+    erbal-collector:
+        path: /erbal-collector/**
+        serviceId: erbal-collector
+        stripPrefix: false
+        sensitiveHeaders:
+
+server:
+  port: 8443  #https
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.jks
+    key-store-password: erbalKeystor3
+    key-store-type: JKS
+    keyAlias: jetty

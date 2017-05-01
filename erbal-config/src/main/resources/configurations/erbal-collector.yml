@@ -1,0 +1,21 @@
+server:
+  port: 9001
+  context-path: /erbal-collector
+
+#security:
+#  oauth2:
+#    client:
+#      clientId: erbal-collector
+#      clientSecret: erbal-collector
+#      accessTokenUri: http://localhost:9090/uaa/oauth/token
+#      grant-type: client_credentials
+#      scope: server
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      username: admin
+      password: password
+      database: erbal_db
+      port: 27017

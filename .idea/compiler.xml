@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="account-service" />
-        <module name="auth-service" />
         <module name="collect-sensors-data-service" />
+        <module name="erbal-collector" />
         <module name="erbal-config" />
         <module name="erbal-core" />
         <module name="erbal-discovering" />
@@ -25,19 +25,13 @@
         <module name="sync-nodes-sensors-service" />
         <module name="users-service" />
       </profile>
-      <profile name="Annotation profile for erbal-ws" enabled="true">
-        <sourceOutputDir name="../collect-sensors-data-service/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../collect-sensors-data-service/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="erbal-collector" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account-service" target="1.8" />
-      <module name="auth-service" target="1.5" />
+      <module name="auth-service" target="1.8" />
       <module name="collect-sensors-data-service" target="1.8" />
       <module name="erbal-collector" target="1.8" />
-      <module name="erbal-config" target="1.5" />
+      <module name="erbal-config" target="1.8" />
       <module name="erbal-core" target="1.5" />
       <module name="erbal-discovering" target="1.8" />
       <module name="erbal-eureka-server" target="1.8" />
