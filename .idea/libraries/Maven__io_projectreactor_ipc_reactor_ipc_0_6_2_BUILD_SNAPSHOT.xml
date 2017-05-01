@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.projectreactor.ipc:reactor-ipc:0.6.2.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/projectreactor/ipc/reactor-ipc/0.6.2.BUILD-SNAPSHOT/reactor-ipc-0.6.2.BUILD-20170427.162052-67.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/projectreactor/ipc/reactor-ipc/0.6.2.BUILD-SNAPSHOT/reactor-ipc-0.6.2.BUILD-20170427.162052-67-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/projectreactor/ipc/reactor-ipc/0.6.2.BUILD-SNAPSHOT/reactor-ipc-0.6.2.BUILD-20170427.162052-67-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
