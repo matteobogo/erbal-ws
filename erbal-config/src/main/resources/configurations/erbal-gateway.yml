@@ -1,14 +1,28 @@
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 20000
+#
+#ribbon:
+#  ReadTimeout: 20000
+#  ConnectTimeout: 20000
 
-ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000
+server:
+  port: 8443  #https
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.jks
+    key-store-password: erbalKeystor3
+    key-store-type: JKS
+    keyAlias: jetty
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 zuul:
   ignoredServices: '*'
@@ -28,12 +42,3 @@ zuul:
         serviceId: erbal-collector
         stripPrefix: false
         sensitiveHeaders:
-
-server:
-  port: 8443  #https
-  ssl:
-    enabled: true
-    key-store: classpath:keystore.jks
-    key-store-password: erbalKeystor3
-    key-store-type: JKS
-    keyAlias: jetty
