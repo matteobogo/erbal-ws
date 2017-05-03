@@ -4,11 +4,11 @@
 <modelVersion>4.0.0</modelVersion>
 
 <groupId>com.erbal.ws</groupId>
-<artifactId>account-service</artifactId>
+<artifactId>account-com.erbal.service</artifactId>
 <version>1.0</version>
 <packaging>jar</packaging>
 
-<name>account-service</name>
+<name>account-com.erbal.service</name>
 
 <parent>
     <groupId>org.springframework.boot</groupId>
@@ -129,7 +129,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <configuration>
-                <finalName>account-service</finalName>
+                <finalName>account-com.erbal.service</finalName>
             </configuration>
         </plugin>
         <plugin>

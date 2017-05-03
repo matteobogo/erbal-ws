@@ -4,7 +4,7 @@ server:
 
 eureka:
   client:
-    service-url:
+    com.erbal.service-url:
       defaultZone: http://borgo.ddns.net:8761/eureka/
 
 #security:

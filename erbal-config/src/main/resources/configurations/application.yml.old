@@ -14,7 +14,7 @@
 
 #eureka:
 #  client:
-#    service-url: http://localhost:8761/eureka/
+#    com.erbal.service-url: http://localhost:8761/eureka/
 
 # /me resource for validating token
 #security:

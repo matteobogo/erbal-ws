@@ -18,12 +18,10 @@
         <module name="erbal-monitoring" />
         <module name="erbal-uaa" />
         <module name="erbalcore" />
-        <module name="logging-service" />
         <module name="monitoring" />
         <module name="notification-service" />
         <module name="retrieve-sensors-data-service" />
         <module name="statistics-service" />
-        <module name="sync-nodes-sensors-service" />
         <module name="users-service" />
       </profile>
     </annotationProcessing>
@@ -42,6 +40,7 @@
       <module name="erbal-uaa" target="1.8" />
       <module name="erbal-ws" target="1.5" />
       <module name="erbalcore" target="1.5" />
+      <module name="logging-com.erbal.service" target="1.8" />
       <module name="logging-service" target="1.8" />
       <module name="manual-override-service" target="1.5" />
       <module name="monitoring" target="1.5" />

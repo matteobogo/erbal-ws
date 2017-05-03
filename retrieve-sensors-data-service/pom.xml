@@ -4,18 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.erbal</groupId>
-    <artifactId>retrieve-sensors-data-service</artifactId>
+    <artifactId>retrieve-sensors-data-com.erbal.service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>retrieve-sensors-data-service</name>
+    <name>retrieve-sensors-data-com.erbal.service</name>
     <description>Erbal Service for retrieving data from sensors</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.0.BUILD-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from com.erbal.repository -->
     </parent>
 
     <properties>
@@ -91,22 +91,22 @@
     </build>
 
     <repositories>
-        <repository>
+        <com.erbal.repository>
             <id>spring-snapshots</id>
             <name>Spring Snapshots</name>
             <url>https://repo.spring.io/snapshot</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
-        <repository>
+        </com.erbal.repository>
+        <com.erbal.repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository>
+        </com.erbal.repository>
     </repositories>
 
     <pluginRepositories>

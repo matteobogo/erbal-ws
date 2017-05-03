@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sync-nodes-sensors-service</artifactId>
+    <artifactId>sync-nodes-sensors-com.erbal.service</artifactId>
 
 
 </project>

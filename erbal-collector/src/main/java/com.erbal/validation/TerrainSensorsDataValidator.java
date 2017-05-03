@@ -1,7 +1,7 @@
 //package com.erbal.validation;
 //
-//import com.erbal.domain.TerrainNodeData;
-//import com.erbal.utils.SensorsDataParams;
+//import com.erbal.com.erbal.domain.TerrainNodeData;
+//import com.erbal.com.erbal.utils.SensorsDataParams;
 //import org.springframework.stereotype.Component;
 //import org.springframework.validation.Errors;
 //import org.springframework.validation.ValidationUtils;

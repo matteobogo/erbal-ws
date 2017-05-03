@@ -11,11 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/erbal-monitoring/erbal-monitoring.iml" filepath="$PROJECT_DIR$/erbal-monitoring/erbal-monitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-uaa/erbal-uaa.iml" filepath="$PROJECT_DIR$/erbal-uaa/erbal-uaa.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-ws.iml" filepath="$PROJECT_DIR$/erbal-ws.iml" />
-      <module fileurl="file://$PROJECT_DIR$/logging-service/logging-service.iml" filepath="$PROJECT_DIR$/logging-service/logging-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification-service/notification-service.iml" filepath="$PROJECT_DIR$/notification-service/notification-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrieve-sensors-data-service/retrieve-sensors-data-service.iml" filepath="$PROJECT_DIR$/retrieve-sensors-data-service/retrieve-sensors-data-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/statistics-service/statistics-service.iml" filepath="$PROJECT_DIR$/statistics-service/statistics-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sync-nodes-sensors-service/sync-nodes-sensors-service.iml" filepath="$PROJECT_DIR$/sync-nodes-sensors-service/sync-nodes-sensors-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/users-service/users-service.iml" filepath="$PROJECT_DIR$/users-service/users-service.iml" />
     </modules>
   </component>

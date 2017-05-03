@@ -4,11 +4,11 @@
 <modelVersion>4.0.0</modelVersion>
 
 <groupId>com.erbal.ws</groupId>
-<artifactId>logging-service</artifactId>
+<artifactId>logging-com.erbal.service</artifactId>
 <version>1.0</version>
 <packaging>jar</packaging>
 
-<name>logging-service</name>
+<name>logging-com.erbal.service</name>
 
 <parent>
     <groupId>org.springframework.boot</groupId>
@@ -109,7 +109,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <configuration>
-                <finalName>account-service</finalName>
+                <finalName>account-com.erbal.service</finalName>
             </configuration>
         </plugin>
         <plugin>

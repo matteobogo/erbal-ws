@@ -14,17 +14,17 @@
     <modules>
         <module>erbal-monitoring</module>
         <module>erbal-uaa</module>
-        <module>notification-service</module>
-        <module>statistics-service</module>
-        <module>retrieve-sensors-data-service</module>
+        <module>notification-com.erbal.service</module>
+        <module>statistics-com.erbal.service</module>
+        <module>retrieve-sensors-data-com.erbal.service</module>
         <module>erbal-collector</module>
         <module>erbal-gateway</module>
         <module>erbal-discovering</module>
         <module>erbal-config</module>
-        <module>account-service</module>
-        <module>sync-nodes-sensors-service</module>
-        <module>logging-service</module>
-        <module>users-service</module>
+        <module>account-com.erbal.service</module>
+        <module>sync-nodes-sensors-com.erbal.service</module>
+        <module>logging-com.erbal.service</module>
+        <module>users-com.erbal.service</module>
         <module>erbal-uaa</module>
         <module>erbal-greenhouse-management</module>
     </modules>
