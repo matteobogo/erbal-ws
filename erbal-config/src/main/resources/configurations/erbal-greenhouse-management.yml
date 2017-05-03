@@ -1,6 +1,6 @@
 server:
   port: 9002
-  context-path: /erbal-collector
+  context-path: /erbal-greenhouse-management
 
 eureka:
   client:

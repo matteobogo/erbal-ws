@@ -42,7 +42,7 @@ public class PairingServiceImpl implements PairingService {
                     pairDTO.getSinkId(),
                     pairDTO.getNodeId(),
                     pairDTO.getSector(),
-                    ""
+                    "Node already paired"
             );
 
             if(node.getSink() == null) {
@@ -54,8 +54,6 @@ public class PairingServiceImpl implements PairingService {
 
                 result.setDescription("Node paired");
             }
-            else
-                result.setDescription("Node already paired");
         }
         return result;
     }
@@ -76,7 +74,7 @@ public class PairingServiceImpl implements PairingService {
                     pairDTO.getSinkId(),
                     pairDTO.getNodeId(),
                     pairDTO.getSector(),
-                    ""
+                    "Node not paired"
             );
 
             if(node.getSink() != null) {
@@ -88,8 +86,6 @@ public class PairingServiceImpl implements PairingService {
 
                 result.setDescription("Node unpaired");
             }
-            else
-                result.setDescription("Node not paired");
         }
         return result;
     }

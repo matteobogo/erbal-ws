@@ -11,7 +11,7 @@ import utils.GreenhouseManagementParams;
 
 @Document(collection = "sinks")
 @Data
-public class Sink {
+public class Sink extends BaseEntity {
 
     @Id
     private String id;

@@ -12,7 +12,7 @@ import utils.GreenhouseManagementParams;
 
 @Document(collection = "nodes")
 @Data
-public class Node {
+public class Node extends BaseEntity {
 
     @Id
     private String id;

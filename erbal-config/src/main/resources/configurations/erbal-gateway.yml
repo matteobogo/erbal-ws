@@ -45,3 +45,9 @@ zuul:
         serviceId: erbal-collector
         stripPrefix: false
         sensitiveHeaders:
+
+    erbal-greenhouse-management:
+        path: /erbal-greenhouse-management/**
+        serviceId: erbal-greenhouse-management
+        stripPrefix: false
+        sensitiveHeaders:
