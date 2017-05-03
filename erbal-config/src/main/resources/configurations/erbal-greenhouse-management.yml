@@ -1,0 +1,17 @@
+server:
+  port: 9002
+  context-path: /erbal-collector
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://borgo.ddns.net:8761/eureka/
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      username: admin
+      password: password
+      database: erbal_db
+      port: 27017

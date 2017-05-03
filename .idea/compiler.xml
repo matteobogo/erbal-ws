@@ -14,6 +14,7 @@
         <module name="erbal-discovering" />
         <module name="erbal-eureka-server" />
         <module name="erbal-gateway" />
+        <module name="erbal-greenhouse-management" />
         <module name="erbal-monitoring" />
         <module name="erbal-uaa" />
         <module name="erbalcore" />
@@ -36,6 +37,7 @@
       <module name="erbal-discovering" target="1.8" />
       <module name="erbal-eureka-server" target="1.8" />
       <module name="erbal-gateway" target="1.8" />
+      <module name="erbal-greenhouse-management" target="1.8" />
       <module name="erbal-monitoring" target="1.8" />
       <module name="erbal-uaa" target="1.8" />
       <module name="erbal-ws" target="1.5" />

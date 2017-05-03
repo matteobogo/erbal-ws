@@ -26,6 +26,7 @@
         <module>logging-service</module>
         <module>users-service</module>
         <module>erbal-uaa</module>
+        <module>erbal-greenhouse-management</module>
     </modules>
 
 </project>

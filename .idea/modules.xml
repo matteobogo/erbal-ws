@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/erbal-config/erbal-config.iml" filepath="$PROJECT_DIR$/erbal-config/erbal-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-discovering/erbal-discovering.iml" filepath="$PROJECT_DIR$/erbal-discovering/erbal-discovering.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-gateway/erbal-gateway.iml" filepath="$PROJECT_DIR$/erbal-gateway/erbal-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/erbal-greenhouse-management/erbal-greenhouse-management.iml" filepath="$PROJECT_DIR$/erbal-greenhouse-management/erbal-greenhouse-management.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-monitoring/erbal-monitoring.iml" filepath="$PROJECT_DIR$/erbal-monitoring/erbal-monitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-uaa/erbal-uaa.iml" filepath="$PROJECT_DIR$/erbal-uaa/erbal-uaa.iml" />
       <module fileurl="file://$PROJECT_DIR$/erbal-ws.iml" filepath="$PROJECT_DIR$/erbal-ws.iml" />
