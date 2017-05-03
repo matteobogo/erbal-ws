@@ -10,19 +10,22 @@
 #  ReadTimeout: 20000
 #  ConnectTimeout: 20000
 
+#server:
+#  port: 8443  #https
+#  ssl:
+#    enabled: true
+#    key-store: classpath:keystore.jks
+#    key-store-password: erbalKeystor3
+#    key-store-type: JKS
+#    keyAlias: jetty
+
 server:
-  port: 8443  #https
-  ssl:
-    enabled: true
-    key-store: classpath:keystore.jks
-    key-store-password: erbalKeystor3
-    key-store-type: JKS
-    keyAlias: jetty
+  port: 9999
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://borgo.ddns.net:8761/eureka/
 
 zuul:
   ignoredServices: '*'
@@ -33,7 +36,7 @@ zuul:
   routes:
     erbal-uaa:
         path: /erbal-uaa/**
-        url: http://localhost:9090
+        url: http://borgo.ddns.net:9090
         stripPrefix: false
         sensitiveHeaders:
 
