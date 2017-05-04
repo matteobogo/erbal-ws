@@ -1,10 +1,9 @@
 package com.erbal.domain.dto;
 
-import com.erbal.domain.BaseEntity;
 import lombok.Data;
 
 @Data
-public class MessageDTO<T extends BaseEntity> {
+public class MessageDTO<T> {
 
   private T entity;
   private String description;

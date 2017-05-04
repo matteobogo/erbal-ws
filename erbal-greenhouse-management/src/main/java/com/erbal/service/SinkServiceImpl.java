@@ -22,12 +22,12 @@ public class SinkServiceImpl implements CrudService<Sink> {
     @Override
     public MessageDTO<Sink> add(Sink sink) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink already exist");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink already exist");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(sink.getSinkId());
 
         if(!sinkExist.isPresent()) {
             message.setEntity(sinkRepository.save(sink));
-            message.setDescription("Sink added successfully");
+            message.setDescription("com.erbal.Sink added successfully");
         }
         return message;
     }
@@ -35,12 +35,12 @@ public class SinkServiceImpl implements CrudService<Sink> {
     @Override
     public MessageDTO<Sink> update(Sink sink) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(sink.getSinkId());
 
         if(sinkExist.isPresent()) {
             message.setEntity(sinkRepository.save(sink));
-            message.setDescription("Sink updated successfully");
+            message.setDescription("com.erbal.Sink updated successfully");
         }
         return message;
     }
@@ -54,12 +54,12 @@ public class SinkServiceImpl implements CrudService<Sink> {
     @Override
     public MessageDTO<Sink> getEntityBySerialId(String serialId) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(serialId);
 
         if(sinkExist.isPresent()) {
             message.setEntity(sinkExist.get());
-            message.setDescription("Sink retrieved successfully");
+            message.setDescription("com.erbal.Sink retrieved successfully");
         }
         return message;
     }
@@ -67,13 +67,13 @@ public class SinkServiceImpl implements CrudService<Sink> {
     @Override
     public MessageDTO<Sink> deleteEntityBySerialId(String serialId) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(serialId);
 
         if(sinkExist.isPresent()) {
             sinkRepository.delete(sinkExist.get());
             message.setEntity(sinkExist.get());
-            message.setDescription("Sink deleted successfully");
+            message.setDescription("com.erbal.Sink deleted successfully");
         }
         return message;
     }

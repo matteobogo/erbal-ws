@@ -1,11 +1,10 @@
 package com.erbal.service;
 
-import com.erbal.domain.BaseEntity;
 import com.erbal.domain.dto.MessageDTO;
 
 import java.util.List;
 
-public interface CrudService<T extends BaseEntity> {
+public interface CrudService<T> {
 
     MessageDTO<T> add(T entity);
     MessageDTO<T> update(T entity);

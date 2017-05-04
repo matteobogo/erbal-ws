@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/erbal-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-greenhouse-management" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-monitoring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/erbal-notifier" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/erbal-shared" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-uaa" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logging-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification-service" charset="UTF-8" />

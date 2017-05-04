@@ -1,9 +1,11 @@
 package com.erbal.service;
 
 import com.erbal.domain.Node;
-import com.erbal.domain.Sink;
 import com.erbal.domain.Pair;
+import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.repository.PairRepository;
+import com.erbal.repository.UnpairRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.NodeRepository;
@@ -16,14 +18,20 @@ public class PairingServiceImpl implements PairingService {
 
     private SinkRepository sinkRepository;
     private NodeRepository nodeRepository;
+    private PairRepository pairRepository;
+    private UnpairRepository unpairRepository;
 
     @Autowired
     public PairingServiceImpl(
             SinkRepository sinkRepository,
-            NodeRepository nodeRepository
+            NodeRepository nodeRepository,
+            PairRepository pairRepository,
+            UnpairRepository unpairRepository
     ) {
         this.sinkRepository = sinkRepository;
         this.nodeRepository = nodeRepository;
+        this.pairRepository = pairRepository;
+        this.unpairRepository = unpairRepository;
     }
 
     @Override
@@ -41,7 +49,7 @@ public class PairingServiceImpl implements PairingService {
 
             result = new MessageDTO<>(
                     pair,
-                    "Node already paired"
+                    "com.erbal.Node already paired"
             );
 
             if(node.getSink() == null) {
@@ -50,8 +58,9 @@ public class PairingServiceImpl implements PairingService {
                 node.setSector(pair.getSectorId());
 
                 nodeRepository.save(node);
+                pairRepository.save(pair);
 
-                result.setDescription("Node paired");
+                result.setDescription("com.erbal.Node paired");
             }
         }
         return result;
@@ -71,7 +80,7 @@ public class PairingServiceImpl implements PairingService {
 
             result = new MessageDTO<>(
                     pair,
-                    "Node not paired"
+                    "com.erbal.Node not paired"
             );
 
             if(node.getSink() != null) {
@@ -80,10 +89,17 @@ public class PairingServiceImpl implements PairingService {
                 node.setSector("");
 
                 nodeRepository.save(node);
+                unpairRepository.save(pair);
 
-                result.setDescription("Node unpaired");
+                result.setDescription("com.erbal.Node unpaired");
             }
         }
         return result;
+    }
+
+    private void updateSinkTable() {
+
+        //Spring STOMP con le websocket (riprendi la connessione con il sink)
+        //invio lista nodi associati al sink
     }
 }

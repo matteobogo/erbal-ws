@@ -1,5 +1,6 @@
 package com.erbal.domain;
 
+import com.erbal.utils.GreenhouseManagementParams;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,7 +10,6 @@ import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import com.erbal.utils.GreenhouseManagementParams;
 
 import javax.validation.constraints.NotNull;
 

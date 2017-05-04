@@ -22,12 +22,12 @@ public class NodeServiceImpl implements CrudService<Node> {
     @Override
     public MessageDTO<Node> add(Node node) {
 
-        MessageDTO<Node> message = new MessageDTO<>(null,"Node already exist");
+        MessageDTO<Node> message = new MessageDTO<>(null,"com.erbal.Node already exist");
         Optional<Node> nodeExist = nodeRepository.findByNodeId(node.getNodeId());
 
         if(!nodeExist.isPresent()) {
             message.setEntity(nodeRepository.save(node));
-            message.setDescription("Node added successfully");
+            message.setDescription("com.erbal.Node added successfully");
         }
         return message;
     }
@@ -35,12 +35,12 @@ public class NodeServiceImpl implements CrudService<Node> {
     @Override
     public MessageDTO<Node> update(Node node) {
 
-        MessageDTO<Node> message = new MessageDTO<>(null,"Node not found");
+        MessageDTO<Node> message = new MessageDTO<>(null,"com.erbal.Node not found");
         Optional<Node> nodeExist = nodeRepository.findByNodeId(node.getNodeId());
 
         if(nodeExist.isPresent()) {
             message.setEntity(nodeRepository.save(node));
-            message.setDescription("Node updated successfully");
+            message.setDescription("com.erbal.Node updated successfully");
         }
         return message;
     }
@@ -54,12 +54,12 @@ public class NodeServiceImpl implements CrudService<Node> {
     @Override
     public MessageDTO<Node> getEntityBySerialId(String serialId) {
 
-        MessageDTO<Node> message = new MessageDTO<>(null,"Node not found");
+        MessageDTO<Node> message = new MessageDTO<>(null,"com.erbal.Node not found");
         Optional<Node> nodeExist = nodeRepository.findByNodeId(serialId);
 
         if(nodeExist.isPresent()) {
             message.setEntity(nodeExist.get());
-            message.setDescription("Node retrieved successfully");
+            message.setDescription("com.erbal.Node retrieved successfully");
         }
         return message;
     }
@@ -67,13 +67,13 @@ public class NodeServiceImpl implements CrudService<Node> {
     @Override
     public MessageDTO<Node> deleteEntityBySerialId(String serialId) {
 
-        MessageDTO<Node> message = new MessageDTO<>(null,"Node not found");
+        MessageDTO<Node> message = new MessageDTO<>(null,"com.erbal.Node not found");
         Optional<Node> nodeExist = nodeRepository.findByNodeId(serialId);
 
         if(nodeExist.isPresent()) {
             nodeRepository.delete(nodeExist.get());
             message.setEntity(nodeExist.get());
-            message.setDescription("Node deleted successfully");
+            message.setDescription("com.erbal.Node deleted successfully");
         }
         return message;
     }

@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @Document(collection = "pairs")
 @Data
-public class Pair extends BaseEntity {
+public class Pair {
 
     @Id
     private String id;

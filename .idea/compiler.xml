@@ -15,6 +15,9 @@
         <module name="erbal-gateway" />
         <module name="erbal-greenhouse-management" />
         <module name="erbal-monitoring" />
+        <module name="erbal-notificator" />
+        <module name="erbal-notifier" />
+        <module name="erbal-shared" />
         <module name="erbal-uaa" />
         <module name="erbalcore" />
         <module name="monitoring" />
@@ -32,6 +35,9 @@
       <module name="erbal-gateway" target="1.8" />
       <module name="erbal-greenhouse-management" target="1.8" />
       <module name="erbal-monitoring" target="1.8" />
+      <module name="erbal-notificator" target="1.8" />
+      <module name="erbal-notifier" target="1.8" />
+      <module name="erbal-shared" target="1.8" />
       <module name="erbal-uaa" target="1.8" />
       <module name="erbal-ws" target="1.5" />
       <module name="erbalcore" target="1.5" />

@@ -1,0 +1,17 @@
+server:
+  port: 9003
+  context-path: /erbal-notifier
+
+eureka:
+  client:
+    com.erbal.service-url:
+      defaultZone: http://borgo.ddns.net:8761/eureka/
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      #username: admin
+      #password: password
+      database: erbal_db
+      port: 27017
