@@ -39,5 +39,6 @@ public class ExceptionHandlingController {
   @ExceptionHandler(Exception.class)
   public void exception(Exception e) {
     //logging
+    e.printStackTrace();
   }
 }

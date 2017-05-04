@@ -44,8 +44,7 @@ public class PairController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/dummy",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)

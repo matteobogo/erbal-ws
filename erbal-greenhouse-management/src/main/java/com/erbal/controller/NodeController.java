@@ -2,10 +2,10 @@ package com.erbal.controller;
 
 import com.erbal.domain.Node;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.service.NodeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.erbal.service.CrudService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -14,10 +14,10 @@ import java.util.List;
 @RequestMapping(value = "/nodes")
 public class NodeController extends ExceptionHandlingController {
 
-  private CrudService<Node> nodeService;
+  private NodeServiceImpl nodeService;
 
   @Autowired
-  public NodeController(CrudService<Node> nodeService) {
+  public NodeController(NodeServiceImpl nodeService) {
     this.nodeService = nodeService;
   }
 
@@ -49,8 +49,7 @@ public class NodeController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/{serialId}",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
@@ -62,8 +61,7 @@ public class NodeController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
@@ -87,8 +85,7 @@ public class NodeController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/dummy",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)

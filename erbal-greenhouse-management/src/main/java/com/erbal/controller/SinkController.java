@@ -2,10 +2,10 @@ package com.erbal.controller;
 
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.service.SinkServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.erbal.service.CrudService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -14,10 +14,10 @@ import java.util.List;
 @RequestMapping(value = "/sinks")
 public class SinkController extends ExceptionHandlingController {
 
-  private CrudService sinkService;
+  private SinkServiceImpl sinkService;
 
   @Autowired
-  public SinkController(CrudService sinkService) { this.sinkService = sinkService; }
+  public SinkController(SinkServiceImpl sinkService) { this.sinkService = sinkService; }
 
   @RequestMapping(
           value = "/add",
@@ -47,8 +47,7 @@ public class SinkController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/{serialId}",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
@@ -60,8 +59,7 @@ public class SinkController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
@@ -85,8 +83,7 @@ public class SinkController extends ExceptionHandlingController {
 
   @RequestMapping(
           value = "/dummy",
-          method = RequestMethod.GET,
-          consumes = {"application/json"}
+          method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
