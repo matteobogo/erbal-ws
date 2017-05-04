@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="account-service" />
         <module name="collect-sensors-data-service" />
         <module name="erbal-collector" />
         <module name="erbal-config" />
@@ -19,10 +18,6 @@
         <module name="erbal-uaa" />
         <module name="erbalcore" />
         <module name="monitoring" />
-        <module name="notification-service" />
-        <module name="retrieve-sensors-data-service" />
-        <module name="statistics-service" />
-        <module name="users-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

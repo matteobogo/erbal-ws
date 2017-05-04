@@ -23,7 +23,7 @@ public class NodeServiceImpl implements CrudService<Node> {
     public MessageDTO<Node> add(Node node) {
 
         MessageDTO<Node> message = new MessageDTO<>(null,"Node already exist");
-        Optional<Node> nodeExist = nodeRepository.findBySerialId(node.getSerialId());
+        Optional<Node> nodeExist = nodeRepository.findBySerialId(node.getNodeId());
 
         if(!nodeExist.isPresent()) {
             message.setEntity(nodeRepository.save(node));
@@ -36,7 +36,7 @@ public class NodeServiceImpl implements CrudService<Node> {
     public MessageDTO<Node> update(Node node) {
 
         MessageDTO<Node> message = new MessageDTO<>(null,"Node not found");
-        Optional<Node> nodeExist = nodeRepository.findBySerialId(node.getSerialId());
+        Optional<Node> nodeExist = nodeRepository.findBySerialId(node.getNodeId());
 
         if(nodeExist.isPresent()) {
             message.setEntity(nodeRepository.save(node));

@@ -48,15 +48,15 @@ public class NodeController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/{serialId}",
+          value = "/{nodeId}",
           method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
   public MessageDTO<Node> findBySerialId(
-          @PathVariable("serialId") String serialId) {
+          @PathVariable("nodeId") String nodeId) {
 
-    return nodeService.getEntityBySerialId(serialId);
+    return nodeService.getEntityBySerialId(nodeId);
   }
 
   @RequestMapping(
@@ -71,16 +71,16 @@ public class NodeController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/delete/{serialId}",
+          value = "/delete/{nodeId}",
           method = RequestMethod.DELETE,
           consumes = {"application/json"}
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
   public MessageDTO<Node> delete(
-          @PathVariable("serialId") String serialId) {
+          @PathVariable("nodeId") String nodeId) {
 
-    return nodeService.deleteEntityBySerialId(serialId);
+    return nodeService.deleteEntityBySerialId(nodeId);
   }
 
   @RequestMapping(

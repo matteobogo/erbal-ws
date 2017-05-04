@@ -46,15 +46,15 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/{serialId}",
+          value = "/{sinkId}",
           method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
   public MessageDTO<Sink> findBySerialId(
-          @PathVariable("serialId") String serialId) {
+          @PathVariable("sinkId") String sinkId) {
 
-    return sinkService.getEntityBySerialId(serialId);
+    return sinkService.getEntityBySerialId(sinkId);
   }
 
   @RequestMapping(
@@ -69,16 +69,16 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/delete/{serialId}",
+          value = "/delete/{sinkId}",
           method = RequestMethod.DELETE,
           consumes = {"application/json"}
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
   public MessageDTO<Sink> delete(
-          @PathVariable("serialId") String serialId) {
+          @PathVariable("sinkId") String sinkId) {
 
-    return sinkService.deleteEntityBySerialId(serialId);
+    return sinkService.deleteEntityBySerialId(sinkId);
   }
 
   @RequestMapping(

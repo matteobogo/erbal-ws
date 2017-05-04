@@ -30,7 +30,7 @@ public class DataInitService {
     initDatabase();
   }
 
-  public void initDatabase() {
+  private void initDatabase() {
 
     //dummy entries
     Sink sink1 = new Sink(

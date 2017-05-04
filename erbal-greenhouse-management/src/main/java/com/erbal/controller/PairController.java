@@ -1,6 +1,7 @@
 package com.erbal.controller;
 
-import com.erbal.domain.dto.PairDTO;
+import com.erbal.domain.Pair;
+import com.erbal.domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +24,8 @@ public class PairController extends ExceptionHandlingController {
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.CREATED)
-  public PairDTO pair(
-          @RequestBody @Valid PairDTO pairDTO) {
+  public MessageDTO<Pair> pair(
+          @RequestBody @Valid Pair pairDTO) {
 
     return pairingService.pair(pairDTO);
   }
@@ -36,8 +37,8 @@ public class PairController extends ExceptionHandlingController {
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.CREATED)
-  public PairDTO unpair(
-          @RequestBody @Valid PairDTO pairDTO) {
+  public MessageDTO<Pair> unpair(
+          @RequestBody @Valid Pair pairDTO) {
 
     return pairingService.unpair(pairDTO);
   }
@@ -48,13 +49,12 @@ public class PairController extends ExceptionHandlingController {
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
-  public PairDTO dummy() {
+  public Pair dummy() {
 
-    return new PairDTO(
+    return new Pair(
             "123456789",
             "1122334455",
-            "A",
-            "error message"
+            "A"
     );
   }
 }

@@ -2,7 +2,8 @@ package com.erbal.service;
 
 import com.erbal.domain.Node;
 import com.erbal.domain.Sink;
-import com.erbal.domain.dto.PairDTO;
+import com.erbal.domain.Pair;
+import com.erbal.domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.NodeRepository;
@@ -26,29 +27,27 @@ public class PairingServiceImpl implements PairingService {
     }
 
     @Override
-    public PairDTO pair(PairDTO pairDTO) {
+    public MessageDTO<Pair> pair(Pair pair) {
 
-        PairDTO result = null;
+        MessageDTO<Pair> result = null;
 
-        Optional<Sink> sinkPaired = sinkRepository.findBySerialId(pairDTO.getSinkId());
-        Optional<Node> nodePaired = nodeRepository.findBySerialId(pairDTO.getNodeId());
+        Optional<Sink> sinkPaired = sinkRepository.findBySerialId(pair.getSinkId());
+        Optional<Node> nodePaired = nodeRepository.findBySerialId(pair.getNodeId());
 
         if(sinkPaired.isPresent() && nodePaired.isPresent()) {
 
             Node node = nodePaired.get();
             Sink sink = sinkPaired.get();
 
-            result = new PairDTO(
-                    pairDTO.getSinkId(),
-                    pairDTO.getNodeId(),
-                    pairDTO.getSector(),
+            result = new MessageDTO<>(
+                    pair,
                     "Node already paired"
             );
 
             if(node.getSink() == null) {
 
                 node.setSink(sink);
-                node.setSector(pairDTO.getSector());
+                node.setSector(pair.getSectorId());
 
                 nodeRepository.save(node);
 
@@ -59,21 +58,19 @@ public class PairingServiceImpl implements PairingService {
     }
 
     @Override
-    public PairDTO unpair(PairDTO pairDTO) {
+    public MessageDTO<Pair> unpair(Pair pair) {
 
-        PairDTO result = null;
+        MessageDTO<Pair> result = null;
 
-        Optional<Sink> sinkPaired = sinkRepository.findBySerialId((pairDTO.getSinkId()));
-        Optional<Node> nodePaired = nodeRepository.findBySerialId(pairDTO.getNodeId());
+        Optional<Sink> sinkPaired = sinkRepository.findBySerialId((pair.getSinkId()));
+        Optional<Node> nodePaired = nodeRepository.findBySerialId(pair.getNodeId());
 
         if(sinkPaired.isPresent() && nodePaired.isPresent()) {
 
             Node node = nodePaired.get();
 
-            result = new PairDTO(
-                    pairDTO.getSinkId(),
-                    pairDTO.getNodeId(),
-                    pairDTO.getSector(),
+            result = new MessageDTO<>(
+                    pair,
                     "Node not paired"
             );
 
