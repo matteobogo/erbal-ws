@@ -31,8 +31,8 @@ public class PairingServiceImpl implements PairingService {
 
         MessageDTO<Pair> result = null;
 
-        Optional<Sink> sinkPaired = sinkRepository.findBySerialId(pair.getSinkId());
-        Optional<Node> nodePaired = nodeRepository.findBySerialId(pair.getNodeId());
+        Optional<Sink> sinkPaired = sinkRepository.findBySinkId(pair.getSinkId());
+        Optional<Node> nodePaired = nodeRepository.findByNodeId(pair.getNodeId());
 
         if(sinkPaired.isPresent() && nodePaired.isPresent()) {
 
@@ -62,8 +62,8 @@ public class PairingServiceImpl implements PairingService {
 
         MessageDTO<Pair> result = null;
 
-        Optional<Sink> sinkPaired = sinkRepository.findBySerialId((pair.getSinkId()));
-        Optional<Node> nodePaired = nodeRepository.findBySerialId(pair.getNodeId());
+        Optional<Sink> sinkPaired = sinkRepository.findBySinkId((pair.getSinkId()));
+        Optional<Node> nodePaired = nodeRepository.findByNodeId(pair.getNodeId());
 
         if(sinkPaired.isPresent() && nodePaired.isPresent()) {
 

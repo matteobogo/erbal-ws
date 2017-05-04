@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface NodeRepository extends MongoRepository<Node,String> {
 
-    Optional<Node> findBySerialId(String serialId);
+    Optional<Node> findByNodeId(String nodeId);
 }

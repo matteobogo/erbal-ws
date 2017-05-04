@@ -23,7 +23,7 @@ public class SinkServiceImpl implements CrudService<Sink> {
     public MessageDTO<Sink> add(Sink sink) {
 
         MessageDTO<Sink> message = new MessageDTO<>(null,"Sink already exist");
-        Optional<Sink> sinkExist = sinkRepository.findBySerialId(sink.getSinkId());
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(sink.getSinkId());
 
         if(!sinkExist.isPresent()) {
             message.setEntity(sinkRepository.save(sink));
@@ -36,7 +36,7 @@ public class SinkServiceImpl implements CrudService<Sink> {
     public MessageDTO<Sink> update(Sink sink) {
 
         MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
-        Optional<Sink> sinkExist = sinkRepository.findBySerialId(sink.getSinkId());
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(sink.getSinkId());
 
         if(sinkExist.isPresent()) {
             message.setEntity(sinkRepository.save(sink));
@@ -55,7 +55,7 @@ public class SinkServiceImpl implements CrudService<Sink> {
     public MessageDTO<Sink> getEntityBySerialId(String serialId) {
 
         MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
-        Optional<Sink> sinkExist = sinkRepository.findBySerialId(serialId);
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(serialId);
 
         if(sinkExist.isPresent()) {
             message.setEntity(sinkExist.get());
@@ -68,7 +68,7 @@ public class SinkServiceImpl implements CrudService<Sink> {
     public MessageDTO<Sink> deleteEntityBySerialId(String serialId) {
 
         MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
-        Optional<Sink> sinkExist = sinkRepository.findBySerialId(serialId);
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(serialId);
 
         if(sinkExist.isPresent()) {
             sinkRepository.delete(sinkExist.get());

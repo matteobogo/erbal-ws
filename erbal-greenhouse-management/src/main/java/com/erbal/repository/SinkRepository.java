@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface SinkRepository extends MongoRepository<Sink,String> {
 
-    Optional<Sink> findBySerialId(String serialId);
+    Optional<Sink> findBySinkId(String sink);
 }
