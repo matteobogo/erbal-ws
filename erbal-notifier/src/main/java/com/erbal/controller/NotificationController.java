@@ -1,6 +1,7 @@
 package com.erbal.controller;
 
 import com.erbal.domain.ItsMeMessage;
+import com.erbal.domain.ItsMeResponse;
 import com.erbal.service.SinkNotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,15 +21,19 @@ public class NotificationController extends ExceptionHandlingController {
     }
 
     @RequestMapping(
+            value = "/"
+    )
+
+    @RequestMapping(
         value = "/itsme",
         method = RequestMethod.POST,
         consumes = {"application/json"}
     )
     @ResponseStatus(HttpStatus.OK)
-    public void itsMe(
+    public ItsMeResponse itsMe(
             @RequestBody @Valid ItsMeMessage itsMeMessage) {
 
-        sinkNotificationService.itsMeNotify(itsMeMessage);
+        return sinkNotificationService.itsMeNotify(itsMeMessage);
     }
 
     @RequestMapping(

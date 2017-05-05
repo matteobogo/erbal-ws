@@ -2,6 +2,7 @@ package com.erbal.service;
 
 import com.erbal.clients.GreenhouseManagementClient;
 import com.erbal.domain.ItsMeMessage;
+import com.erbal.domain.ItsMeResponse;
 import com.erbal.domain.SinkTable;
 import com.erbal.domain.shared.MessageDTO;
 import com.erbal.domain.shared.Node;
@@ -29,32 +30,9 @@ public class SinkNotificationServiceImpl implements SinkNotificationService {
     }
 
     @Override
-    public void itsMeNotify(ItsMeMessage itsMeMessage) {
+    public ItsMeResponse itsMeNotify(ItsMeMessage itsMeMessage) {
 
-        Optional<MessageDTO<Node>> node = Optional.of(
-                greenhouseManagementClient
-                        .findNodeBySerialId(itsMeMessage.getNodeId()));
 
-        Optional<MessageDTO> sink = Optional.of(
-                greenhouseManagementClient
-                        .findSinkBySerialId(itsMeMessage.getSinkId()));
-
-        if(node.isPresent() && sink.isPresent()) {
-
-            if(node.get().getEntity() != null) {
-
-                if (node.get().getEntity().getType().equals(itsMeMessage.getType())) {
-
-                    //test
-                    System.out.println("OK");
-                    System.out.println(node.get());
-
-                    //TODO send to client
-                    //TODO gestione errori con httpstatus ? x sink intelligente
-                }
-            }
-            else throw new EntityNotFoundException();
-        }
     }
 
     @Override

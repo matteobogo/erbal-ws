@@ -1,7 +1,10 @@
 package com.erbal.service;
 
+import com.erbal.domain.Node;
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.domain.dto.SinkTable;
+import com.erbal.repository.NodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.SinkRepository;
@@ -10,13 +13,18 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SinkServiceImpl implements CrudService<Sink> {
+public class SinkServiceImpl implements SinkService {
 
     private SinkRepository sinkRepository;
+    private NodeRepository nodeRepository;
 
     @Autowired
-    public SinkServiceImpl(SinkRepository sinkRepository) {
+    public SinkServiceImpl(
+            SinkRepository sinkRepository,
+            NodeRepository nodeRepository) {
+
         this.sinkRepository = sinkRepository;
+        this.nodeRepository = nodeRepository;
     }
 
     @Override
@@ -76,5 +84,19 @@ public class SinkServiceImpl implements CrudService<Sink> {
             message.setDescription("com.erbal.Sink deleted successfully");
         }
         return message;
+    }
+
+    @Override
+    public SinkTable updateSinkTable(String sinkId) {
+
+        SinkTable sinkTable = null;
+        Optional<Sink> sink = sinkRepository.findBySinkId(sinkId);
+
+        if(sink.isPresent()) {
+
+            List<Node> nodes = nodeRepository.findAllBySink(sink.get());
+            sinkTable = new SinkTable(sinkId,nodes);
+        }
+        return sinkTable;
     }
 }

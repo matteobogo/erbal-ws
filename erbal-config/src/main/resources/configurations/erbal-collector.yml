@@ -2,10 +2,22 @@ server:
   port: 9001
   context-path: /erbal-collector
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
 eureka:
+  istance:
+    hostname: http://borgo.ddns.net
+    preferIpAddress: true
   client:
-    com.erbal.service-url:
+    service-url:
       defaultZone: http://borgo.ddns.net:8761/eureka/
+
 
 #security:
 #  oauth2:
