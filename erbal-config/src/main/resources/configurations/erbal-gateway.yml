@@ -8,7 +8,7 @@
 #    keyAlias: jetty
 
 server:
-  port: 8080
+  port: 9999
 
 hystrix:
   command:
