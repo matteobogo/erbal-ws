@@ -1,7 +1,9 @@
 package com.erbal.service;
 
 import com.erbal.domain.Node;
+import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.repository.SinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.NodeRepository;
@@ -13,10 +15,15 @@ import java.util.Optional;
 public class NodeServiceImpl implements CrudService<Node> {
 
     private NodeRepository nodeRepository;
+    private SinkRepository sinkRepository;
 
     @Autowired
-    public NodeServiceImpl(NodeRepository nodeRepository) {
+    public NodeServiceImpl(
+            NodeRepository nodeRepository,
+            SinkRepository sinkRepository) {
+
         this.nodeRepository = nodeRepository;
+        this.sinkRepository = sinkRepository;
     }
 
     @Override
@@ -62,6 +69,18 @@ public class NodeServiceImpl implements CrudService<Node> {
             message.setDescription("com.erbal.Node retrieved successfully");
         }
         return message;
+    }
+
+    public List<Node> findAllBySinkId(String sinkId) {
+
+        List<Node> nodes = null;
+        Optional<Sink> sink = sinkRepository.findBySinkId(sinkId);
+
+        if(sink.isPresent()) {
+
+            nodes = nodeRepository.findAllBySink(sink.get());
+        }
+        return nodes;
     }
 
     @Override

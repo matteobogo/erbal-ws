@@ -51,3 +51,9 @@ zuul:
         serviceId: erbal-greenhouse-management
         stripPrefix: false
         sensitiveHeaders:
+
+    erbal-notifier:
+        path: /erbal-notifier/**
+        serviceId: erbal-notifier
+        stripPrefix: false
+        sensitiveHeaders:

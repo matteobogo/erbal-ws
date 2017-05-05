@@ -70,7 +70,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.erbal.com.erbal.Application</mainClass>
+                    <mainClass>com.erbal.Application</mainClass>
                     <finalName>erbal-gateway</finalName>
                 </configuration>
                 <executions>

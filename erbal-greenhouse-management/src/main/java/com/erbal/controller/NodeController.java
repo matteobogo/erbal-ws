@@ -71,6 +71,18 @@ public class NodeController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
+          value = "/findAllBySinkId/{sinkId}",
+          method = RequestMethod.GET
+  )
+  @ResponseBody
+  @ResponseStatus(HttpStatus.OK)
+  public List<Node> findAllBySinkId(
+          @PathVariable("sinkId") String sinkId) {
+
+    return nodeService.findAllBySinkId(sinkId);
+  }
+
+  @RequestMapping(
           value = "/delete/{nodeId}",
           method = RequestMethod.DELETE,
           consumes = {"application/json"}
