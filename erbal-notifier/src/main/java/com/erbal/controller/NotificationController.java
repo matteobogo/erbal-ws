@@ -10,7 +10,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/notifications")
-public class NotificationController {
+public class NotificationController extends ExceptionHandlingController {
 
     private SinkNotificationService sinkNotificationService;
 

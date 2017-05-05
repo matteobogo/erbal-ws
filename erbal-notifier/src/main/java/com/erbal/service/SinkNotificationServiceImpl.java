@@ -8,6 +8,7 @@ import com.erbal.domain.shared.Node;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,15 +41,19 @@ public class SinkNotificationServiceImpl implements SinkNotificationService {
 
         if(node.isPresent() && sink.isPresent()) {
 
-            if(node.get().getEntity().getType().equals(itsMeMessage.getType())) {
+            if(node.get().getEntity() != null) {
 
-                //test
-                System.out.println("OK");
-                System.out.println(node.get());
+                if (node.get().getEntity().getType().equals(itsMeMessage.getType())) {
 
-                //TODO send to client
-                //TODO gestione errori con httpstatus ? x sink intelligente
+                    //test
+                    System.out.println("OK");
+                    System.out.println(node.get());
+
+                    //TODO send to client
+                    //TODO gestione errori con httpstatus ? x sink intelligente
+                }
             }
+            else throw new EntityNotFoundException();
         }
     }
 
