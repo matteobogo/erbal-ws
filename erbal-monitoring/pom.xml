@@ -42,6 +42,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-metrics-event-stream</artifactId>
+            <version>1.5.5</version>
+        </dependency>
         <!-- alternative to embedded tomcat -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

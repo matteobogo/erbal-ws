@@ -68,7 +68,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
-        <!-- Attiva Endpoint /hystrix.stream per essere consumato dalla hystrix dashboard del monitoring service -->
+        <!-- Hystrix Stream/metrics/health failure tolerance -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-netflix-hystrix-stream</artifactId>
@@ -76,6 +76,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-metrics-event-stream</artifactId>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>

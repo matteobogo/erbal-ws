@@ -29,8 +29,7 @@ public class Application {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/sinks/**").allowedOrigins("*");
                 registry.addMapping("/nodes/**").allowedOrigins("*");
-                registry.addMapping("/pair").allowedOrigins("*");
-                registry.addMapping("/unpair").allowedOrigins("*");
+                registry.addMapping("/pairing/**").allowedOrigins("*");
             }
         };
     }

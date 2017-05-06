@@ -2,6 +2,9 @@
 #  level:
 #    org.springframework.security: INFO
 
+turbine:
+    clusterNameExpression: new String("default")
+
 hystrix:
   command:
     default:
