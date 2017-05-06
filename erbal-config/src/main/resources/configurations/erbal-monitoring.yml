@@ -1,6 +1,6 @@
-server:
-  port: 9001
-  context-path: /erbal-collector
+#logging:
+#  level:
+#    org.springframework.security: INFO
 
 hystrix:
   command:
@@ -18,26 +18,14 @@ eureka:
     service-url:
       defaultZone: http://borgo.ddns.net:8761/eureka/
 
-
-#security:
-#  oauth2:
-#    client:
-#      clientId: erbal-collector
-#      clientSecret: erbal-collector
-#      accessTokenUri: http://localhost:9090/uaa/oauth/token
-#      grant-type: client_credentials
-#      scope: server
-
 spring:
-  data:
-    mongodb:
-      host: localhost
-      username: admin
-      password: password
-      database: erbal_db
-      port: 27017
   rabbitmq:
     host: localhost
     port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
     username: guest
     password: guest
+
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://auth-service:5000/uaa/users/current

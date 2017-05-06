@@ -26,3 +26,8 @@ spring:
       #password: password
       database: erbal_db
       port: 27017
+  rabbitmq:
+    host: localhost
+    port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
+    username: guest
+    password: guest

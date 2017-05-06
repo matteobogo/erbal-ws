@@ -1,14 +1,6 @@
 server:
   port: 8761
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
-
 eureka:
   istance:
     hostname: http://borgo.ddns.net

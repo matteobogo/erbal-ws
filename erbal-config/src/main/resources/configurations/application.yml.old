@@ -4,13 +4,20 @@
 #  level:
 #    org.springframework.security: INFO
 
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
+    username: guest
+    password: guest
 
 #eureka:
 #  client:
