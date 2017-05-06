@@ -12,11 +12,11 @@ hystrix:
 
 eureka:
   istance:
-    hostname: http://borgo.ddns.net
+    hostname: localhost
     preferIpAddress: true
   client:
     service-url:
-      defaultZone: http://borgo.ddns.net:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 spring:
   data:

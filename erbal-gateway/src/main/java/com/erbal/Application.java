@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableZuulProxy
-@Controller
 public class Application {
 
     @RequestMapping(value = "/")
     public String welcome() {
-        return "redirect:/welcome.html";
+        return "redirect:/index.html";
     }
 
     public static void main(String[] args) {

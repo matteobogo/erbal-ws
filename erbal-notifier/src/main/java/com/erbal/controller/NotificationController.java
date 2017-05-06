@@ -19,34 +19,4 @@ public class NotificationController extends ExceptionHandlingController {
     public NotificationController(SinkNotificationService sinkNotificationService) {
         this.sinkNotificationService = sinkNotificationService;
     }
-
-    @RequestMapping(
-            value = "/"
-    )
-
-    @RequestMapping(
-        value = "/itsme",
-        method = RequestMethod.POST,
-        consumes = {"application/json"}
-    )
-    @ResponseStatus(HttpStatus.OK)
-    public ItsMeResponse itsMe(
-            @RequestBody @Valid ItsMeMessage itsMeMessage) {
-
-        return sinkNotificationService.itsMeNotify(itsMeMessage);
-    }
-
-    @RequestMapping(
-            value = "/itsme/dummy",
-            method = RequestMethod.GET
-    )
-    @ResponseBody
-    @ResponseStatus(HttpStatus.OK)
-    public ItsMeMessage dummy() {
-
-        return new ItsMeMessage(
-                "112233",
-                "332211",
-                "Soil");
-    }
 }

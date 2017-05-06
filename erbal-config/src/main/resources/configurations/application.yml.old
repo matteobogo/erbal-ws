@@ -12,6 +12,14 @@ hystrix:
           thread:
             timeoutInMilliseconds: 20000
 
+eureka:
+  istance:
+    hostname: borgo.ddns.net
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://borgo.ddns.net:8761/eureka/
+
 spring:
   rabbitmq:
     host: localhost

@@ -27,7 +27,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@Controller
 //@EnableRabbit
 @EnableScheduling
 public class Application
@@ -44,11 +43,6 @@ public class Application
                 registry.addMapping("/notifications/**").allowedOrigins("*");
             }
         };
-    }
-
-    @RequestMapping(value = "/")
-    public String welcome() {
-        return "redirect:/welcome.html";
     }
 
     public static void main(String[] args) {

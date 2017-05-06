@@ -17,7 +17,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableHystrix
-@Controller
 public class Application {
 
     /* CORS */
@@ -32,11 +31,6 @@ public class Application {
                 registry.addMapping("/pairing/**").allowedOrigins("*");
             }
         };
-    }
-
-    @RequestMapping(value = "/")
-    public String welcome() {
-        return "redirect:/welcome.html";
     }
 
     public static void main(String[] args) {

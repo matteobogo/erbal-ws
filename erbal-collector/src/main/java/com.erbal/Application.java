@@ -19,7 +19,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 //@EnableConfigurationProperties
 //@Configuration
-@Controller
 public class Application {
 
     /* CORS */
@@ -33,11 +32,6 @@ public class Application {
                         .allowedOrigins("*");
             }
         };
-    }
-
-    @RequestMapping(value = "/")
-    public String welcome() {
-        return "redirect:/welcome.html";
     }
 
     public static void main(String[] args) {

@@ -31,23 +31,11 @@ public class SinkNotificationServiceImpl implements SinkNotificationService {
 
     @Override
     public ItsMeResponse itsMeNotify(ItsMeMessage itsMeMessage) {
-
-
+        return null;
     }
 
     @Override
     public SinkTable updateSinkTable(String sinkId) {
-
-        List<Node> nodes = greenhouseManagementClient.findAllBySinkId(sinkId);
-
-
-
-        //check if websocket connection exists
-
-        SinkTable sinkTable = new SinkTable(sinkId,nodes);
-
         return null;
-
-        //send through websocket list of nodes
     }
 }
