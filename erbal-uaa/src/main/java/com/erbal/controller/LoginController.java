@@ -22,12 +22,12 @@ public class LoginController {
   }
 
   @RequestMapping(
-          value = "/login",
+          value={"/", "/login"},
           method = RequestMethod.GET
   )
-  public ModelAndView login(
-          @RequestParam Optional<String> error) {
-
-    return new ModelAndView("login", "error", error);
+  public ModelAndView login(){
+    ModelAndView modelAndView = new ModelAndView();
+    modelAndView.setViewName("login");
+    return modelAndView;
   }
 }

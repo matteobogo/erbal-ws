@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>erBal Login</title>
 
     <!-- Libraries -->
-    <script src="libs/jquery.min.js"></script>
+    <script src="/static/libs/jquery.min.js"></script>
 
     <!-- Javascript -->
-    <script src="js/flower-shower.js"></script>
-    <script src="js/login.js"></script>
+    <script src="/static/js/flower-shower.js"></script>
+    <script src="/static/js/login.js"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
 
 </head>
 <body>
@@ -41,8 +42,8 @@
 
             <div class="filter"></div>
             <video autoplay loop class="fillWidth">
-                <source src="videos/Flower-Shower.mp4" type="video/mp4"/>
-                <source src="others/Flower-Shower.webm" type="video/webm"/>
+                <source src="/videos/Flower-Shower.mp4" type="video/mp4"/>
+                <source src="/others/Flower-Shower.webm" type="video/webm"/>
             </video>
             <!--<div class="poster hidden">-->
                 <!--<img src="images/Flower-Shower.jpg" alt="">-->
