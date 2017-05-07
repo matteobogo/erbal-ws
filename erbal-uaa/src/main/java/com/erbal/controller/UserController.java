@@ -13,8 +13,13 @@ import java.security.Principal;
 @RestController
 public class UserController {
 
-  @Autowired
-  private UserService userService;
+//  private UserService userService;
+//
+//  @Autowired
+//  public UserController(UserService userService) {
+//
+//    this.userService = userService;
+//  }
 
   /* user-info-endpoint */
   @RequestMapping(value = "/current", method = RequestMethod.GET)
@@ -22,12 +27,12 @@ public class UserController {
     return principal;
   }
 
-  //@PreAuthorize("#oauth2.hasScope('server')")
-  @RequestMapping(
-          value = "/create",
-          method = RequestMethod.POST)
-  @ResponseStatus(HttpStatus.CREATED)
-  public void createUser(@Valid @RequestBody User user) {
-    userService.create(user);
-  }
+//  //@PreAuthorize("#oauth2.hasScope('server')")
+//  @RequestMapping(
+//          value = "/create",
+//          method = RequestMethod.POST)
+//  @ResponseStatus(HttpStatus.CREATED)
+//  public void createUser(@Valid @RequestBody User user) {
+//    userService.create(user);
+//  }
 }
