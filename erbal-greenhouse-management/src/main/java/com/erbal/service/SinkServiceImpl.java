@@ -5,6 +5,8 @@ import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.SinkTable;
 import com.erbal.repository.NodeRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.SinkRepository;
@@ -14,6 +16,8 @@ import java.util.Optional;
 
 @Service
 public class SinkServiceImpl implements SinkService {
+
+    private final Logger log = LoggerFactory.getLogger(getClass());
 
     private SinkRepository sinkRepository;
     private NodeRepository nodeRepository;
@@ -30,12 +34,14 @@ public class SinkServiceImpl implements SinkService {
     @Override
     public MessageDTO<Sink> add(Sink sink) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink already exist");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink already exist");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(sink.getSinkId());
 
         if(!sinkExist.isPresent()) {
             message.setEntity(sinkRepository.save(sink));
-            message.setDescription("com.erbal.Sink added successfully");
+            message.setDescription("Sink added successfully");
+
+            log.info("Sink "+ sink.getSinkId()+" for Greenhouse "+sink.getGreenhouseName()+" added successfully");
         }
         return message;
     }
@@ -43,12 +49,14 @@ public class SinkServiceImpl implements SinkService {
     @Override
     public MessageDTO<Sink> update(Sink sink) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink not found");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(sink.getSinkId());
 
         if(sinkExist.isPresent()) {
             message.setEntity(sinkRepository.save(sink));
-            message.setDescription("com.erbal.Sink updated successfully");
+            message.setDescription("Sink updated successfully");
+
+            log.info("Sink "+sink.getSinkId()+" for Greenhouse "+sink.getGreenhouseName()+" updated successfully");
         }
         return message;
     }
@@ -62,12 +70,12 @@ public class SinkServiceImpl implements SinkService {
     @Override
     public MessageDTO<Sink> getEntityBySerialId(String serialId) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink not found");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(serialId);
 
         if(sinkExist.isPresent()) {
             message.setEntity(sinkExist.get());
-            message.setDescription("com.erbal.Sink retrieved successfully");
+            message.setDescription("Sink retrieved successfully");
         }
         return message;
     }
@@ -75,13 +83,15 @@ public class SinkServiceImpl implements SinkService {
     @Override
     public MessageDTO<Sink> deleteEntityBySerialId(String serialId) {
 
-        MessageDTO<Sink> message = new MessageDTO<>(null,"com.erbal.Sink not found");
+        MessageDTO<Sink> message = new MessageDTO<>(null,"Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(serialId);
 
         if(sinkExist.isPresent()) {
             sinkRepository.delete(sinkExist.get());
             message.setEntity(sinkExist.get());
-            message.setDescription("com.erbal.Sink deleted successfully");
+            message.setDescription("Sink deleted successfully");
+
+            log.info("Sink "+serialId+" for Greenhouse "+sinkExist.get().getGreenhouseName()+" deleted successfully");
         }
         return message;
     }

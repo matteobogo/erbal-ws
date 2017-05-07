@@ -6,9 +6,10 @@ import com.erbal.domain.Sink;
 import com.erbal.domain.dto.ItsMeMessage;
 import com.erbal.domain.dto.ItsMeResponse;
 import com.erbal.domain.dto.MessageDTO;
-import com.erbal.domain.dto.SinkTable;
 import com.erbal.repository.PairRepository;
 import com.erbal.repository.UnpairRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.NodeRepository;
@@ -18,6 +19,8 @@ import java.util.Optional;
 
 @Service
 public class PairingServiceImpl implements PairingService {
+
+    private final Logger log = LoggerFactory.getLogger(getClass());
 
     private SinkRepository sinkRepository;
     private NodeRepository nodeRepository;
@@ -52,7 +55,7 @@ public class PairingServiceImpl implements PairingService {
 
             result = new MessageDTO<>(
                     pair,
-                    "com.erbal.Node already paired"
+                    "Node already paired"
             );
 
             if(node.getSink() == null) {
@@ -63,7 +66,9 @@ public class PairingServiceImpl implements PairingService {
                 nodeRepository.save(node);
                 pairRepository.save(pair);
 
-                result.setDescription("com.erbal.Node paired");
+                result.setDescription("Node paired");
+
+                log.info("Node "+pair.getNodeId()+" paired with Sink "+pair.getSinkId()+" for Sector "+pair.getSectorId());
             }
         }
         return result;
@@ -83,7 +88,7 @@ public class PairingServiceImpl implements PairingService {
 
             result = new MessageDTO<>(
                     pair,
-                    "com.erbal.Node not paired"
+                    "Node not paired"
             );
 
             if(node.getSink() != null) {
@@ -94,7 +99,10 @@ public class PairingServiceImpl implements PairingService {
                 nodeRepository.save(node);
                 unpairRepository.save(pair);
 
-                result.setDescription("com.erbal.Node unpaired");
+                result.setDescription("Node unpaired");
+
+                log.info("Node "+pair.getNodeId()+" paired with Sink "+pair.getSinkId()+" for Sector "+
+                        pair.getSectorId()+" is unpaired");
             }
         }
         return result;
@@ -130,6 +138,8 @@ public class PairingServiceImpl implements PairingService {
 
                 //TODO send to client
                 //TODO gestione errori con httpstatus ? x sink intelligente
+
+                //TODO logging
             }
         }
         return itsMeResponse;
