@@ -17,7 +17,6 @@
         <module name="erbal-monitoring" />
         <module name="erbal-notificator" />
         <module name="erbal-notifier" />
-        <module name="erbal-shared" />
         <module name="erbal-uaa" />
         <module name="erbalcore" />
         <module name="monitoring" />

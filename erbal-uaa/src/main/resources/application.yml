@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: erbal-uaa
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: true
-      password: 3rB4L4dm1n$
-      username: admin

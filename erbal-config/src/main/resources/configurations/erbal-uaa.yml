@@ -1,3 +1,7 @@
+server:
+  port: 9090
+  context-path: /erbal-uaa
+
 spring:
   data:
     mongodb:
@@ -6,7 +10,3 @@ spring:
       #password:
       database: erbal_db
       port: 27017
-
-server:
-  context-path: /erbal-uaa
-  port: 9090

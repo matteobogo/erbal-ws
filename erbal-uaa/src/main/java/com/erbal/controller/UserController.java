@@ -22,7 +22,7 @@ public class UserController {
     return principal;
   }
 
-  @PreAuthorize("#oauth2.hasScope('server')")
+  //@PreAuthorize("#oauth2.hasScope('server')")
   @RequestMapping(
           value = "/create",
           method = RequestMethod.POST)
