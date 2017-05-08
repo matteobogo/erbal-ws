@@ -17,6 +17,9 @@ public class NodeData implements Serializable, Cloneable {
   @Field(SensorsDataParams.NODE_TIMESTAMP)
   private String timestamp;
 
+  @Field(SensorsDataParams.NODE_TYPE)
+  private String type;
+
   @Field(SensorsDataParams.NODE_VOLTAGE)
   private int voltage;
 
