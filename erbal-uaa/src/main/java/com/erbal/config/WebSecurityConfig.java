@@ -77,6 +77,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //            .permitAll();
   }
 
+  /* Another Security Configuration with HTTP BasicAuth */
+  @Configuration
+  @Order(1)
+  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
+
+    public void configure(HttpSecurity httpSecurity) throws Exception {
+
+      httpSecurity
+              .antMatcher("/security-management/**")
+              .csrf().disable()
+              .httpBasic();
+    }
+  }
+
   @Override
   public void configure(WebSecurity web) throws Exception {
     web

@@ -1,4 +1,4 @@
-$.get( "/erbal-uaa/current", function( data ) {
+$.get( "/erbal-uaa/user/current", function( data ) {
     $( "body" )
         .append( "Email: " + data.principal.username )
         .append( "<br/>" )

@@ -1,5 +1,6 @@
-package com.erbal.domain;
+package com.erbal.domain.security;
 
+import com.erbal.domain.User;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.security.core.authority.AuthorityUtils;

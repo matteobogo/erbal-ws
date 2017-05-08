@@ -1,6 +1,6 @@
 package com.erbal.service;
 
-import com.erbal.domain.CurrentUser;
+import com.erbal.domain.security.CurrentUser;
 import com.erbal.domain.User;
 import com.erbal.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
