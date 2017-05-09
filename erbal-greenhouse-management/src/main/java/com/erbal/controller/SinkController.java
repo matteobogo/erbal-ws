@@ -3,6 +3,7 @@ package com.erbal.controller;
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.RegisterSink;
+import com.erbal.domain.dto.SinkPreview;
 import com.erbal.service.SinkServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -78,6 +79,17 @@ public class SinkController extends ExceptionHandlingController {
   public List<Sink> findAllByUserId(@PathVariable("userId") String userId) {
 
     return sinkService.findAllByUserId(userId);
+  }
+
+  @RequestMapping(
+          value = "/findAllPreviewByUserId/{userId}",
+          method = RequestMethod.GET
+  )
+  @ResponseBody
+  @ResponseStatus(HttpStatus.OK)
+  public List<SinkPreview> getAllSinkPreview(@PathVariable("userId") String userId) {
+
+    return sinkService.findAllSinkPreview(userId);
   }
 
   @RequestMapping(

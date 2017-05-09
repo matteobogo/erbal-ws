@@ -4,6 +4,7 @@ import com.erbal.domain.Node;
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.RegisterSink;
+import com.erbal.domain.dto.SinkPreview;
 import com.erbal.domain.dto.SinkTable;
 import com.erbal.repository.NodeRepository;
 import org.slf4j.Logger;
@@ -12,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.SinkRepository;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -117,6 +120,14 @@ public class SinkServiceImpl implements SinkService {
         //check user id with feign client ?
 
         return sinkRepository.findAllByUserId(userId);
+    }
+
+    @Override
+    public List<SinkPreview> findAllSinkPreview(String userId) {
+
+        //TODO prendi dal db solo sinkId e nomeSerra (vedi query su repository)
+
+        return null;
     }
 
     @Override
