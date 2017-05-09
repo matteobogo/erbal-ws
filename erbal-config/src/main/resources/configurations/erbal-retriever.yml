@@ -1,0 +1,44 @@
+server:
+  port: 9004
+  context-path: /erbal-retriever
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+eureka:
+  istance:
+    hostname: localhost
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#security:
+#  oauth2:
+#    client:
+#      clientId: erbal-greenhouse-management
+#      clientSecret: erbal-greenhouse-management
+#      accessTokenUri: http://localhost:9090/erbal-uaa/oauth/token
+#      grant-type: client_credentials
+#      scope: server
+#    resource:
+#      user-info-uri: http://localhost:9090/erbal-uaa/user/current
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      #username: admin
+      #password: password
+      database: erbal_db
+      port: 27017
+  rabbitmq:
+    host: localhost
+    port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
+    username: guest
+    password: guest

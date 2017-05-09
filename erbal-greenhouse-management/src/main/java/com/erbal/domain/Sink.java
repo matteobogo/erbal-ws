@@ -22,22 +22,23 @@ public class Sink extends BaseEntity {
     private String id;
 
     @Indexed
-    @NotNull(message = "Sink Serial ID is compulsory")
-    @NotBlank(message = "Sink Serial ID is compulsory")
     @Field(GreenhouseManagementParams.SINK_ID)
     private String sinkId;
 
-    @NotNull(message = "Greenhouse name is compulsory")
-    @NotBlank(message = "Greenhouse name is compulsory")
     @Field(GreenhouseManagementParams.SINK_GREENHOUSE_NAME)
     private String greenhouseName;
+
+    @Field(GreenhouseManagementParams.SINK_USER_ID)
+    private String userId;
 
     @PersistenceConstructor
     public Sink(
             @JsonProperty(GreenhouseManagementParams.SINK_ID) String sinkId,
-            @JsonProperty(GreenhouseManagementParams.SINK_GREENHOUSE_NAME) String greenhouseName
+            @JsonProperty(GreenhouseManagementParams.SINK_GREENHOUSE_NAME) String greenhouseName,
+            @JsonProperty(GreenhouseManagementParams.SINK_USER_ID) String userId
     ) {
         this.sinkId = sinkId;
         this.greenhouseName = greenhouseName;
+        this.userId = userId;
     }
 }

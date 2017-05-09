@@ -2,6 +2,7 @@ package com.erbal.controller;
 
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.domain.dto.RegisterSink;
 import com.erbal.service.SinkServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -69,6 +70,17 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
+          value = "/findAllByUserId/{userId}",
+          method = RequestMethod.GET
+  )
+  @ResponseBody
+  @ResponseStatus(HttpStatus.OK)
+  public List<Sink> findAllByUserId(@PathVariable("userId") String userId) {
+
+    return sinkService.findAllByUserId(userId);
+  }
+
+  @RequestMapping(
           value = "/delete/{sinkId}",
           method = RequestMethod.DELETE,
           consumes = {"application/json"}
@@ -82,6 +94,30 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
+          value = "/register",
+          method = RequestMethod.POST,
+          consumes = {"application/json"}
+  )
+  @ResponseBody
+  @ResponseStatus(HttpStatus.OK)
+  public MessageDTO<RegisterSink> register(
+          @RequestBody @Valid RegisterSink registerSink) {
+
+    return sinkService.register(registerSink);
+  }
+
+  @RequestMapping(
+          value = "/unregister",
+          method = RequestMethod.POST,
+          consumes = {"application/json"}
+  )
+  public MessageDTO<RegisterSink> unregister(
+          @RequestBody @Valid RegisterSink registerSink) {
+
+    return sinkService.unregister(registerSink);
+  }
+
+  @RequestMapping(
           value = "/dummy",
           method = RequestMethod.GET
   )
@@ -91,6 +127,7 @@ public class SinkController extends ExceptionHandlingController {
 
     return new Sink(
             "123456789",
-            "Serra Cagne");
+            "Serra Cagne",
+            "394959hd939ffs3D");
   }
 }

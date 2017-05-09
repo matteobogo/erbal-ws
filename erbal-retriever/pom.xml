@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.erbal</groupId>
-    <artifactId>erbal-greenhouse-management</artifactId>
+    <artifactId>erbal-retriever</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Erbal Greenhouse Management Service</name>
-    <description>Erbal Service for managing greenhouse</description>
+    <name>Erbal Retriever Service</name>
+    <description>Erbal Service for retrieving data</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -141,7 +141,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <mainClass>com.erbal.Application</mainClass>
-                    <finalName>erbal-greenhouse-management</finalName>
+                    <finalName>erbal-retriever</finalName>
                 </configuration>
                 <executions>
                     <execution>

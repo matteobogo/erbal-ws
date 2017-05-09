@@ -5,6 +5,7 @@ public final class GreenhouseManagementParams {
     //SINK
     public static final String SINK_ID = "sink_id";
     public static final String SINK_GREENHOUSE_NAME = "greenhouse_name";
+    public static final String SINK_USER_ID = "user_id";
 
     //NODE
     public static final String NODE_ID = "node_id";

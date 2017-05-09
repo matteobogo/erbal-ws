@@ -3,6 +3,7 @@ package com.erbal.service;
 import com.erbal.domain.Node;
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.domain.dto.RegisterSink;
 import com.erbal.domain.dto.SinkTable;
 import com.erbal.repository.NodeRepository;
 import org.slf4j.Logger;
@@ -108,5 +109,67 @@ public class SinkServiceImpl implements SinkService {
             sinkTable = new SinkTable(sinkId,nodes);
         }
         return sinkTable;
+    }
+
+    @Override
+    public List<Sink> findAllByUserId(String userId) {
+
+        //check user id with feign client ?
+
+        return sinkRepository.findAllByUserId(userId);
+    }
+
+    @Override
+    public MessageDTO<RegisterSink> register(RegisterSink registerSink) {
+
+        MessageDTO<RegisterSink> messageDTO = new MessageDTO<>(registerSink,"Sink not found");
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(registerSink.getSinkId());
+        if(sinkExist.isPresent()) {
+
+            Sink sink = sinkExist.get();
+            //is it already bound ?
+            if(!sink.getUserId().equals("")) {
+
+                messageDTO.setDescription("Sink is already registered");
+            }
+            else {
+
+                sink.setUserId(registerSink.getUserId());
+                sink.setGreenhouseName(registerSink.getGreenhouseName());
+                sinkRepository.save(sink);
+
+                log.info("Sink "+sink.getSinkId()+" registered with ClientID "+sink.getUserId());
+
+                messageDTO.setDescription("Sink registered successfully");
+            }
+        }
+        return messageDTO;
+    }
+
+    @Override
+    public MessageDTO<RegisterSink> unregister(RegisterSink registerSink) {
+
+        MessageDTO<RegisterSink> messageDTO = new MessageDTO<>(registerSink,"Sink not found");
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(registerSink.getSinkId());
+        if(sinkExist.isPresent()) {
+
+            Sink sink = sinkExist.get();
+            //is it already bound ?
+            if(sink.getUserId().equals("")) {
+
+                messageDTO.setDescription("Sink is already unbounded");
+            }
+            else {
+
+                sink.setUserId("");
+                sink.setGreenhouseName("");
+                sinkRepository.save(sink);
+
+                log.info("Sink "+sink.getSinkId()+" unregistered from ClientID "+sink.getUserId());
+
+                messageDTO.setDescription("Sink unregistered successfully");
+            }
+        }
+        return messageDTO;
     }
 }

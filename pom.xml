@@ -21,7 +21,7 @@
         <module>erbal-uaa</module>
         <module>erbal-greenhouse-management</module>
         <module>erbal-notifier</module>
-        <module>erbal-shared</module>
+        <module>erbal-retriever</module>
     </modules>
 
 </project>
