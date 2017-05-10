@@ -1,19 +1,17 @@
 package com.erbal.service;
 
-import com.erbal.domain.Node;
+import com.erbal.clients.GreenhouseManagementClient;
 import com.erbal.domain.Pair;
-import com.erbal.domain.Sink;
 import com.erbal.domain.dto.ItsMeMessage;
-import com.erbal.domain.dto.ItsMeResponse;
-import com.erbal.domain.dto.MessageDTO;
+import com.erbal.domain.shared.MessageDTO;
+import com.erbal.domain.shared.Node;
+import com.erbal.domain.shared.Sink;
 import com.erbal.repository.PairRepository;
 import com.erbal.repository.UnpairRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.erbal.repository.NodeRepository;
-import com.erbal.repository.SinkRepository;
 
 import java.util.Optional;
 
@@ -22,30 +20,48 @@ public class PairingServiceImpl implements PairingService {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-    private SinkRepository sinkRepository;
-    private NodeRepository nodeRepository;
+    private GreenhouseManagementClient greenhouseManagementClient;
     private PairRepository pairRepository;
     private UnpairRepository unpairRepository;
 
     @Autowired
     public PairingServiceImpl(
-            SinkRepository sinkRepository,
-            NodeRepository nodeRepository,
+            GreenhouseManagementClient greenhouseManagementClient,
             PairRepository pairRepository,
             UnpairRepository unpairRepository
     ) {
-        this.sinkRepository = sinkRepository;
-        this.nodeRepository = nodeRepository;
+        this.greenhouseManagementClient = greenhouseManagementClient;
         this.pairRepository = pairRepository;
         this.unpairRepository = unpairRepository;
     }
 
     @Override
-    public MessageDTO<Pair> pair(Pair pair) {
+    public void pair(Pair pair) {
 
-        MessageDTO<Pair> result = null;
+        MessageDTO<Sink> resultSink = greenhouseManagementClient.findSinkBySerialId(pair.getSinkId());
+        Optional<Sink> sinkExist = Optional.of(resultSink.getEntity());
 
-        Optional<Sink> sinkPaired = sinkRepository.findBySinkId(pair.getSinkId());
+        MessageDTO<Node> resultNode = greenhouseManagementClient.findNodeBySerialId(pair.getNodeId());
+        Optional<Node> nodeExist = Optional.of(resultNode.getEntity());
+
+        if(sinkExist.isPresent() && nodeExist.isPresent()) {
+
+            Sink sink = sinkExist.get();
+            Node node = nodeExist.get();
+
+            //check
+            if(node.getSink() == null) {
+
+                node.setSink(sink);
+                node.setSector(pair.getSectorId());
+            }
+        }
+
+
+
+
+
+                //sinkRepository.findBySinkId(pair.getSinkId());
         Optional<Node> nodePaired = nodeRepository.findByNodeId(pair.getNodeId());
 
         if(sinkPaired.isPresent() && nodePaired.isPresent()) {

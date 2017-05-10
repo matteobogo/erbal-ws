@@ -12,4 +12,5 @@ public class Sink {
     private String id;
     private String sinkId;
     private String greenhouseName;
+    private String userId;
 }

@@ -1,6 +1,5 @@
 package com.erbal.controller;
 
-import com.erbal.domain.Pair;
 import com.erbal.domain.dto.ItsMeMessage;
 import com.erbal.domain.dto.ItsMeResponse;
 import com.erbal.domain.dto.MessageDTO;
@@ -9,7 +8,6 @@ import com.erbal.service.SinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.erbal.service.PairingService;
 
 import javax.validation.Valid;
 
@@ -94,7 +92,8 @@ public class PairController extends ExceptionHandlingController {
     return new ItsMeMessage(
             "112233",
             "332211",
-            "Soil");
+            "Soil",
+            "");
   }
 
   @RequestMapping(

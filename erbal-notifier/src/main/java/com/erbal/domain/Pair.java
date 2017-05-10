@@ -1,6 +1,6 @@
 package com.erbal.domain;
 
-import com.erbal.utils.GreenhouseManagementParams;
+import com.erbal.utils.NotifierParams;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotBlank;
@@ -20,24 +20,24 @@ public class Pair {
 
     @NotNull(message = "Sink Serial ID is compulsory")
     @NotBlank(message = "Sink Serial ID is compulsory")
-    @Field(value = GreenhouseManagementParams.SINK_ID)
+    @Field(value = NotifierParams.SINK_ID)
     private String sinkId;
 
     @NotNull(message = "Node Serial ID is compulsory")
     @NotBlank(message = "Node Serial ID is compulsory")
-    @Field(value = GreenhouseManagementParams.NODE_ID)
+    @Field(value = NotifierParams.NODE_ID)
     private String nodeId;
 
     @NotNull(message = "Sector is compulsory")
     @NotBlank(message = "Sector is compulsory")
-    @Field(value = GreenhouseManagementParams.SECTOR_ID)
+    @Field(value = NotifierParams.SECTOR_ID)
     private String sectorId;
 
     @PersistenceConstructor
     public Pair(
-            @JsonProperty(GreenhouseManagementParams.SINK_ID) String sinkId,
-            @JsonProperty(GreenhouseManagementParams.NODE_ID) String nodeId,
-            @JsonProperty(GreenhouseManagementParams.SECTOR_ID) String sectorId) {
+            @JsonProperty(NotifierParams.SINK_ID) String sinkId,
+            @JsonProperty(NotifierParams.NODE_ID) String nodeId,
+            @JsonProperty(NotifierParams.SECTOR_ID) String sectorId) {
 
         this.sinkId = sinkId;
         this.nodeId = nodeId;

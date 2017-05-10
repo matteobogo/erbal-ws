@@ -13,12 +13,21 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
 
-        config.enableSimpleBroker("/topic/itsme");
+        /* Topics for subscribing */
+
+        //topic ItsMe Notification
+        config.enableSimpleBroker("/topic/notifications");
+
         config.setApplicationDestinationPrefixes("/app");
     }
 
+    /**
+     * WebSockets Endpoint
+     * @param registry
+     */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
+
         registry.addEndpoint("/websockets").setAllowedOrigins("*").withSockJS();
     }
 }
