@@ -40,7 +40,9 @@ public class Application
 
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/notifications/**").allowedOrigins("*");
+                registry.addMapping("/websockets/**").allowedOrigins("*");
+                registry.addMapping("/websockets/**").allowedHeaders("*");
+                registry.addMapping("/websockets/**").allowedMethods("*");
             }
         };
     }
