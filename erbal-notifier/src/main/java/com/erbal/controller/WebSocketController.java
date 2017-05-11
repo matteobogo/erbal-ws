@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WebSocketController {
 
-  private SimpMessagingTemplate simpMessagingTemplate;
+  private SimpMessagingTemplate simpMessagingTemplate;  //TODO dopo i test toglilo
   private NotificationService notificationService;
 
   @Autowired
@@ -23,31 +23,21 @@ public class WebSocketController {
     this.notificationService = notificationService;
   }
 
-  /*
-    SINK <--> SERVER WebSockets
-   */
+  //
+  //SINK <--> SERVER WebSockets
+  //
 
+  /**
+   * Endpoint where sinks push the ItsMe Message
+   * @param itsMeMessage
+   */
   @MessageMapping("/notifications/itsme")
   //@SendTo("/topic/itsme/{sinkId}")
   public void itsMeNotification(
           //@DestinationVariable("sinkId") String sinkId
-          ItsMeMessage itsMeMessage
-  ) {
+          ItsMeMessage itsMeMessage) {
 
     notificationService.itsMeNotification(itsMeMessage);
-    //simpMessagingTemplate.convertAndSend("/topic/notifications/itsme/1","OK");
-  }
-
-  @RequestMapping("/notifications/pairingResult")
-  public void pairingResult() {
-
-    //TODO
-  }
-
-  @RequestMapping("/notifications/unpairingResult")
-  public void unpairingResult() {
-
-    //TODO
   }
 
   @RequestMapping("/notifications/lowBattery")
@@ -60,23 +50,5 @@ public class WebSocketController {
   public void missingNode() {
 
     //TODO
-  }
-
-  /*
-    CLIENT <--> SERVER WebSockets
-   */
-
-  @MessageMapping("/notifications/pairing")
-  public void pairing() {
-
-    //TODO service
-    //simpMessagingTemplate.convertAndSend("/topic/notifications/pairing/1","OK");
-  }
-
-  @MessageMapping("/notifications/unpairing")
-  public void unpairing() {
-
-    //TODO service
-
   }
 }

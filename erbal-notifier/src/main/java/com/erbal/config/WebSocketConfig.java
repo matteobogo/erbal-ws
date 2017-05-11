@@ -10,19 +10,22 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 @EnableWebSocketMessageBroker
 public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
+    /**
+     * Configure Topic where clients subscribe (server push data in this channel)
+     * Configure context-path where clients push data to server
+     * @param config
+     */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
 
-        /* Topics for subscribing */
-
-        //topic ItsMe Notification
+        //topic notifications (ex. ItsMe, MissingNode, lowBattery, ..)
         config.enableSimpleBroker("/topic/notifications");
-
         config.setApplicationDestinationPrefixes("/app");
     }
 
     /**
-     * WebSockets Endpoint
+     * Settings WebSockets Endpoint with CORS and SockJS
+     * (where clients connect for open the websocket)
      * @param registry
      */
     @Override

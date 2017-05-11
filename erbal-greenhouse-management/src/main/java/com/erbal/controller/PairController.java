@@ -1,9 +1,9 @@
 package com.erbal.controller;
 
-import com.erbal.domain.dto.ItsMeMessage;
-import com.erbal.domain.dto.ItsMeResponse;
+import com.erbal.domain.Pair;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.SinkTable;
+import com.erbal.service.PairingService;
 import com.erbal.service.SinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -66,34 +66,6 @@ public class PairController extends ExceptionHandlingController {
             "1122334455",
             "A"
     );
-  }
-
-  @RequestMapping(
-          value = "/itsme",
-          method = RequestMethod.POST,
-          consumes = {"application/json"}
-  )
-  @ResponseStatus(HttpStatus.OK)
-  public ItsMeResponse itsMe(
-          @RequestBody @Valid ItsMeMessage itsMeMessage) {
-
-    //return sinkNotificationService.itsMeNotify(itsMeMessage);
-    return null;
-  }
-
-  @RequestMapping(
-          value = "/itsme/dummy",
-          method = RequestMethod.GET
-  )
-  @ResponseBody
-  @ResponseStatus(HttpStatus.OK)
-  public ItsMeMessage itsMeDummy() {
-
-    return new ItsMeMessage(
-            "112233",
-            "332211",
-            "Soil",
-            "");
   }
 
   @RequestMapping(

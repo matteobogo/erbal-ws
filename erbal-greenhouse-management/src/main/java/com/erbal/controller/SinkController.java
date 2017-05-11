@@ -1,7 +1,6 @@
 package com.erbal.controller;
 
 import com.erbal.domain.Sink;
-import com.erbal.domain.dto.ItsMeMessage;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.RegisterSink;
 import com.erbal.domain.dto.SinkPreview;

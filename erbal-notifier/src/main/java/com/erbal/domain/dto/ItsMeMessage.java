@@ -1,7 +1,5 @@
 package com.erbal.domain.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,5 +24,6 @@ public class ItsMeMessage {
     @NotBlank(message = "Node Type is compulsory")
     private String type;
 
+    @NotNull
     private String greenHouseName;
 }
