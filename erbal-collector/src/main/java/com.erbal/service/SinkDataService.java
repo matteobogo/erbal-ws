@@ -1,9 +1,8 @@
 package com.erbal.service;
 
-import java.util.Collection;
+import com.erbal.domain.SinkData;
 
-public interface SinkDataService<T> {
+public interface SinkDataService {
 
-    void add(T sinkData);
-    Collection<T> findAll();
+    void add(SinkData sinkData);
 }

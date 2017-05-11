@@ -36,7 +36,7 @@ public class Node extends BaseEntity {
     @NotNull(message = "Sector is compulsory")
     @NotBlank(message = "Sector is compulsory")
     @Field(GreenhouseManagementParams.NODE_SECTOR)
-    private String sector;
+    private String sectorId;
 
     @DBRef
     private Sink sink;
@@ -45,10 +45,10 @@ public class Node extends BaseEntity {
     public Node(
             @JsonProperty(GreenhouseManagementParams.NODE_ID) String nodeId,
             @JsonProperty(GreenhouseManagementParams.NODE_TYPE) String type,
-            @JsonProperty(GreenhouseManagementParams.NODE_SECTOR) String sector
+            @JsonProperty(GreenhouseManagementParams.NODE_SECTOR) String sectorId
     ) {
         this.nodeId = nodeId;
         this.type = type;
-        this.sector = sector;
+        this.sectorId = sectorId;
     }
 }

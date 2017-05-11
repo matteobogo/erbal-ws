@@ -1,6 +1,8 @@
 package com.erbal.domain;
 
 import com.erbal.utils.GreenhouseManagementParams;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,6 +20,7 @@ import javax.validation.constraints.NotNull;
 public class Pair extends BaseEntity {
 
     @Id
+    @JsonIgnore
     private String id;
 
     @NotNull(message = "Sink Serial ID is compulsory")

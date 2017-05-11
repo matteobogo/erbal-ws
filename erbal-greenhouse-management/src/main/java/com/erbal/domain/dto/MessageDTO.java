@@ -1,21 +1,14 @@
 package com.erbal.domain.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MessageDTO<T> {
 
   private T entity;
   private String description;
-
-  public MessageDTO(
-          T entity,
-          String description) {
-
-    this.entity = entity;
-    this.description = description;
-  }
-
-  public T getEntity() { return this.entity; }
-  public String getDescription() { return this.description; }
 }

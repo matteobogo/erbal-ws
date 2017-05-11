@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -15,10 +16,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableResourceServer
 @EnableDiscoveryClient
 //@EnableOAuth2Client
-//@EnableFeignClients
+@EnableFeignClients
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 //@EnableConfigurationProperties
 //@Configuration
+@EnableMongoAuditing
 public class Application {
 
     /* CORS */

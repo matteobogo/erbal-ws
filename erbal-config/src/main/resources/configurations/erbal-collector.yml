@@ -32,8 +32,8 @@ spring:
   data:
     mongodb:
       host: localhost
-      username: admin
-      password: password
+      #username: admin
+      #password: password
       database: erbal_db
       port: 27017
   rabbitmq:

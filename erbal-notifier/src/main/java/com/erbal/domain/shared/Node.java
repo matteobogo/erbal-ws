@@ -12,6 +12,6 @@ public class Node {
     private String id;
     private String nodeId;
     private String type;
-    private String sector;
+    private String sectorId;
     private Sink sink;
 }

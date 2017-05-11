@@ -14,7 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import java.io.Serializable;
 import java.util.Collection;
 
-@EqualsAndHashCode(callSuper = true)
 @Document(collection = "sinks_data")
 @Data
 @NoArgsConstructor

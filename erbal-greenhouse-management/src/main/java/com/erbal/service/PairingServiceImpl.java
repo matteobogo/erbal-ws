@@ -4,6 +4,7 @@ import com.erbal.domain.Node;
 import com.erbal.domain.Pair;
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
+import com.erbal.exception.AlreadyPairedException;
 import com.erbal.repository.NodeRepository;
 import com.erbal.repository.PairRepository;
 import com.erbal.repository.SinkRepository;
@@ -39,7 +40,7 @@ public class PairingServiceImpl implements PairingService {
     }
 
     @Override
-    public MessageDTO<Pair> pair(Pair pair) {
+    public MessageDTO<Pair> pair(Pair pair) throws AlreadyPairedException {
 
         MessageDTO<Pair> result = null;
 
@@ -53,13 +54,13 @@ public class PairingServiceImpl implements PairingService {
 
             result = new MessageDTO<>(
                     pair,
-                    ""
+                    "Node is already paired"
             );
 
             if(node.getSink() == null) {
 
                 node.setSink(sink);
-                node.setSector(pair.getSectorId());
+                node.setSectorId(pair.getSectorId());
 
                 nodeRepository.save(node);
                 pairRepository.save(pair);
@@ -68,7 +69,7 @@ public class PairingServiceImpl implements PairingService {
 
                 log.info("Node "+pair.getNodeId()+" paired with Sink "+pair.getSinkId()+" for Sector "+pair.getSectorId());
             }
-            else throw new IllegalArgumentException("Node already paired");
+            else throw new AlreadyPairedException();
         }
         return result;
     }
@@ -93,7 +94,7 @@ public class PairingServiceImpl implements PairingService {
             if(node.getSink() != null) {
 
                 node.setSink(null);
-                node.setSector("");
+                node.setSectorId("");
 
                 nodeRepository.save(node);
                 unpairRepository.save(pair);
