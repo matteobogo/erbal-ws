@@ -4,6 +4,7 @@ import com.erbal.domain.Sink;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.RegisterSink;
 import com.erbal.domain.dto.SinkPreview;
+import com.erbal.domain.dto.SinkTable;
 import com.erbal.service.SinkServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -130,16 +131,13 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/dummy",
+          value = "/findAllSinkWithNodesByUserId/{userId}",
           method = RequestMethod.GET
   )
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
-  public Sink dummy() {
+  public List<SinkTable> findAllSinkWithNodesByUserId(@PathVariable("userId") String userId) {
 
-    return new Sink(
-            "123456789",
-            "Serra Cagne",
-            "394959hd939ffs3D");
+    return sinkService.findAllSinkWithNodesByUserId(userId);
   }
 }

@@ -53,7 +53,7 @@ public class PairingServiceImpl implements PairingService {
 
             result = new MessageDTO<>(
                     pair,
-                    "Node already paired"
+                    ""
             );
 
             if(node.getSink() == null) {
@@ -68,6 +68,7 @@ public class PairingServiceImpl implements PairingService {
 
                 log.info("Node "+pair.getNodeId()+" paired with Sink "+pair.getSinkId()+" for Sector "+pair.getSectorId());
             }
+            else throw new IllegalArgumentException("Node already paired");
         }
         return result;
     }

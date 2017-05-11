@@ -2,13 +2,12 @@ package com.erbal.domain;
 
 import org.springframework.data.annotation.*;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public abstract class AuditEntity<ID extends Serializable> implements Serializable, Cloneable {
+public abstract class AuditEntity {
 
     @Id
-    private ID id;
+    private String id;
     @Version
     private Long version;
     @CreatedDate

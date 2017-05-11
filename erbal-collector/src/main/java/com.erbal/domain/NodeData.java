@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import java.io.Serializable;
 
 @Data
-public class NodeData implements Serializable, Cloneable {
+public class NodeData {
 
   @Field(SensorsDataParams.NODE_ID)
   private String nodeId;

@@ -31,42 +31,6 @@ public class SinkDataController {
     }
 
     @RequestMapping(
-            value = "/dummy",
-            method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    public SinkData getDummy() {
-
-        List<NodeData> nodeDataList = new ArrayList<>();
-
-        //air sample
-        nodeDataList.add(new NodeData(
-                "12345",
-                "20/01/2017 03:00",
-                123,
-                new AirSampleData(
-                        20,
-                        21,
-                        22,
-                        23)
-        ));
-
-        //soil sample
-        nodeDataList.add(new NodeData(
-                "54321",
-                "20/01/2017 3:15",
-                321,
-                new SoilSampleData(
-                        30,
-                        35
-                )
-        ));
-
-        return new SinkData(
-                "123456789",
-                nodeDataList);
-    }
-
-    @RequestMapping(
             value = "/collect",
             method = RequestMethod.POST,
             consumes = {"application/json"}

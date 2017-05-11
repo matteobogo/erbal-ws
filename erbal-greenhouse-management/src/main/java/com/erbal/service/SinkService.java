@@ -12,4 +12,5 @@ public interface SinkService extends CrudService<Sink> {
     List<SinkPreview> findAllSinkPreview(String userId);
     MessageDTO<RegisterSink> register(RegisterSink registerSink);
     MessageDTO<RegisterSink> unregister(RegisterSink registerSink);
+    List<SinkTable> findAllSinkWithNodesByUserId(String userId);
 }

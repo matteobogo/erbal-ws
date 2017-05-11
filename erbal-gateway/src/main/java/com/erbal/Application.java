@@ -21,19 +21,19 @@ public class Application {
         return "redirect:/index.html";
     }
 
-    /* CORS */
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/erbal-collector/**").allowedOrigins("*");
-                registry.addMapping("/erbal-greenhouse-management/**").allowedOrigins("*");
-                registry.addMapping("/erbal-notifier/**").allowedOrigins("*");
-            }
-        };
-    }
+//    /* CORS */
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurerAdapter() {
+//
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/erbal-collector/**").allowedOrigins("*");
+//                registry.addMapping("/erbal-greenhouse-management/**").allowedOrigins("*");
+//                registry.addMapping("/erbal-notifier/**").allowedOrigins("*");
+//            }
+//        };
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

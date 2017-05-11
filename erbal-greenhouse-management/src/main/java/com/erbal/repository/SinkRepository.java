@@ -12,6 +12,4 @@ public interface SinkRepository extends MongoRepository<Sink,String> {
 
     Optional<Sink> findBySinkId(String sinkId);
     List<Sink> findAllByUserId(String userId);
-
-    //TODO query
 }

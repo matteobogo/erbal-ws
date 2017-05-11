@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.erbal.repository.SinkRepository;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -106,7 +105,7 @@ public class SinkServiceImpl implements SinkService {
         if(sink.isPresent()) {
 
             List<Node> nodes = nodeRepository.findAllBySink(sink.get());
-            sinkTable = new SinkTable(sinkId,nodes);
+            sinkTable = new SinkTable(sinkId,sink.get().getGreenhouseName(),nodes);
         }
         return sinkTable;
     }
@@ -179,5 +178,21 @@ public class SinkServiceImpl implements SinkService {
             }
         }
         return messageDTO;
+    }
+
+    @Override
+    public List<SinkTable> findAllSinkWithNodesByUserId(String userId) {
+
+        List<SinkTable> sinkTables = new ArrayList<>();
+
+        //obtain all sinks from userId
+        List<Sink> sinkList = sinkRepository.findAllByUserId(userId);
+
+        sinkList.stream()
+                .forEach(s -> {
+                    List<Node> nodeList = nodeRepository.findAllBySink(s);
+                    sinkTables.add(new SinkTable(s.getSinkId(),s.getGreenhouseName(),nodeList));
+                });
+        return sinkTables;
     }
 }

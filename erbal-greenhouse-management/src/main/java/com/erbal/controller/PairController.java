@@ -7,6 +7,7 @@ import com.erbal.service.PairingService;
 import com.erbal.service.SinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -27,18 +28,29 @@ public class PairController extends ExceptionHandlingController {
     this.sinkService = sinkService;
   }
 
-  @RequestMapping(
-          value = "/pair",
-          method = RequestMethod.POST,
-          consumes = {"application/json"}
-  )
-  @ResponseBody
-  @ResponseStatus(HttpStatus.CREATED)
-  public MessageDTO<Pair> pair(
-          @RequestBody @Valid Pair pairDTO) {
-
-    return pairingService.pair(pairDTO);
-  }
+//  @RequestMapping(
+//          value = "/pair",
+//          method = RequestMethod.POST,
+//          consumes = {"application/json"}
+//  )
+//  @ResponseBody
+//  @ResponseStatus(HttpStatus.CREATED)
+//  public ResponseEntity<MessageDTO<Pair>> pair(
+//          @RequestBody @Valid Pair pairDTO) {
+//
+//    int status;
+//
+//    try {
+//
+//      return new ResponseEntity<MessageDTO<Pair>>(pairingService.pair(pairDTO), HttpStatus.CREATED);
+//
+//    }catch(IllegalArgumentException e) {
+//
+//
+//    }
+//
+//    return new ResponseEntity<MessageDTO<Pair>>(pairingService.pair(pairDTO), status);
+//  }
 
   @RequestMapping(
           value = "/unpair",
@@ -51,21 +63,6 @@ public class PairController extends ExceptionHandlingController {
           @RequestBody @Valid Pair pairDTO) {
 
     return pairingService.unpair(pairDTO);
-  }
-
-  @RequestMapping(
-          value = "pair/dummy",
-          method = RequestMethod.GET
-  )
-  @ResponseBody
-  @ResponseStatus(HttpStatus.OK)
-  public Pair pairDummy() {
-
-    return new Pair(
-            "123456789",
-            "1122334455",
-            "A"
-    );
   }
 
   @RequestMapping(
