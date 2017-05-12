@@ -7,18 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4bfeff5-f75e-4a8b-92ed-43eb99c5e402" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyRegisteredException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyUnpairedException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyUnregisteredException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/ExceptionHandlingController.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/ExceptionHandlingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/PairController.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/PairController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/SinkController.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/SinkController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyPairedException.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyPairedException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingService.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingServiceImpl.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/SinkService.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/SinkService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/SinkServiceImpl.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/SinkServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java" afterPath="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java" />
     </list>
     <ignored path="erbal-ws.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -130,17 +120,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AlreadyRegisteredException.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyRegisteredException.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ExceptionHandlingController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ExceptionHandlingController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/ExceptionHandlingController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="870">
@@ -150,11 +130,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AlreadyUnregisteredException.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyUnregisteredException.java">
+          <file leaf-file-name="NodeServiceImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/NodeServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <state relative-caret-position="85">
+                  <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -237,7 +227,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/repository/SinkRepository.java" />
-        <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java" />
         <option value="$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/domain/shared/Node.java" />
         <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Pair.java" />
         <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/DataFormatException.java" />
@@ -287,6 +276,7 @@
         <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingServiceImpl.java" />
         <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/PairController.java" />
         <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/ExceptionHandlingController.java" />
+        <option value="$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java" />
       </list>
     </option>
   </component>
@@ -1959,7 +1949,7 @@
       <workItem from="1494544732498" duration="1869000" />
       <workItem from="1494547525896" duration="604000" />
       <workItem from="1494612679390" duration="4275000" />
-      <workItem from="1494617003438" duration="9188000" />
+      <workItem from="1494617003438" duration="9306000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bug intellij">
       <created>1489697763465</created>
@@ -2262,7 +2252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494625304632</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="added exception handlers for register/unregister/unpairing">
+      <created>1494626617937</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1494626617937</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2274,7 +2271,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="406737000" />
+    <option name="totallyTimeSpent" value="406855000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2410,7 +2407,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixes to unknown problem eureka -&gt; collector service" />
     <MESSAGE value="need to fix port change of collector service" />
     <MESSAGE value="bug fix collector due to folders structure" />
     <MESSAGE value="changed hostname from localhost to borgo.ddns.net in yaml of config server" />
@@ -2435,7 +2431,8 @@
     <MESSAGE value="started erbal-web&#10;resolved issue on itsme already paired" />
     <MESSAGE value="added oauth sso erbal-webclient -&gt; erbal-uaa&#10;preconfigure greenhouse, temp disabled" />
     <MESSAGE value="disabled oauth on greenhouse&#10;resolved issue sinkpreview" />
-    <option name="LAST_COMMIT_MESSAGE" value="disabled oauth on greenhouse&#10;resolved issue sinkpreview" />
+    <MESSAGE value="added exception handlers for register/unregister/unpairing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exception handlers for register/unregister/unpairing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2452,22 +2449,6 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/config/WebSocketConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/erbal-collector/src/main/java/com.erbal/controller/SinkDataController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -2867,6 +2848,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="78" column="3" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/NodeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding />
         </state>
       </provider>

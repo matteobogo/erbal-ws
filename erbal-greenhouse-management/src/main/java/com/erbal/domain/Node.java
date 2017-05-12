@@ -33,8 +33,6 @@ public class Node extends BaseEntity {
     @Field(GreenhouseManagementParams.NODE_TYPE)
     private String type;
 
-    @NotNull(message = "Sector is compulsory")
-    @NotBlank(message = "Sector is compulsory")
     @Field(GreenhouseManagementParams.NODE_SECTOR)
     private String sectorId;
 
