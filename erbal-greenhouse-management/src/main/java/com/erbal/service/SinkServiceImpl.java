@@ -121,9 +121,15 @@ public class SinkServiceImpl implements SinkService {
     @Override
     public List<SinkPreview> findAllSinkPreview(String userId) {
 
-        //TODO prendi dal db solo sinkId e nomeSerra (vedi query su repository)
+        List<Sink> sinkList = sinkRepository.findAllByUserId(userId);
+        List<SinkPreview> sinkPreviews = new ArrayList<>();
 
-        return null;
+        if(!sinkList.isEmpty()) {
+
+            sinkList.forEach( s -> sinkPreviews.add(new SinkPreview(s.getSinkId(),s.getGreenhouseName())));
+        }
+
+        return sinkPreviews;
     }
 
     @Override
