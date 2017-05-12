@@ -3,6 +3,8 @@ package com.erbal.service;
 import com.erbal.domain.Node;
 import com.erbal.domain.Sink;
 import com.erbal.domain.dto.*;
+import com.erbal.exception.AlreadyRegisteredException;
+import com.erbal.exception.AlreadyUnregisteredException;
 import com.erbal.repository.NodeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.erbal.repository.SinkRepository;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -133,36 +136,11 @@ public class SinkServiceImpl implements SinkService {
     }
 
     @Override
-    public MessageDTO<RegisterSink> register(RegisterSink registerSink) {
+    public MessageDTO<RegisterSink> register(RegisterSink registerSink)
+            throws AlreadyRegisteredException, EntityNotFoundException {
 
-        MessageDTO<RegisterSink> messageDTO = new MessageDTO<>(registerSink,"Sink not found");
-        Optional<Sink> sinkExist = sinkRepository.findBySinkId(registerSink.getSinkId());
-        if(sinkExist.isPresent()) {
+        MessageDTO<RegisterSink> result;
 
-            Sink sink = sinkExist.get();
-            //is it already bound ?
-            if(!sink.getUserId().equals("")) {
-
-                messageDTO.setDescription("Sink is already registered");
-            }
-            else {
-
-                sink.setUserId(registerSink.getUserId());
-                sink.setGreenhouseName(registerSink.getGreenhouseName());
-                sinkRepository.save(sink);
-
-                log.info("Sink "+sink.getSinkId()+" registered with ClientID "+sink.getUserId());
-
-                messageDTO.setDescription("Sink registered successfully");
-            }
-        }
-        return messageDTO;
-    }
-
-    @Override
-    public MessageDTO<RegisterSink> unregister(RegisterSink registerSink) {
-
-        MessageDTO<RegisterSink> messageDTO = new MessageDTO<>(registerSink,"Sink not found");
         Optional<Sink> sinkExist = sinkRepository.findBySinkId(registerSink.getSinkId());
         if(sinkExist.isPresent()) {
 
@@ -170,20 +148,49 @@ public class SinkServiceImpl implements SinkService {
             //is it already bound ?
             if(sink.getUserId().equals("")) {
 
-                messageDTO.setDescription("Sink is already unbounded");
+                sink.setUserId(registerSink.getUserId());
+                sink.setGreenhouseName(registerSink.getGreenhouseName());
+
+                sinkRepository.save(sink);
+
+                result = new MessageDTO<>(registerSink,"Sink registered successfully");
+
+                log.info("Sink "+sink.getSinkId()+" registered with ClientID "+sink.getUserId());
             }
-            else {
+            else throw new AlreadyRegisteredException();
+        }
+        else throw new EntityNotFoundException();
+
+        return result;
+    }
+
+    @Override
+    public MessageDTO<RegisterSink> unregister(RegisterSink registerSink)
+            throws AlreadyUnregisteredException, EntityNotFoundException {
+
+        MessageDTO<RegisterSink> result;
+
+        Optional<Sink> sinkExist = sinkRepository.findBySinkId(registerSink.getSinkId());
+        if(sinkExist.isPresent()) {
+
+            Sink sink = sinkExist.get();
+            //is it already bound ?
+            if(sink.getUserId().equals("")) {
 
                 sink.setUserId("");
                 sink.setGreenhouseName("");
+
                 sinkRepository.save(sink);
 
-                log.info("Sink "+sink.getSinkId()+" unregistered from ClientID "+sink.getUserId());
+                result = new MessageDTO<>(registerSink,"Sink unregistered successfully");
 
-                messageDTO.setDescription("Sink unregistered successfully");
+                log.info("Sink "+sink.getSinkId()+" unregistered from ClientID "+sink.getUserId());
             }
+            else throw new AlreadyUnregisteredException();
         }
-        return messageDTO;
+        else throw new EntityNotFoundException();
+
+        return result;
     }
 
     @Override
@@ -194,8 +201,7 @@ public class SinkServiceImpl implements SinkService {
         //obtain all sinks from userId
         List<Sink> sinkList = sinkRepository.findAllByUserId(userId);
 
-        sinkList.stream()
-                .forEach(s -> {
+        sinkList.forEach(s -> {
                     List<Node> nodeList = nodeRepository.findAllBySink(s);
                     sinkTables.add(new SinkTable(s.getSinkId(),s.getGreenhouseName(),nodeList));
                 });

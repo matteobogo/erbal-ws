@@ -1,6 +1,9 @@
 package com.erbal.controller;
 
 import com.erbal.exception.AlreadyPairedException;
+import com.erbal.exception.AlreadyRegisteredException;
+import com.erbal.exception.AlreadyUnregisteredException;
+import com.netflix.ribbon.proxy.annotation.Http;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -26,15 +29,31 @@ public class ExceptionHandlingController {
 
   @ResponseStatus(
           value = HttpStatus.BAD_REQUEST,
+          reason = "Node is already registered"
+  )
+  @ExceptionHandler(AlreadyRegisteredException.class)
+  public void alreadyRegisteredException() {}
+
+  @ResponseStatus(
+          value = HttpStatus.BAD_REQUEST,
+          reason = "Sink is already unregistered"
+  )
+  @ExceptionHandler(AlreadyUnregisteredException.class)
+  public void alreadyUnregisteredException() {}
+
+  @ResponseStatus(
+          value = HttpStatus.BAD_REQUEST,
           reason = "Data format is wrong"
   )
   @ExceptionHandler(MethodArgumentNotValidException.class)
   public void dataFormatException() {}
 
-
-
-
-
+  @ResponseStatus(
+          value = HttpStatus.NOT_FOUND,
+          reason = "Entity Not Found"
+  )
+  @ExceptionHandler(EntityNotFoundException.class)    //404
+  public void notFound() {}
 
   @ResponseStatus(
           value = HttpStatus.CONFLICT,
@@ -48,13 +67,6 @@ public class ExceptionHandlingController {
 //  )
 //  @ExceptionHandler(IllegalArgumentException.class)   //400
 //  public void badRequest() {}
-
-  @ResponseStatus(
-          value = HttpStatus.NOT_FOUND,
-          reason = "Document Not Found"
-  )
-  @ExceptionHandler(EntityNotFoundException.class)    //404
-  public void notFound() {}
 
   @ResponseStatus(
           value = HttpStatus.INTERNAL_SERVER_ERROR,

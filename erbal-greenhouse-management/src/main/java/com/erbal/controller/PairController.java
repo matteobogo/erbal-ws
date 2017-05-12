@@ -4,6 +4,7 @@ import com.erbal.domain.Pair;
 import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.SinkTable;
 import com.erbal.exception.AlreadyPairedException;
+import com.erbal.exception.AlreadyUnpairedException;
 import com.erbal.service.PairingService;
 import com.erbal.service.SinkService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,7 @@ public class PairController extends ExceptionHandlingController {
   @ResponseBody
   @ResponseStatus(HttpStatus.CREATED)
   public MessageDTO<Pair> unpair(
-          @RequestBody @Valid Pair pairDTO) {
+          @RequestBody @Valid Pair pairDTO) throws AlreadyUnpairedException {
 
     return pairingService.unpair(pairDTO);
   }

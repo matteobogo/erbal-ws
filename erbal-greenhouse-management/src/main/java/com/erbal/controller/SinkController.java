@@ -5,6 +5,8 @@ import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.RegisterSink;
 import com.erbal.domain.dto.SinkPreview;
 import com.erbal.domain.dto.SinkTable;
+import com.erbal.exception.AlreadyRegisteredException;
+import com.erbal.exception.AlreadyUnregisteredException;
 import com.erbal.service.SinkServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -115,7 +117,7 @@ public class SinkController extends ExceptionHandlingController {
   @ResponseBody
   @ResponseStatus(HttpStatus.OK)
   public MessageDTO<RegisterSink> register(
-          @RequestBody @Valid RegisterSink registerSink) {
+          @RequestBody @Valid RegisterSink registerSink) throws AlreadyRegisteredException {
 
     return sinkService.register(registerSink);
   }
@@ -126,7 +128,7 @@ public class SinkController extends ExceptionHandlingController {
           consumes = {"application/json"}
   )
   public MessageDTO<RegisterSink> unregister(
-          @RequestBody @Valid RegisterSink registerSink) {
+          @RequestBody @Valid RegisterSink registerSink) throws AlreadyUnregisteredException {
 
     return sinkService.unregister(registerSink);
   }
