@@ -37,6 +37,9 @@ public class NotificationServiceImpl implements NotificationService {
 
         if(sinkExist.getEntity() != null && nodeExist.getEntity() != null) {
 
+            //already paired ?
+            if(nodeExist.getEntity().getSink() != null) return;
+
             //populate itsMeMessage with GreenHouse name
             itsMeMessage.setGreenHouseName(sinkExist.getEntity().getGreenhouseName());
 

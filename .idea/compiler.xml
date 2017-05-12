@@ -19,6 +19,7 @@
         <module name="erbal-notifier" />
         <module name="erbal-retriever" />
         <module name="erbal-uaa" />
+        <module name="erbal-web" />
         <module name="erbalcore" />
         <module name="monitoring" />
       </profile>
