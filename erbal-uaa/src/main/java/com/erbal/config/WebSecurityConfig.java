@@ -22,27 +22,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Autowired
   private CurrentUserDetailsService userDetailsService;
 
-//  @Override
-//  protected void configure(HttpSecurity http) throws Exception {
-//
-//    http.
-//            authorizeRequests()
-//            .antMatchers("/").permitAll()
-//            .antMatchers("/login").permitAll()
-//            .antMatchers("/registration").permitAll()
-//            .antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
-//            .authenticated().and().csrf().disable().formLogin()
-//            .loginPage("/login").failureUrl("/login?error=true")
-//            .defaultSuccessUrl("/admin/home")
-//            .usernameParameter("email")
-//            .passwordParameter("password")
-//            .and().logout()
-//            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//            .logoutSuccessUrl("/").and().exceptionHandling()
-//            .accessDeniedPage("/access-denied");
-//  }
-//}
-
   @Override
   protected void configure(HttpSecurity http) throws Exception {
 
@@ -56,13 +35,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/resources/**").permitAll()
             .antMatchers("/oauth/**").authenticated()
             .antMatchers("/j_spring_security_check").anonymous()
-            .antMatchers("/login/**").anonymous()
+            .antMatchers("/login/**").permitAll()
             .antMatchers("/security-management/**").hasAuthority("ADMIN")
             .anyRequest().authenticated()
             .and()
             .formLogin()
             .loginPage("/login")
-            .defaultSuccessUrl("/home", true)
+            //.defaultSuccessUrl("/",true)
             .usernameParameter("email")
             .passwordParameter("password")
             .and()
@@ -77,19 +56,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //            .permitAll();
   }
 
-  /* Another Security Configuration with HTTP BasicAuth */
-  @Configuration
-  @Order(1)
-  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
-
-    public void configure(HttpSecurity httpSecurity) throws Exception {
-
-      httpSecurity
-              .antMatcher("/security-management/**")
-              .csrf().disable()
-              .httpBasic();
-    }
-  }
+//  /* Another Security Configuration with HTTP BasicAuth */
+//  @Configuration
+//  @Order(1)
+//  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
+//
+//    public void configure(HttpSecurity httpSecurity) throws Exception {
+//
+//      httpSecurity
+//              .antMatcher("/security-management/**")
+//              .csrf().disable()
+//              .httpBasic();
+//    }
+//  }
 
   @Override
   public void configure(WebSecurity web) throws Exception {

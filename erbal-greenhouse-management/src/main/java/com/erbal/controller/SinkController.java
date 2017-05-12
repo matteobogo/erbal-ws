@@ -8,12 +8,14 @@ import com.erbal.domain.dto.SinkTable;
 import com.erbal.service.SinkServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+//@PreAuthorize("#oauth2.hasScope('server')")
 @RequestMapping(value = "/sinks")
 public class SinkController extends ExceptionHandlingController {
 

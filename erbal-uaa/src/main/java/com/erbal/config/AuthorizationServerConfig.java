@@ -1,6 +1,8 @@
 package com.erbal.config;
 
 import com.erbal.service.CurrentUserDetailsService;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,8 +14,10 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 
-//@Configuration
-//@EnableAuthorizationServer
+import java.util.List;
+
+@Configuration
+@EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
   private TokenStore tokenStore = new InMemoryTokenStore(); //TODO TokenStore in DB ?
@@ -29,21 +33,41 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     // TODO persist clients details ?
 
+//    clients.inMemory()
+//            .withClient("erbal-collector")
+//            .secret("erbal-collector")
+//            .authorizedGrantTypes("client_credentials", "refresh_token")
+//            .scopes("server")
+//    .and()
+//            .withClient("erbal-greenhouse-management")
+//            .secret("erbal-greenhouse-management")
+//            .authorizedGrantTypes("client_credentials", "refresh_token")
+//            .scopes("server")
+//    .and()
+//            .withClient("erbal-notifier")
+//            .secret("erbal-notifier")
+//            .authorizedGrantTypes("client_credentials", "refresh_token")
+//            .scopes("server");
+
     clients.inMemory()
-            .withClient("erbal-collector")
-            .secret("erbal-collector")
-            .authorizedGrantTypes("client_credentials", "refresh_token")
-            .scopes("server")
-    .and()
-            .withClient("erbal-greenhouse-management")
-            .secret("erbal-greenhouse-management")
-            .authorizedGrantTypes("client_credentials", "refresh_token")
-            .scopes("server")
-    .and()
-            .withClient("erbal-notifier")
-            .secret("erbal-notifier")
-            .authorizedGrantTypes("client_credentials", "refresh_token")
-            .scopes("server");
+              .withClient("erbal-webclient")
+              .secret("erbal-webclient")
+              .resourceIds("erbal-uaa")
+              .scopes("read,write")
+              .authorizedGrantTypes("authorization_code","password","refresh_token")
+              //.redirectUris("http://borgo.ddns.net:8080/erbal-webclient/")
+              .authorities("ROLE_CLIENT")
+              .accessTokenValiditySeconds(Integer.MAX_VALUE)
+              .refreshTokenValiditySeconds(Integer.MAX_VALUE)
+              .additionalInformation("")
+              .autoApprove(true)
+
+              .and()
+              .withClient("erbal-greenhouse-management")
+              .secret("erbal-greenhouse-management")
+              .authorizedGrantTypes("client_credentials", "refresh_token")
+              .scopes("server");
+
   }
 
   @Override
