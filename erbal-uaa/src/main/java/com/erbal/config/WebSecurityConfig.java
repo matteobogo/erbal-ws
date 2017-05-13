@@ -20,21 +20,31 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
 @Configuration
-@EnableWebSecurity
+@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Autowired
   private CurrentUserDetailsService userDetailsService;
 
-  @Bean
   @Override
-  public AuthenticationManager authenticationManagerBean() throws Exception {
-    return super.authenticationManagerBean();
-  }
-
-  @Bean
-  public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
+  protected void configure(HttpSecurity http) throws Exception {
+    http
+            .headers().disable()
+            .csrf().disable()
+            .antMatcher("/**")
+            .authorizeRequests()
+            .antMatchers("/login").permitAll()
+            .antMatchers("/oauth/**").authenticated()
+            .anyRequest().authenticated()
+            .and()
+            .formLogin()
+            .loginPage("/login").permitAll()
+            .loginProcessingUrl("/login").permitAll()
+            .and()
+            .logout()
+            .logoutUrl("/logout")
+            .deleteCookies("JSESSIONID")
+            .permitAll();
   }
 
   @Override
@@ -45,20 +55,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .passwordEncoder(passwordEncoder());
   }
 
-  @Override
-  protected void configure(HttpSecurity http) throws Exception {
-
-    http
-            .authorizeRequests().anyRequest().authenticated()
-            .and()
-            .csrf().disable();
+  @Bean
+  public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
   }
 
   @Override
   public void configure(WebSecurity web) throws Exception {
     web
             .ignoring()
-            .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
+            .antMatchers("/resources/**", "/css/**", "/js/**", "/images/**");
   }
 
 

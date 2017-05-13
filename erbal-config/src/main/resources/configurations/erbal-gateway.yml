@@ -55,5 +55,10 @@ zuul:
 
 security:
   oauth2:
+    client:
+      access-token-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/token
+      client-id: erbal-gateway
+      client-secret: erbal-gateway
+      user-authorization-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/authorize
     resource:
       user-info-uri: http://borgo.ddns.net:9090/erbal-uaa/user/current

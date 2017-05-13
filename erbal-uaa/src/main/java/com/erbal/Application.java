@@ -45,17 +45,8 @@ import java.security.Principal;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@Controller
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@EnableResourceServer
 public class Application {
-
-  //user-info-endpoint
-  @RequestMapping("/user/current")
-  @ResponseBody
-  public Principal user(Principal principal) {
-    return principal;
-  }
 
   //settings views to url
   @Configuration
