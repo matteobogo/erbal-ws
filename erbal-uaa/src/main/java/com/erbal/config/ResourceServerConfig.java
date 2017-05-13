@@ -10,19 +10,11 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-  @Override
-  public void configure(HttpSecurity httpSecurity) throws Exception {
-
-    httpSecurity
-            .requestMatchers().antMatchers("/resources/**", "/user/current")
-            .and().authorizeRequests()
-            .antMatchers("/resources/**").permitAll()
-            .anyRequest().authenticated();
-  }
-
-  @Override
-  public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-
-    resources.resourceId("erbal-uaa");
-  }
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+      http
+              .antMatcher("/user/current")
+              .authorizeRequests()
+              .anyRequest().authenticated();
+    }
 }

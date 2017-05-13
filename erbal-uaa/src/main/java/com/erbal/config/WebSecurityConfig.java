@@ -15,15 +15,56 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
 @Configuration
-@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 @EnableWebSecurity
+@Order(-20)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-  @Autowired
-  private CurrentUserDetailsService userDetailsService;
+  @Bean
+  @Override
+  public AuthenticationManager authenticationManagerBean() throws Exception {
+    return super.authenticationManagerBean();
+  }
+
+  @Bean
+  public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+  }
+
+  @Override
+  public void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+    auth.inMemoryAuthentication()
+            .withUser("admin").password("admin").roles("ADMIN");
+  }
+
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http
+            .formLogin().loginPage("/login").permitAll()
+            .and()
+            .authorizeRequests().anyRequest().authenticated();
+  }
+
+  @Override
+  public void configure(WebSecurity web) throws Exception {
+    web
+            .ignoring()
+            .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
+  }
+
+
+
+
+
+
+
+//  @Autowired
+//  private CurrentUserDetailsService userDetailsService;
 
 //  @Override
 //  protected void configure(HttpSecurity http) throws Exception {
@@ -60,45 +101,45 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //  }
 
   /* Another Security Configuration with HTTP BasicAuth */
-  @Configuration
-  @Order(1)
-  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
-
-    public void configure(HttpSecurity httpSecurity) throws Exception {
-
-      httpSecurity
-              .authorizeRequests().anyRequest().authenticated()
-              .and()
-              .csrf().disable();
-    }
-  }
-
-  @Override
-  public void configure(WebSecurity web) throws Exception {
-    web
-            .ignoring()
-            .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
-  }
-
-  @Override
-  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth
-//            .userDetailsService(userDetailsService)
-//            .passwordEncoder(passwordEncoder());
-            .inMemoryAuthentication()
-            .withUser("admin")
-            .password("password")
-            .roles("ADMIN");
-  }
-
-  @Bean
-  public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder();
-  }
-
-  @Override
-  @Bean
-  public AuthenticationManager authenticationManagerBean() throws Exception {
-    return super.authenticationManagerBean();
-  }
+//  @Configuration
+//  @Order(1)
+//  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
+//
+//    public void configure(HttpSecurity httpSecurity) throws Exception {
+//
+//      httpSecurity
+//              .authorizeRequests().anyRequest().authenticated()
+//              .and()
+//              .csrf().disable();
+//    }
+//  }
+//
+//  @Override
+//  public void configure(WebSecurity web) throws Exception {
+//    web
+//            .ignoring()
+//            .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
+//  }
+//
+//  @Override
+//  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//    auth
+////            .userDetailsService(userDetailsService)
+////            .passwordEncoder(passwordEncoder());
+//            .inMemoryAuthentication()
+//            .withUser("admin")
+//            .password("password")
+//            .roles("ADMIN");
+//  }
+//
+//  @Bean
+//  public PasswordEncoder passwordEncoder() {
+//    return new BCryptPasswordEncoder();
+//  }
+//
+//  @Override
+//  @Bean
+//  public AuthenticationManager authenticationManagerBean() throws Exception {
+//    return super.authenticationManagerBean();
+//  }
 }
