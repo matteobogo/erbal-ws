@@ -52,3 +52,13 @@ zuul:
         serviceId: erbal-notifier
         stripPrefix: false
         sensitiveHeaders:
+
+security:
+  oauth2:
+    client:
+      clientId: erbal-webclient
+      clientSecret: erbal-webclient
+      accessTokenUri: http://borgo.ddns.net:9090/erbal-uaa/oauth/token
+      user-authorization-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/authorize
+    resource:
+      user-info-uri: http://borgo.ddns.net:9090/erbal-uaa/user/current

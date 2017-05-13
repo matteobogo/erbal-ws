@@ -14,18 +14,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableFeignClients
 public class Application {
 
-    /* CORS */
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/websockets/**").allowedOrigins("*");
-                registry.addMapping("/topic/notifications/**").allowedOrigins("*");
-            }
-        };
-    }
+//    /* CORS */
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurerAdapter() {
+//
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/websockets/**").allowedOrigins("*");
+//                registry.addMapping("/topic/notifications/**").allowedOrigins("*");
+//            }
+//        };
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

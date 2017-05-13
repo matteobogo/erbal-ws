@@ -30,7 +30,7 @@ security:
     client:
       clientId: erbal-webclient
       clientSecret: erbal-webclient
-      accessTokenUri: http://localhost:9090/erbal-uaa/oauth/token
-      user-authorization-uri: http://localhost:9090/erbal-uaa/oauth/authorize
+      accessTokenUri: http://borgo.ddns.net:9090/erbal-uaa/oauth/token
+      user-authorization-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/authorize
     resource:
-      user-info-uri: http://localhost:9090/erbal-uaa/user/current
+      user-info-uri: http://borgo.ddns.net:9090/erbal-uaa/user/current

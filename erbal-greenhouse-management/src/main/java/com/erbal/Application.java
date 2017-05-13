@@ -23,19 +23,19 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableOAuth2Client
 public class Application {
 
-    /* CORS */
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/sinks/**").allowedOrigins("*");
-                registry.addMapping("/nodes/**").allowedOrigins("*");
-                registry.addMapping("/pairing/**").allowedOrigins("*");
-            }
-        };
-    }
+//    /* CORS */
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurerAdapter() {
+//
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/sinks/**").allowedOrigins("*");
+//                registry.addMapping("/nodes/**").allowedOrigins("*");
+//                registry.addMapping("/pairing/**").allowedOrigins("*");
+//            }
+//        };
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
