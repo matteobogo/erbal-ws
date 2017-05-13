@@ -50,17 +50,24 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 //            .scopes("server");
 
     clients.inMemory()
-              .withClient("erbal-webclient")
-              .secret("erbal-webclient")
-              .resourceIds("erbal-uaa")
-              .scopes("read,write")
-              .authorizedGrantTypes("authorization_code","password","refresh_token")
-              //.redirectUris("http://borgo.ddns.net:8080/")
-              .authorities("ROLE_CLIENT")
-              .accessTokenValiditySeconds(Integer.MAX_VALUE)
-              .refreshTokenValiditySeconds(Integer.MAX_VALUE)
-              .additionalInformation("")
-              .autoApprove(true)
+
+            //erbal-webclient
+            .withClient("browser")
+            .authorizedGrantTypes("refresh_token", "password")
+            .scopes("ui")
+
+
+//              .withClient("erbal-webclient")
+//              .secret("erbal-webclient")
+//              .resourceIds("erbal-uaa")
+//              .scopes("read,write")
+//              .authorizedGrantTypes("authorization_code","password","refresh_token")
+//              //.redirectUris("http://borgo.ddns.net:8080/")
+//              .authorities("ROLE_CLIENT")
+//              .accessTokenValiditySeconds(Integer.MAX_VALUE)
+//              .refreshTokenValiditySeconds(Integer.MAX_VALUE)
+//              .additionalInformation("")
+//              .autoApprove(true)
 
               .and()
               .withClient("erbal-greenhouse-management")

@@ -25,53 +25,53 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Autowired
   private CurrentUserDetailsService userDetailsService;
 
-  @Override
-  protected void configure(HttpSecurity http) throws Exception {
-
-    http
-            .authorizeRequests()
-            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-            .antMatchers("/css/**").permitAll()
-            .antMatchers("/images/**").permitAll()
-            .antMatchers("/js/**").permitAll()
-            .antMatchers("/resources/**").permitAll()
-            .antMatchers("/oauth/**").authenticated()
-            .antMatchers("/j_spring_security_check").anonymous()
-            .antMatchers("/login/**").permitAll()
-            .antMatchers("/security-management/**").hasAuthority("ADMIN")
-            .anyRequest().authenticated()
-            .and()
-            .formLogin()
-            .loginPage("/login")
-            //.defaultSuccessUrl("/",true)
-            .usernameParameter("email")
-            .passwordParameter("password")
-            .and()
-            .logout()
-            .logoutUrl("/logout")
-            .logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler())
-            .and()
-            .exceptionHandling()
-            .accessDeniedPage("/access-denied")
-            .and().csrf().disable();
+//  @Override
+//  protected void configure(HttpSecurity http) throws Exception {
 //
-//            .deleteCookies("JSESSIONID")
-//            .permitAll();
-  }
-
-//  /* Another Security Configuration with HTTP BasicAuth */
-//  @Configuration
-//  @Order(1)
-//  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
-//
-//    public void configure(HttpSecurity httpSecurity) throws Exception {
-//
-//      httpSecurity
-//              .antMatcher("/security-management/**")
-//              .csrf().disable()
-//              .httpBasic();
-//    }
+//    http
+//            .authorizeRequests()
+//            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+//            .antMatchers("/css/**").permitAll()
+//            .antMatchers("/images/**").permitAll()
+//            .antMatchers("/js/**").permitAll()
+//            .antMatchers("/resources/**").permitAll()
+//            .antMatchers("/oauth/**").authenticated()
+//            .antMatchers("/j_spring_security_check").anonymous()
+//            .antMatchers("/login/**").permitAll()
+//            .antMatchers("/security-management/**").hasAuthority("ADMIN")
+//            .anyRequest().authenticated()
+//            .and()
+//            .formLogin()
+//            .loginPage("/login")
+//            //.defaultSuccessUrl("/",true)
+//            .usernameParameter("email")
+//            .passwordParameter("password")
+//            .and()
+//            .logout()
+//            .logoutUrl("/logout")
+//            .logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler())
+//            .and()
+//            .exceptionHandling()
+//            .accessDeniedPage("/access-denied")
+//            .and().csrf().disable();
+////
+////            .deleteCookies("JSESSIONID")
+////            .permitAll();
 //  }
+
+  /* Another Security Configuration with HTTP BasicAuth */
+  @Configuration
+  @Order(1)
+  public static class WebSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
+
+    public void configure(HttpSecurity httpSecurity) throws Exception {
+
+      httpSecurity
+              .authorizeRequests().anyRequest().authenticated()
+              .and()
+              .csrf().disable();
+    }
+  }
 
   @Override
   public void configure(WebSecurity web) throws Exception {
@@ -83,12 +83,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     auth
-            .userDetailsService(userDetailsService)
-            .passwordEncoder(passwordEncoder());
-//            .inMemoryAuthentication()
-//            .withUser("admin")
-//            .password("password")
-//            .roles("ADMIN");
+//            .userDetailsService(userDetailsService)
+//            .passwordEncoder(passwordEncoder());
+            .inMemoryAuthentication()
+            .withUser("admin")
+            .password("password")
+            .roles("ADMIN");
   }
 
   @Bean
