@@ -46,7 +46,8 @@ import java.security.Principal;
 @SpringBootApplication
 @EnableDiscoveryClient
 @Controller
-@SessionAttributes("authorizationRequest")
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableResourceServer
 public class Application {
 
   //user-info-endpoint
@@ -65,7 +66,6 @@ public class Application {
       registry.addViewController("/login").setViewName("login");
       registry.addViewController("/logout").setViewName("logout");
       registry.addViewController("/access-denied").setViewName("access-denied");
-      //registry.addViewController("/oauth/confirm_access").setViewName("authorize");
     }
   }
 

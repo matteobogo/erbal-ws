@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8"/>
+    <title>erBal Login</title>
 
+    <!-- Libraries -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/home.js"></script>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/flower-shower.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 
 </head>
 <body>
+<div id="main-container">
+        <div class="homepage-hero-module">
+            <div class="video-container">
 
+                <!-- Login Page -->
+                <div class="login-page">
+                    <div class="form">
+                        <form class="register-form">
+                            <input type="text" placeholder="name"/>
+                            <input type="password" placeholder="password"/>
+                            <input type="text" placeholder="email address"/>
+                            <button>create</button>
+                            <p class="message">Already registered? <a href="#">Sign In</a></p>
+                        </form>
+                        <form th:action="@{/login}" method="post">
+                            <input id="email-form" type="text" name="username" placeholder="email"/>
+                            <input id="password-form" type="password" name="password" placeholder="password"/>
+                            <input id="login-btn" type="submit" value="Sign In"/>
+                            <p class="message">Not registered? <a href="#">Create an account</a></p>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="filter"></div>
+                <video autoplay loop class="fillWidth">
+                    <source src="resources/Flower-Shower.mp4" type="video/mp4"/>
+                    <source src="resources/Flower-Shower.webm" type="video/webm"/>
+                </video>
+                <!--<div class="poster hidden">-->
+                <!--<img src="images/Flower-Shower.jpg" alt="">-->
+                <!--</div>-->
+            </div>
+        </div>
+</div>
 </body>
 </html>

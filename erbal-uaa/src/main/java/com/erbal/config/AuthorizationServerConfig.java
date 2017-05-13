@@ -24,41 +24,37 @@ import java.security.KeyPair;
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
+  private TokenStore tokenStore = new InMemoryTokenStore();
+
   @Autowired
   private AuthenticationManager authenticationManager;
 
   @Autowired
   private CurrentUserDetailsService userDetailsService;
 
-  @Bean
-  public JwtAccessTokenConverter jwtAccessTokenConverter() {
-    JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-    KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"), "foobar".toCharArray())
-            .getKeyPair("test");
-    converter.setKeyPair(keyPair);
-    return converter;
-  }
-
   @Override
   public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
     clients.inMemory()
 
-            //erbal-gateway (where web client is located)
             .withClient("erbal-gateway")
-            .secret("erbal-gateway")
-            .authorizedGrantTypes("authorization_code", "refresh_token")
-            .scopes("openid");
+            .authorizedGrantTypes("refresh_token", "password")
+            .scopes("ui");
   }
 
   @Override
   public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-    endpoints.authenticationManager(authenticationManager).accessTokenConverter(jwtAccessTokenConverter());
+    endpoints
+            .tokenStore(tokenStore)
+            .authenticationManager(authenticationManager)
+            .userDetailsService(userDetailsService);
   }
 
   @Override
   public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-    oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
+    oauthServer
+            .tokenKeyAccess("permitAll()")
+            .checkTokenAccess("isAuthenticated()");
   }
 }
 

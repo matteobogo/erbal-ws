@@ -21,8 +21,10 @@ import org.springframework.security.web.authentication.logout.HttpStatusReturnin
 
 @Configuration
 @EnableWebSecurity
-@Order(-20)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+  @Autowired
+  private CurrentUserDetailsService userDetailsService;
 
   @Bean
   @Override
@@ -38,16 +40,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   public void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-    auth.inMemoryAuthentication()
-            .withUser("admin").password("admin").roles("ADMIN");
+    auth
+            .userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
   }
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
+
     http
-            .formLogin().loginPage("/login").permitAll()
+            .authorizeRequests().anyRequest().authenticated()
             .and()
-            .authorizeRequests().anyRequest().authenticated();
+            .csrf().disable();
   }
 
   @Override

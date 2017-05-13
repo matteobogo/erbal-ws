@@ -29,15 +29,11 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-    user:
-      path: /user/**
-      url: http://borgo.ddns.net:9090/erbal-uaa/user/current
-#
-#    erbal-uaa:
-#        path: /erbal-uaa/**
-#        serviceId: erbal-uaa
-#        stripPrefix: false
-#        sensitiveHeaders:
+    erbal-uaa:
+        path: /erbal-uaa/**
+        serviceId: erbal-uaa
+        stripPrefix: false
+        sensitiveHeaders:
 
     erbal-collector:
         path: /erbal-collector/**
@@ -59,12 +55,5 @@ zuul:
 
 security:
   oauth2:
-    client:
-      accessTokenUri: http://borgo.ddns.net:9090/erbal-uaa/oauth/token
-      userAuthorizationUri: http://borgo.ddns.net:9090/erbal-uaa/oauth/authorize
-      clientId: erbal-gateway
-      clientSecret: erbal-gateway
     resource:
-      userInfoUri: http://borgo.ddns.net:9090/erbal-uaa/user/current
-      preferTokenInfo: false
-    sessions: ALWAYS
+      user-info-uri: http://borgo.ddns.net:9090/erbal-uaa/user/current
