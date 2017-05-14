@@ -26,7 +26,8 @@ public class Application extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/login**", "/webjars/**")
                 .permitAll()
                 .anyRequest()
-                .authenticated();
+                .authenticated()
+                .and().csrf().disable();
     }
 
     /**
