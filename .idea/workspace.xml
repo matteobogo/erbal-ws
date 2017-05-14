@@ -6,48 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4bfeff5-f75e-4a8b-92ed-43eb99c5e402" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/fonts/Pe-icon-7-stroke.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/fonts/Pe-icon-7-stroke.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/fonts/Pe-icon-7-stroke.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/OAuth2SecurityConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/asset-manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/css/light-bootstrap-dashboard.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/css/pe-icon-7-stroke.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/fonts/Pe-icon-7-stroke.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/js/bootstrap-notify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/js/bootstrap-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets/js/light-bootstrap-dashboard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/static/js/main.791b9324.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/static/js/main.791b9324.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/static/media/logo.5d5d9eef.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/ResourceController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/images/Flower-Shower.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/flower-shower.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/home.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/login.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/resources/Flower-Shower.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/resources/Flower-Shower.webm" afterPath="" />
+    <list default="true" id="a4bfeff5-f75e-4a8b-92ed-43eb99c5e402" name="Default" comment="now erbal authentication works (included redirects)&#10;api gateway with ui&#10;erbal-uaa with oauth auth_code flow + userstore in db&#10;tokens store and clients store in memory&#10;login on erbal-uaa&#10;/me endpoint on gateway of obtain principal+token">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/greenhouse.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/resources/logo_login.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/WebConfig.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_3_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_0_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_1_3_5_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_2_1_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/flower-shower.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/home.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/login.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/resources/Flower-Shower.mp4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/resources/Flower-Shower.webm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/home.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/images/Flower-Shower.jpg" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/login.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/access-denied.html" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/access-denied.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/logout.html" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/logout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml" afterPath="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-gateway/erbal-gateway.iml" afterPath="$PROJECT_DIR$/erbal-gateway/erbal-gateway.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-gateway/pom.xml" afterPath="$PROJECT_DIR$/erbal-gateway/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml" afterPath="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/Application.java" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/Application.java" afterPath="$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-uaa/erbal-uaa.iml" afterPath="$PROJECT_DIR$/erbal-uaa/erbal-uaa.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-uaa/pom.xml" afterPath="$PROJECT_DIR$/erbal-uaa/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/ResourceServerConfig.java" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/ResourceServerConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java" />
     </list>
     <ignored path="erbal-ws.iws" />
@@ -108,12 +97,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java">
+      <file leaf-file-name="erbal-gateway.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="215">
+              <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="68" lean-forward="false" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorizationServerConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="38" column="94" lean-forward="false" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +132,8 @@
       <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="66" column="40" lean-forward="false" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+            <state relative-caret-position="785">
+              <caret line="75" column="33" lean-forward="false" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,79 +141,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/UserController.java">
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="96" column="24" lean-forward="false" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CurrentUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/domain/security/CurrentUser.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/erbal-uaa/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
-                <element signature="e#1714#1715#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/Application.java">
+        <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/resources/static/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OAuth2SecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/OAuth2SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="792">
+              <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="erbal-uaa.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="27" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -214,11 +203,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -232,6 +221,9 @@
       <find>hystrix</find>
       <find>meta</find>
       <find>Cor</find>
+      <find>backgr</find>
+      <find>whit</find>
+      <find>url</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -245,16 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/erbal-notifier/pom.xml" />
-        <option value="$PROJECT_DIR$/erbal-web/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/service/NotificationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/erbal-web/src/main/java/com/erbal/Application.java" />
-        <option value="$PROJECT_DIR$/erbal-web/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-web" />
-        <option value="$PROJECT_DIR$/erbal-webclient/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/erbal-webclient/pom.xml" />
-        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/MvcConfig.java" />
         <option value="$PROJECT_DIR$/erbal-webclient/src/main/java/com/erbal/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/erbal-webclient/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-greenhouse-management.yml" />
@@ -277,7 +259,6 @@
         <option value="$PROJECT_DIR$/erbal-retriever/src/main/java/com/erbal/Application.java" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/login.html" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/login.js" />
         <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/UserController.java" />
@@ -285,17 +266,28 @@
         <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/erbal-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/OAuth2SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/ResourceController.java" />
         <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml" />
-        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/home.html" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/home.js" />
-        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/erbal-notifier/src/main/java/com/erbal/Application.java" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java" />
+        <option value="$PROJECT_DIR$/erbal-uaa/pom.xml" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/background_video.js" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/styles.css" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/login.js" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/home.js" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/login.css" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/resources/static/login.html" />
         <option value="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/Application.java" />
+        <option value="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml" />
+        <option value="$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml" />
       </list>
     </option>
   </component>
@@ -790,7 +782,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -859,40 +851,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-uaa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1250,98 +1208,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-notifier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-notifier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-notifier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-notifier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="erbal-gateway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1388,112 +1254,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-gateway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-gateway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-ws" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erbal-gateway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.791b9324.js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1674,15 +1434,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\git\erbal-ws\erbal-uaa\src\main\resources\static\css" />
+      <recent name="C:\git\erbal-ws\erbal-uaa\src\main\resources\static" />
+      <recent name="$PROJECT_DIR$/erbal-gateway/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/erbal-gateway/src/main/resources" />
+      <recent name="C:\git\erbal-ws\erbal-gateway\src\main\resources\static" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/erbal-gateway/src/main/resources/static" />
-      <recent name="C:\git\erbal-ws\erbal-gateway\src\main\java\com\erbal" />
-      <recent name="C:\git\erbal-ws\erbal-webclient" />
-      <recent name="C:\git\erbal-ws\erbal-gateway\src\main\resources\static" />
-      <recent name="$PROJECT_DIR$/erbal-gateway/src/main/resources/static/assets" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.erbal.config" />
@@ -1691,15 +1451,15 @@
       <recent name="com.erbal.domain" />
       <recent name="com.erbal.domain.dto" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\erbal-ws\erbal-uaa\src\main\resources\static\resources" />
+      <recent name="C:\git\erbal-ws\erbal-uaa\src\main\resources\static\images" />
       <recent name="$PROJECT_DIR$/erbal-gateway/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/erbal-gateway/src/main/resources" />
-      <recent name="C:\git\erbal-ws\erbal-gateway\src\main\resources\static" />
-      <recent name="C:\git\erbal-ws\erbal-uaa\src\main\resources\templates" />
-      <recent name="C:\git\erbal-ws\erbal-uaa\src\main\resources\templates\admin" />
+      <recent name="C:\git\erbal-ws\erbal-gateway\src\main\java\com\erbal" />
+      <recent name="C:\git\erbal-ws\erbal-webclient" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.erbal-uaa">
+  <component name="RunManager" selected="Spring Boot.erbal-gateway">
     <configuration default="false" name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="erbal-uaa" />
@@ -1722,6 +1482,9 @@
       <method />
     </configuration>
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/erbal-ws/erbal-webclient/static/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/erbal-ws/erbal-uaa/static/login.html">
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -2205,7 +1968,7 @@
       <envs />
       <method />
     </configuration>
-    <list size="12">
+    <list size="13">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.erbal-webclient" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.erbal-greenhouse-management" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.erbal-retriever" />
@@ -2218,12 +1981,14 @@
       <item index="9" class="java.lang.String" itemvalue="Spring Boot.erbal-monitoring" />
       <item index="10" class="java.lang.String" itemvalue="JUnit.UserControllerTest" />
       <item index="11" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="12" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
         <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserControllerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -2326,7 +2091,7 @@
       <workItem from="1494648764950" duration="23000" />
       <workItem from="1494678989588" duration="15586000" />
       <workItem from="1494695027547" duration="3535000" />
-      <workItem from="1494700507002" duration="9312000" />
+      <workItem from="1494700507002" duration="18990000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bug intellij">
       <created>1489697763465</created>
@@ -2643,7 +2408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494626733018</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="now erbal authentication works (included redirects)&#10;api gateway with ui&#10;erbal-uaa with oauth auth_code flow + userstore in db&#10;tokens store and clients store in memory&#10;login on erbal-uaa&#10;/me endpoint on gateway of obtain principal+token">
+      <created>1494710734949</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1494710734949</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2655,7 +2427,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455069000" />
+    <option name="totallyTimeSpent" value="464747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2668,7 +2440,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2683,9 +2455,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4161074" sideWeight="0.49790794" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4161074" sideWeight="0.49790794" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62351674" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6232023" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2791,7 +2563,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug fix collector due to folders structure" />
     <MESSAGE value="changed hostname from localhost to borgo.ddns.net in yaml of config server" />
     <MESSAGE value="exception handler&#10;controllers finished&#10;minor refactoring and fixes" />
     <MESSAGE value="Pair as entity with history in db&#10;general refactoring&#10;added validation" />
@@ -2816,7 +2587,8 @@
     <MESSAGE value="disabled oauth on greenhouse&#10;resolved issue sinkpreview" />
     <MESSAGE value="added exception handlers for register/unregister/unpairing" />
     <MESSAGE value="removed validation (not null) on node entity, attribute sectorId" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed validation (not null) on node entity, attribute sectorId" />
+    <MESSAGE value="now erbal authentication works (included redirects)&#10;api gateway with ui&#10;erbal-uaa with oauth auth_code flow + userstore in db&#10;tokens store and clients store in memory&#10;login on erbal-uaa&#10;/me endpoint on gateway of obtain principal+token" />
+    <option name="LAST_COMMIT_MESSAGE" value="now erbal authentication works (included redirects)&#10;api gateway with ui&#10;erbal-uaa with oauth auth_code flow + userstore in db&#10;tokens store and clients store in memory&#10;login on erbal-uaa&#10;/me endpoint on gateway of obtain principal+token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2833,65 +2605,6 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/exception/AlreadyUnpairedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/PairController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/controller/ExceptionHandlingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="78" column="3" lean-forward="false" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/NodeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/service/PairingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/domain/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/SecurityConfig.java" />
-    <entry file="file://$PROJECT_DIR$/erbal-webclient/src/main/java/com/erbal/config/CorsFilter.java" />
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/CorsFilter.java" />
     <entry file="file://$PROJECT_DIR$/erbal-greenhouse-management/src/main/java/com/erbal/config/CorsFilter.java" />
     <entry file="file://$PROJECT_DIR$/erbal-retriever/src/main/java/com/erbal/Application.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2990,22 +2703,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/resources/templates/home.html" />
-    <entry file="file://$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3046,61 +2743,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="58" column="24" lean-forward="false" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/resources/static/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3112,28 +2759,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="66" column="40" lean-forward="false" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/resources/static/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3151,16 +2780,8 @@
         <state relative-caret-position="436">
           <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3180,15 +2801,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="3" lean-forward="false" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/utils/Roles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1604">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/controller/ResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/background_video.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="1" lean-forward="false" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="3" lean-forward="false" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="96" column="24" lean-forward="false" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/resources/static/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="68" lean-forward="false" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/CorsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="792">
+          <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/AuthorizationServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="38" column="94" lean-forward="false" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/CorsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-uaa/src/main/java/com/erbal/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="75" column="33" lean-forward="false" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-gateway/src/main/java/com/erbal/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-uaa.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erbal-config/src/main/resources/configurations/erbal-gateway.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -18,3 +18,11 @@ spring:
       #password:
       database: erbal_db
       port: 27017
+
+#erbal:
+#  cors:
+#    allow-credentials: true
+#    allowed-headers: origin, content-type, accept, authorization, X-Requested-With, Access-Control-Allow-Origin, Access-Control-Allow-Headers
+#    allowed-methods: "GET, POST, OPTIONS"
+#    allowed-origins: http://borgo.ddns.net:9999
+#    max-age: 1800
