@@ -22,7 +22,6 @@
         <module>erbal-greenhouse-management</module>
         <module>erbal-notifier</module>
         <module>erbal-retriever</module>
-        <module>erbal-webclient</module>
     </modules>
 
 </project>

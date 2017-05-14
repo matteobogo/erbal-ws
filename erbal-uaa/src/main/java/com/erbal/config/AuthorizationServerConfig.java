@@ -39,7 +39,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
             .authorizedGrantTypes("refresh_token", "authorization_code", "password", "implicit")
             //.authorities("ADMIN")
             .scopes("read","write")
-            //.redirectUris("http://borgo.ddns.net:9999/home")
+            .redirectUris("http://borgo.ddns.net:9999")
             .accessTokenValiditySeconds(600)
             .refreshTokenValiditySeconds(1800)
             .autoApprove(true);

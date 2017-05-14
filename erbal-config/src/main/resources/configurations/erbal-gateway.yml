@@ -29,11 +29,16 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-    erbal-uaa:
-        path: /erbal-uaa/**
-        serviceId: erbal-uaa
-        stripPrefix: false
-        sensitiveHeaders:
+
+    user:
+      path: /user/**
+      url: http://borgo.ddns.net:9090/erbal-uaa/user/current
+
+#    erbal-uaa:
+#        path: /erbal-uaa/**
+#        serviceId: erbal-uaa
+#        stripPrefix: false
+#        sensitiveHeaders:
 
     erbal-collector:
         path: /erbal-collector/**

@@ -20,7 +20,6 @@
         <module name="erbal-retriever" />
         <module name="erbal-uaa" />
         <module name="erbal-web" />
-        <module name="erbal-webclient" />
         <module name="erbalcore" />
         <module name="monitoring" />
       </profile>

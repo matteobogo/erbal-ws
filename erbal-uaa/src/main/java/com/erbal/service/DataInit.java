@@ -46,7 +46,6 @@ public class DataInit {
       }
       admin.setFirstname("pippo");
       admin.setLastname("pippi");
-      admin.setGreenhouseName("IPASerra");
       List<String> roles = new ArrayList<>();
       roles.add(Roles.ROLE_ADMIN);
       admin.setRoles(roles);

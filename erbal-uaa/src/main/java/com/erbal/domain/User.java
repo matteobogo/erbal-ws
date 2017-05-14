@@ -39,10 +39,6 @@ public class User {
   @NotBlank(message = "Lastname is required")
   private String lastname;
 
-  @NotNull(message = "Greenhouse Name is required")
-  @NotBlank(message = "Greenhouse Name is required")
-  private String greenhouseName;
-
   @NotNull
   private Collection<String> roles;
 }
