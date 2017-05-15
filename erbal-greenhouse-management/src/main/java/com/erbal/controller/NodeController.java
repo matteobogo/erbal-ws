@@ -84,6 +84,18 @@ public class NodeController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
+          value = "/findSectorIdByNodeId/{nodeId}",
+          method = RequestMethod.GET
+  )
+  @ResponseBody
+  @ResponseStatus(HttpStatus.OK)
+  public String findSectorIdByNodeId(
+          @PathVariable("nodeId") String nodeId) {
+
+    return nodeService.findSectorIdByNodeId(nodeId);
+  }
+
+  @RequestMapping(
           value = "/delete/{nodeId}",
           method = RequestMethod.DELETE,
           consumes = {"application/json"}

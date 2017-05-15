@@ -20,6 +20,9 @@ import java.util.Collection;
 @AllArgsConstructor
 public class SinkData extends AuditEntity {
 
+    @Id
+    private String id;
+
     @Field(value = SensorsDataParams.SINK_ID)
     private String sinkId;
 

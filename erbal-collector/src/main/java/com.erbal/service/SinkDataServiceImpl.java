@@ -2,6 +2,7 @@ package com.erbal.service;
 
 import com.erbal.client.GreenhouseManagementClient;
 import com.erbal.domain.SinkData;
+import com.erbal.domain.dto.SinkNBatchDTO;
 import com.erbal.domain.shared.MessageDTO;
 import com.erbal.domain.shared.Sink;
 import com.erbal.repository.SinkDataRepository;
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class SinkDataServiceImpl implements SinkDataService {
@@ -42,5 +45,22 @@ public class SinkDataServiceImpl implements SinkDataService {
 
       log.info("Received Sink "+sinkData.getSinkId()+" batch");
     }
+  }
+
+  @Override
+  public List<SinkData> findNBatchBySinkId(String sinkId, long nBatch) {
+
+    List<SinkData> sinkDataList = sinkDataRepository.findTop100BySinkIdOrderByCreatedAt(sinkId);
+
+    return sinkDataList
+            .stream()
+            .limit(nBatch)
+            .collect(Collectors.toList());
+  }
+
+  @Override
+  public List<SinkData> findLastBatchBySinkId(String sinkId) {
+
+    return sinkDataRepository.findTop1BySinkIdOrderByCreatedAt(sinkId);
   }
 }

@@ -6,8 +6,6 @@ import java.time.LocalDateTime;
 
 public abstract class AuditEntity {
 
-    @Id
-    private String id;
     @Version
     private Long version;
     @CreatedDate

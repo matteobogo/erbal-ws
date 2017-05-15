@@ -6,8 +6,6 @@ import lombok.Data;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.io.Serializable;
-
 @Data
 public class NodeData {
 
@@ -19,6 +17,9 @@ public class NodeData {
 
   @Field(SensorsDataParams.NODE_TYPE)
   private String type;
+
+  @Field(SensorsDataParams.NODE_SECTOR_ID)
+  private String sectorId;
 
   @Field(SensorsDataParams.NODE_VOLTAGE)
   private int voltage;

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class NodeServiceImpl implements CrudService<Node> {
+public class NodeServiceImpl implements NodeService {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
@@ -105,5 +105,17 @@ public class NodeServiceImpl implements CrudService<Node> {
             log.info("Node "+serialId+" deleted successfully");
         }
         return message;
+    }
+
+    @Override
+    public String findSectorIdByNodeId(String nodeId) {
+
+        String response = "";
+
+        Optional<Node> node = nodeRepository.findByNodeId(nodeId);
+        if(node.isPresent()) {
+            response = node.get().getSectorId();
+        }
+        return response;
     }
 }

@@ -12,6 +12,7 @@ public abstract class SensorsDataParams {
     public static final String NODE_VOLTAGE = "node_voltage";
     public static final String NODE_SAMPLE = "node_sample";
     public static final String NODE_TYPE = "node_type";
+    public static final String NODE_SECTOR_ID = "sector_id";
 
     //SAMPLES
 

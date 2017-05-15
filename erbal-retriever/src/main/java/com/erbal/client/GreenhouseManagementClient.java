@@ -1,5 +1,6 @@
 package com.erbal.client;
 
+import com.erbal.domain.shared.MessageDTO;
 import com.erbal.shared.Sink;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,4 +18,18 @@ public interface GreenhouseManagementClient {
     )
     List<Sink> findAllByUserId(
             @PathVariable("userId") String userId);
+
+    @RequestMapping(
+            method = RequestMethod.GET,
+            value = "/erbal-greenhouse-management/sinks/{sinkId}")
+    MessageDTO<Sink> findSinkBySerialId(
+            @PathVariable("sinkId") String sinkId);
+
+    @RequestMapping(
+            value = "/findSectorIdByNodeId/{nodeId}",
+            method = RequestMethod.GET
+    )
+    String findSectorIdByNodeId(
+            @PathVariable("nodeId") String nodeId);
+
 }
