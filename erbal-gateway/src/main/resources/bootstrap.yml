@@ -1,4 +1,24 @@
 spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+  application:
+    name: erbal-gateway
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: admin
+
+---
+
+spring:
+  profiles: production
   application:
     name: erbal-gateway
   cloud:
@@ -6,4 +26,4 @@ spring:
       uri: http://borgo.ddns.net:8888
       fail-fast: true
       password: password
-      username: user
+      username: admin

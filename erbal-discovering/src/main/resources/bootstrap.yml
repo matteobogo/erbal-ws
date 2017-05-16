@@ -1,4 +1,24 @@
 spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+  application:
+    name: erbal-discovering
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: admin
+
+---
+
+spring:
+  profiles: production
   application:
     name: erbal-discovering
   cloud:
@@ -7,12 +27,3 @@ spring:
       fail-fast: true
       password: password
       username: admin
-
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#  client:
-#    registerWithEureka: false
-#    fetchRegistry: false
-#    server:
-#      waitTimeInMsWhenSyncEmpty: 0

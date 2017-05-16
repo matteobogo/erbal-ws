@@ -1,4 +1,24 @@
 spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
+  application:
+    name: erbal-collector
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: admin
+
+---
+
+spring:
+  profiles: production
   application:
     name: erbal-collector
   cloud:

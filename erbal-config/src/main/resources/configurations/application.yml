@@ -1,8 +1,18 @@
-# global configuration shared between micro-services fetching the config server
-
-#logging:
-#  level:
-#    org.springframework.security: INFO
+spring:
+  profiles:
+    active: development
+  data:
+      mongodb:
+        host: localhost
+        #username: admin
+        #password: password
+        database: erbal_db
+        port: 27017
+  rabbitmq:
+    host: localhost
+    port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
+    username: guest
+    password: guest
 
 hystrix:
   command:
@@ -12,31 +22,50 @@ hystrix:
           thread:
             timeoutInMilliseconds: 20000
 
+---
+
+spring:
+  profiles: development
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: admin
+
 eureka:
   istance:
-    hostname: borgo.ddns.net
+    hostname: localhost
     preferIpAddress: true
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+---
+
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
-    username: guest
-    password: guest
+  profiles: production
+  cloud:
+    config:
+      uri: http://borgo.ddns.net:8888
+      fail-fast: true
+      password: password
+      username: admin
+
+eureka:
+  istance:
+    hostname: localhost
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://borgo.ddns.net:8761/eureka/
+
+
+#logging:
+#  level:
+#    org.springframework.security: INFO
+
 
 #eureka:
 #  client:
 #    com.erbal.service-url: http://localhost:8761/eureka/
-
-# /me resource for validating token
-#security:
-#  oauth2:
-#    resource:
-#      user-info-uri: http://localhost:9090/uaa/users/current
-
-#spring:
-#  rabbitmq:
-#    host: rabbitmq

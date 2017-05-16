@@ -1,9 +1,29 @@
 spring:
+  profiles:
+    active: development
+
+---
+
+spring:
+  profiles: development
   application:
     name: erbal-monitoring
   cloud:
     config:
       uri: http://localhost:8888
+      fail-fast: true
+      password: password
+      username: admin
+
+---
+
+spring:
+  profiles: production
+  application:
+    name: erbal-monitoring
+  cloud:
+    config:
+      uri: http://borgo.ddns.net:8888
       fail-fast: true
       password: password
       username: admin

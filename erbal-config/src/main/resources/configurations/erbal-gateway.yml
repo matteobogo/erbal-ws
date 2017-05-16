@@ -7,6 +7,9 @@
 #    key-store-type: JKS
 #    keyAlias: jetty
 
+spring:
+  profiles:
+    active: development
 server:
   port: 9999
 
@@ -14,13 +17,20 @@ ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
 
-#eureka:
-#  istance:
-#    hostname: localhost
-#    preferIpAddress: true
-#  client:
-#    service-url:
-#      defaultZone: http://localhostt:8761/eureka/
+---
+
+spring:
+  profiles: development
+
+security:
+    oauth2:
+      client:
+        access-token-uri: http://localhost:9090/erbal-uaa/oauth/token
+        client-id: erbal-gateway
+        client-secret: erbal-gateway
+        user-authorization-uri: http://localhost:9090/erbal-uaa/oauth/authorize
+      resource:
+        user-info-uri: http://localhost:9090/erbal-uaa/user/current
 
 zuul:
   ignoredServices: '*'
@@ -29,44 +39,65 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-
-    user:
-      path: /user/**
-      url: http://borgo.ddns.net:9090/erbal-uaa/user/current
-
-#    erbal-uaa:
-#        path: /erbal-uaa/**
-#        serviceId: erbal-uaa
-#        stripPrefix: false
-#        sensitiveHeaders:
-
-    erbal-collector:
+      user:
+        path: /user/**
+        url: http://localhost:9090/erbal-uaa/user/current
+      erbal-collector:
         path: /erbal-collector/**
         serviceId: erbal-collector
         stripPrefix: false
         sensitiveHeaders:
-
-    erbal-greenhouse-management:
+      erbal-greenhouse-management:
         path: /erbal-greenhouse-management/**
         serviceId: erbal-greenhouse-management
         stripPrefix: false
         sensitiveHeaders:
-
-    erbal-notifier:
+      erbal-notifier:
         path: /erbal-notifier/**
         serviceId: erbal-notifier
         stripPrefix: false
         sensitiveHeaders:
 
+---
+
+spring:
+  profiles: production
+
 security:
-  oauth2:
-    client:
-      access-token-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/token
-      client-id: erbal-gateway
-      client-secret: erbal-gateway
-      user-authorization-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/authorize
-    resource:
-      user-info-uri: http://borgo.ddns.net:9090/erbal-uaa/user/current
+    oauth2:
+      client:
+        access-token-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/token
+        client-id: erbal-gateway
+        client-secret: erbal-gateway
+        user-authorization-uri: http://borgo.ddns.net:9090/erbal-uaa/oauth/authorize
+      resource:
+        user-info-uri: http://borgo.ddns.net:9090/erbal-uaa/user/current
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+      user:
+        path: /user/**
+        url: http://borgo.ddns.net:9090/erbal-uaa/user/current
+      erbal-collector:
+        path: /erbal-collector/**
+        serviceId: erbal-collector
+        stripPrefix: false
+        sensitiveHeaders:
+      erbal-greenhouse-management:
+        path: /erbal-greenhouse-management/**
+        serviceId: erbal-greenhouse-management
+        stripPrefix: false
+        sensitiveHeaders:
+      erbal-notifier:
+        path: /erbal-notifier/**
+        serviceId: erbal-notifier
+        stripPrefix: false
+        sensitiveHeaders:
 
 #erbal:
 #  cors:

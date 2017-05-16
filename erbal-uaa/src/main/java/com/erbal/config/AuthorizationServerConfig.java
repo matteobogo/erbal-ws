@@ -2,6 +2,7 @@ package com.erbal.config;
 
 import com.erbal.service.CurrentUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
   private TokenStore tokenStore = new InMemoryTokenStore();
 
+  @Value("${erbal.oauth.redirectUri}")  //take from yaml
+  private String redirectUri;
+
   @Autowired
   private AuthenticationManager authenticationManager;
 
@@ -39,7 +43,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
             .authorizedGrantTypes("refresh_token", "authorization_code", "password", "implicit")
             //.authorities("ADMIN")
             .scopes("read","write")
-            .redirectUris("http://borgo.ddns.net:9999")
+            .redirectUris(redirectUri)
             .accessTokenValiditySeconds(600)
             .refreshTokenValiditySeconds(1800)
             .autoApprove(true);

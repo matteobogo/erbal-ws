@@ -1,23 +1,31 @@
+spring:
+  profiles:
+    active: development
+
 server:
   port: 9090
   context-path: /erbal-uaa
 
-#eureka:
-#  istance:
-#    hostname: borgo.ddns.net
-#    preferIpAddress: true
-#  client:
-#    service-url:
-#      defaultZone: http://borgo.ddns.net:8761/eureka/
+---
 
 spring:
-  data:
-    mongodb:
-      host: localhost
-      #username: user
-      #password:
-      database: erbal_db
-      port: 27017
+  profiles: development
+
+#Configuration injected in Authorization Server
+erbal:
+  oauth:
+    redirectUri: http://localhost:9999
+
+---
+
+spring:
+  profiles: production
+
+#Configuration injected in Authorization Server
+erbal:
+  oauth:
+    redirectUri: http://borgo.ddns.net:9999
+
 
 #erbal:
 #  cors:
