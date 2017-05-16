@@ -14,13 +14,13 @@ ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
 
-eureka:
-  istance:
-    hostname: borgo.ddns.net
-    preferIpAddress: true
-  client:
-    service-url:
-      defaultZone: http://borgo.ddns.net:8761/eureka/
+#eureka:
+#  istance:
+#    hostname: localhost
+#    preferIpAddress: true
+#  client:
+#    service-url:
+#      defaultZone: http://localhostt:8761/eureka/
 
 zuul:
   ignoredServices: '*'

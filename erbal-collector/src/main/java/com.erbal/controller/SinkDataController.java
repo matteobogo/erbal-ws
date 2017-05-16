@@ -4,6 +4,7 @@ import com.erbal.domain.SinkData;
 import com.erbal.domain.dto.SinkNBatchDTO;
 import com.erbal.service.SinkDataService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +22,7 @@ public class SinkDataController {
         this.sinkDataService = sinkDataService;
     }
 
+    @LoadBalanced
     @RequestMapping(
             value = "/collect",
             method = RequestMethod.POST,

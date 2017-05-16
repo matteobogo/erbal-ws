@@ -2,7 +2,6 @@ package com.erbal.service;
 
 import com.erbal.client.GreenhouseManagementClient;
 import com.erbal.domain.SinkData;
-import com.erbal.domain.dto.SinkNBatchDTO;
 import com.erbal.domain.shared.MessageDTO;
 import com.erbal.domain.shared.Sink;
 import com.erbal.repository.SinkDataRepository;

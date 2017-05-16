@@ -61,7 +61,7 @@ public class PairController extends ExceptionHandlingController {
           method = RequestMethod.GET
   )
   @ResponseBody
-  @ResponseStatus
+  @ResponseStatus(HttpStatus.OK)
   public SinkTable updateSinkTable(
           @PathVariable("sinkId") String sinkId) {
 

@@ -2,13 +2,13 @@ server:
   port: 9090
   context-path: /erbal-uaa
 
-eureka:
-  istance:
-    hostname: borgo.ddns.net
-    preferIpAddress: true
-  client:
-    service-url:
-      defaultZone: http://borgo.ddns.net:8761/eureka/
+#eureka:
+#  istance:
+#    hostname: borgo.ddns.net
+#    preferIpAddress: true
+#  client:
+#    service-url:
+#      defaultZone: http://borgo.ddns.net:8761/eureka/
 
 spring:
   data:
