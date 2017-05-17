@@ -1,10 +1,8 @@
 package com.erbal.service;
 
-import com.erbal.domain.dto.ItsMeMessage;
+import com.erbal.domain.dto.IncomingBaseAlert;
 
 public interface NotificationService {
 
-    void itsMeNotification(ItsMeMessage itsMeMessage);
-    //void lowBatteryNotification(...);
-    //void missingNodeNotification(...);
+    void genericAlertNotification(IncomingBaseAlert genericAlert, int type);
 }

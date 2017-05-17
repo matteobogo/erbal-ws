@@ -1,11 +1,11 @@
 package com.erbal.controller;
 
-import com.erbal.domain.dto.ItsMeMessage;
+import com.erbal.domain.dto.IncomingBaseAlert;
 import com.erbal.service.NotificationService;
+import com.erbal.utils.NotifierParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -29,26 +29,26 @@ public class WebSocketController {
 
   /**
    * Endpoint where sinks push the ItsMe Message
-   * @param itsMeMessage
+   * @param incomingBaseAlert
    */
   @MessageMapping("/notifications/itsme")
   //@SendTo("/topic/itsme/{sinkId}")
   public void itsMeNotification(
           //@DestinationVariable("sinkId") String sinkId
-          ItsMeMessage itsMeMessage) {
+          IncomingBaseAlert incomingBaseAlert) {
 
-    notificationService.itsMeNotification(itsMeMessage);
+    notificationService.genericAlertNotification(incomingBaseAlert, NotifierParams.ALERT_ITS_ME);
   }
 
-  @RequestMapping("/notifications/lowBattery")
-  public void lowBattery() {
+  @MessageMapping("/notifications/missingNode")
+  public void missingNode(IncomingBaseAlert incomingBaseAlert) {
 
-    //TODO
+    notificationService.genericAlertNotification(incomingBaseAlert, NotifierParams.ALERT_MISSING_NODE);
   }
 
-  @RequestMapping("/notifications/missingNode")
-  public void missingNode() {
+  @MessageMapping("/notifications/lowBattery")
+  public void lowBattery(IncomingBaseAlert incomingBaseAlert) {
 
-    //TODO
+    notificationService.genericAlertNotification(incomingBaseAlert, NotifierParams.ALERT_LOW_BATTERY);
   }
 }

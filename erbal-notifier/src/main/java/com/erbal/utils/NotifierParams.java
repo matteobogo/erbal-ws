@@ -14,4 +14,9 @@ public final class NotifierParams {
 
     //SECTOR
     public static final String SECTOR_ID = "sector_id";
+
+    //ALERTS
+    public static final int ALERT_ITS_ME = 1;
+    public static final int ALERT_MISSING_NODE = 2;
+    public static final int ALERT_LOW_BATTERY = 3;
 }

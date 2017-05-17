@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItsMeMessage {
+public class IncomingBaseAlert {
 
     @NotNull(message = "Sink Serial ID is compulsory")
     @NotBlank(message = "Sink Serial ID is compulsory")
@@ -23,7 +23,4 @@ public class ItsMeMessage {
     @NotNull(message = "Node Type is compulsory")
     @NotBlank(message = "Node Type is compulsory")
     private String type;
-
-    @NotNull
-    private String greenHouseName;
 }
