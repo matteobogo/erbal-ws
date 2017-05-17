@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class SinkPreview {
 
     private String sinkId;
-    private String greenHouseName;
+    private String greenhouseName;
 }
