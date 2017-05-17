@@ -4,7 +4,7 @@ import com.erbal.client.CollectorClient;
 import com.erbal.client.GreenhouseManagementClient;
 import com.erbal.domain.dto.*;
 import com.erbal.domain.shared.*;
-import com.erbal.shared.Sink;
+import com.erbal.domain.shared.Sink;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

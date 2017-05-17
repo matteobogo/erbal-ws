@@ -2,7 +2,7 @@ package com.erbal.service;
 
 import com.erbal.client.GreenhouseManagementClient;
 import com.erbal.domain.SinkPreview;
-import com.erbal.shared.Sink;
+import com.erbal.domain.shared.Sink;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
