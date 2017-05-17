@@ -1,18 +1,6 @@
 spring:
   profiles:
     active: development
-  data:
-      mongodb:
-        host: localhost
-        #username: admin
-        #password: password
-        database: erbal_db
-        port: 27017
-  rabbitmq:
-    host: localhost
-    port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
-    username: guest
-    password: guest
 
 hystrix:
   command:
@@ -33,6 +21,20 @@ spring:
       password: password
       username: admin
 
+  data:
+    mongodb:
+      host: localhost
+      #username: admin
+      #password: password
+      database: erbal_db
+      port: 27017
+
+  rabbitmq:
+      host: localhost
+      port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
+      username: guest
+      password: guest
+
 eureka:
   istance:
     hostname: localhost
@@ -51,6 +53,20 @@ spring:
       fail-fast: true
       password: password
       username: admin
+
+  data:
+    mongodb:
+      host: borgo.ddns.net
+      #username: admin
+      #password: password
+      database: erbal_db
+      port: 27017
+
+  rabbitmq:
+      host: borgo.ddns.net
+      port: 5672  #15672 (http api show RabbitMQ stats) - 5672 (main port RabbitMQ)
+      username: guest
+      password: guest
 
 eureka:
   istance:
