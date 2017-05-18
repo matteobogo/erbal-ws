@@ -1563,14 +1563,7 @@
       <workItem from="1495008093630" duration="370000" />
       <workItem from="1495021961065" duration="15657000" />
       <workItem from="1495096954100" duration="8221000" />
-      <workItem from="1495108677089" duration="5514000" />
-    </task>
-    <task id="LOCAL-00011" summary="account service:  update spring boot starter and simple user domain class">
-      <created>1490740984876</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1490740984876</updated>
+      <workItem from="1495108677089" duration="5726000" />
     </task>
     <task id="LOCAL-00012" summary="account service: service ready without security and cloud management">
       <created>1490794068365</created>
@@ -1908,7 +1901,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495109289229</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="added sort to findbatch">
+      <created>1495114323967</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1495114323967</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1920,7 +1920,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562281000" />
+    <option name="totallyTimeSpent" value="562493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1933,7 +1933,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1946,7 +1945,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42014113" sideWeight="0.49790794" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42014113" sideWeight="0.49790794" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6221937" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2056,7 +2055,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="completed uaa with account management&#10;added temp http basic for testing api (another security config)" />
     <MESSAGE value="created erbal-retriever: settings with config server, bootstrap yaml, sinkpreview  service(controller+validation+service) that retrieve from greenhouse management service with feign client&#10;updated greenhouse management service: now sink have an attribute of userId, register and unregister sink, updated datainit&#10;disabled hystrix stream for circuit breaker" />
     <MESSAGE value="moved sinkpreview logic from erbal-retriever to erbal-greenhouse-management" />
     <MESSAGE value="added websocket mechanism to erbal-notifier for managing itsme form sink to client directly" />
@@ -2081,7 +2079,8 @@
     <MESSAGE value="added logic for missingNode and lowBattery features" />
     <MESSAGE value="FIXED ITSME NOT CHECKING FOR PREVIOUS PAIRING (SECTORID FROM NODE)" />
     <MESSAGE value="changed sink preview endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed sink preview endpoint" />
+    <MESSAGE value="added sort to findbatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sort to findbatch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
