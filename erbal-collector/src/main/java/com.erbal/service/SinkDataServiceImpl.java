@@ -8,9 +8,9 @@ import com.erbal.repository.SinkDataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,7 +49,10 @@ public class SinkDataServiceImpl implements SinkDataService {
   @Override
   public List<SinkData> findNBatchBySinkId(String sinkId, long nBatch) {
 
-    List<SinkData> sinkDataList = sinkDataRepository.findTop100BySinkIdOrderByCreatedAt(sinkId);
+    List<SinkData> sinkDataList = sinkDataRepository.findTop100BySinkIdOrderByCreatedAt(
+            sinkId,
+            new Sort(Sort.Direction.DESC, "CreatedAt")
+    );
 
     return sinkDataList
             .stream()
@@ -59,7 +62,9 @@ public class SinkDataServiceImpl implements SinkDataService {
 
   @Override
   public List<SinkData> findLastBatchBySinkId(String sinkId) {
-
-    return sinkDataRepository.findTop1BySinkIdOrderByCreatedAt(sinkId);
+    return sinkDataRepository.findTop1BySinkIdOrderByCreatedAt(
+            sinkId,
+            new Sort(Sort.Direction.DESC, "CreatedAt")
+    );
   }
 }
