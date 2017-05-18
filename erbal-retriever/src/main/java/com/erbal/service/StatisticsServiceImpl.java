@@ -3,8 +3,8 @@ package com.erbal.service;
 import com.erbal.client.CollectorClient;
 import com.erbal.client.GreenhouseManagementClient;
 import com.erbal.domain.dto.*;
-import com.erbal.domain.shared.*;
-import com.erbal.domain.shared.Sink;
+import domain.*;
+import domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -55,10 +55,9 @@ public class StatisticsServiceImpl implements StatisticsService {
 
                     nodeDataList.get().forEach(n -> {
 
-                        Optional<String> type = Optional.of(n.getType().toUpperCase());
-                        if(!type.isPresent()) return;
+                        if(n.getType() == null) return;
 
-                        switch(type.get()) {
+                        switch(n.getType().toUpperCase()) {
 
                             case "SOIL":
 

@@ -24,6 +24,13 @@
     </properties>
 
     <dependencies>
+        <!-- Erbal Shared Data -->
+        <dependency>
+            <groupId>com.erbal</groupId>
+            <artifactId>erbal-shared-data</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!--
         <dependency>

@@ -18,10 +18,10 @@
         <module>erbal-gateway</module>
         <module>erbal-discovering</module>
         <module>erbal-config</module>
-        <module>erbal-uaa</module>
         <module>erbal-greenhouse-management</module>
         <module>erbal-notifier</module>
         <module>erbal-retriever</module>
+        <module>erbal-shared-data</module>
     </modules>
 
 </project>

@@ -1,6 +1,6 @@
 package com.erbal.service;
 
-import com.erbal.domain.dto.MessageDTO;
+import domain.dto.MessageDTO;
 
 import java.util.List;
 

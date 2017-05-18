@@ -1,4 +1,4 @@
-package com.erbal.domain.shared;
+package domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AirSampleData extends SampleData {
+public class SoilSampleData extends SampleData {
 
-  private int airTemperatureData;
-  private int airHumidityData;
-  private int airPhotoData;
-  private int airRadiationData;
+  private int soilTemperatureData;
+  private int soilMoistureData;
 }

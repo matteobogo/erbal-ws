@@ -10,9 +10,7 @@
     <file url="file://$PROJECT_DIR$/erbal-monitoring" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-notifier" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-retriever" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/erbal-shared-data" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/erbal-uaa" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/erbal-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/erbal-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/erbal-webclient" charset="UTF-8" />
   </component>
 </project>

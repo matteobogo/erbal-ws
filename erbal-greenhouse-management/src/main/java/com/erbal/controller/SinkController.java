@@ -1,13 +1,13 @@
 package com.erbal.controller;
 
 import com.erbal.domain.Sink;
-import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.RegisterSink;
 import com.erbal.domain.dto.SinkPreview;
 import com.erbal.domain.dto.SinkTable;
 import com.erbal.exception.AlreadyRegisteredException;
 import com.erbal.exception.AlreadyUnregisteredException;
 import com.erbal.service.SinkServiceImpl;
+import domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -86,17 +86,6 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/findAllPreviewByUserId/{userId}",
-          method = RequestMethod.GET
-  )
-  @ResponseBody
-  @ResponseStatus(HttpStatus.OK)
-  public List<SinkPreview> getAllSinkPreview(@PathVariable("userId") String userId) {
-
-    return sinkService.findAllSinkPreview(userId);
-  }
-
-  @RequestMapping(
           value = "/delete/{sinkId}",
           method = RequestMethod.DELETE,
           consumes = {"application/json"}
@@ -142,5 +131,16 @@ public class SinkController extends ExceptionHandlingController {
   public List<SinkTable> findAllSinkWithNodesByUserId(@PathVariable("userId") String userId) {
 
     return sinkService.findAllSinkWithNodesByUserId(userId);
+  }
+
+  @RequestMapping(
+          value = "/getAllSinkPreviewByUserId/{userId}",
+          method = RequestMethod.GET
+  )
+  @ResponseBody
+  @ResponseStatus(HttpStatus.OK)
+  public List<SinkPreview> getAllSinkPreview(@PathVariable("userId") String userId) {
+
+    return sinkService.findAllSinkPreview(userId);
   }
 }

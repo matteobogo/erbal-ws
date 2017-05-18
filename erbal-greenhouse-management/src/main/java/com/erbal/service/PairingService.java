@@ -1,9 +1,9 @@
 package com.erbal.service;
 
 import com.erbal.domain.Pair;
-import com.erbal.domain.dto.MessageDTO;
 import com.erbal.exception.AlreadyPairedException;
 import com.erbal.exception.AlreadyUnpairedException;
+import domain.dto.MessageDTO;
 
 public interface PairingService {
 

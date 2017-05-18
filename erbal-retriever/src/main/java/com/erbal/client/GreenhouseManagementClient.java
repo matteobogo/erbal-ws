@@ -1,7 +1,7 @@
 package com.erbal.client;
 
-import com.erbal.domain.shared.MessageDTO;
-import com.erbal.domain.shared.Sink;
+import domain.Sink;
+import domain.dto.MessageDTO;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

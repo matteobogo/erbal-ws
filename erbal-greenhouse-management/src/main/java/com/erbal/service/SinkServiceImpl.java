@@ -6,6 +6,7 @@ import com.erbal.domain.dto.*;
 import com.erbal.exception.AlreadyRegisteredException;
 import com.erbal.exception.AlreadyUnregisteredException;
 import com.erbal.repository.NodeRepository;
+import domain.dto.MessageDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import com.erbal.repository.SinkRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -116,23 +118,7 @@ public class SinkServiceImpl implements SinkService {
     @Override
     public List<Sink> findAllByUserId(String userId) {
 
-        //check user id with feign client ?
-
         return sinkRepository.findAllByUserId(userId);
-    }
-
-    @Override
-    public List<SinkPreview> findAllSinkPreview(String userId) {
-
-        List<Sink> sinkList = sinkRepository.findAllByUserId(userId);
-        List<SinkPreview> sinkPreviews = new ArrayList<>();
-
-        if(!sinkList.isEmpty()) {
-
-            sinkList.forEach( s -> sinkPreviews.add(new SinkPreview(s.getSinkId(),s.getGreenhouseName())));
-        }
-
-        return sinkPreviews;
     }
 
     @Override
@@ -206,5 +192,22 @@ public class SinkServiceImpl implements SinkService {
                     sinkTables.add(new SinkTable(s.getSinkId(),s.getGreenhouseName(),nodeList));
                 });
         return sinkTables;
+    }
+
+    @Override
+    public List<SinkPreview> findAllSinkPreview(String userId) {
+
+        //obtain sink list from userId from Greenhouse Management Service
+        List<Sink> sinkList = sinkRepository.findAllByUserId(userId);
+
+        log.info("Retrieved Sink List ["+sinkList.size()+"] from Greenhouse Service by UserID "+userId);
+
+        List<SinkPreview> sinkPreviewList = new ArrayList<>();
+
+        sinkList.stream()
+                .sorted(Comparator.comparing(Sink::getGreenhouseName))
+                .forEach(e -> sinkPreviewList.add(new SinkPreview(e.getSinkId(), e.getGreenhouseName())));
+
+        return sinkPreviewList;
     }
 }

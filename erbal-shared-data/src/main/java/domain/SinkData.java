@@ -1,4 +1,4 @@
-package com.erbal.domain.shared;
+package domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

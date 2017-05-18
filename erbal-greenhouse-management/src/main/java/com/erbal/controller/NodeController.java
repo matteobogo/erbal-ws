@@ -1,8 +1,8 @@
 package com.erbal.controller;
 
 import com.erbal.domain.Node;
-import com.erbal.domain.dto.MessageDTO;
 import com.erbal.service.NodeServiceImpl;
+import domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,12 +1,12 @@
 package com.erbal.controller;
 
 import com.erbal.domain.Pair;
-import com.erbal.domain.dto.MessageDTO;
 import com.erbal.domain.dto.SinkTable;
 import com.erbal.exception.AlreadyPairedException;
 import com.erbal.exception.AlreadyUnpairedException;
 import com.erbal.service.PairingService;
 import com.erbal.service.SinkService;
+import domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

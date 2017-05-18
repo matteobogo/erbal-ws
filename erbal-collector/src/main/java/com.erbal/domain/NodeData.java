@@ -1,12 +1,14 @@
 package com.erbal.domain;
 
 import com.erbal.utils.SensorsDataParams;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.data.annotation.PersistenceConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class NodeData {
 
   @Field(SensorsDataParams.NODE_ID)
@@ -26,17 +28,4 @@ public class NodeData {
 
   @Field(SensorsDataParams.NODE_SAMPLE)
   private SampleData sample;
-
-  @PersistenceConstructor
-  public NodeData(
-          @JsonProperty(SensorsDataParams.NODE_ID) String nodeId,
-          @JsonProperty(SensorsDataParams.NODE_TIMESTAMP) String timestamp,
-          @JsonProperty(SensorsDataParams.NODE_VOLTAGE) int voltage,
-          @JsonProperty(SensorsDataParams.NODE_SAMPLE) SampleData sample) {
-
-    this.nodeId = nodeId;
-    this.timestamp = timestamp;
-    this.voltage = voltage;
-    this.sample = sample;
-  }
 }

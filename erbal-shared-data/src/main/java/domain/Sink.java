@@ -1,4 +1,4 @@
-package com.erbal.domain;
+package domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SinkPreview {
+public class Sink {
 
+    private String id;
     private String sinkId;
-    private String greenHouseName;
+    private String greenhouseName;
+    private String userId;
 }
