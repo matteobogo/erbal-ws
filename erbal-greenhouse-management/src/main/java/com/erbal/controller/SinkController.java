@@ -134,7 +134,7 @@ public class SinkController extends ExceptionHandlingController {
   }
 
   @RequestMapping(
-          value = "/getAllSinkPreviewByUserId/{userId}",
+          value = "/findAllPreviewByUserId/{userId}",
           method = RequestMethod.GET
   )
   @ResponseBody
