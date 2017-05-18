@@ -36,7 +36,6 @@
       <module name="erbal-retriever" target="1.8" />
       <module name="erbal-shared-data" target="1.5" />
       <module name="erbal-uaa" target="1.8" />
-      <module name="erbal-webclient" target="1.8" />
       <module name="erbal-ws" target="1.5" />
     </bytecodeTargetLevel>
   </component>
