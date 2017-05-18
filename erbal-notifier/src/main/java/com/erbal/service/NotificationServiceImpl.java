@@ -47,7 +47,8 @@ public class NotificationServiceImpl implements NotificationService {
             switch(type) {
 
                 case NotifierParams.ALERT_ITS_ME:
-
+                    if(nodeExist.getEntity().getSink() != null)
+                        return;
                     forwardedBaseAlert = new ForwardedBaseAlert(
                             genericAlert.getSinkId(),
                             genericAlert.getNodeId(),
