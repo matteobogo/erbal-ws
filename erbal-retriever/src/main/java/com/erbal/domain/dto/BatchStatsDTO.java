@@ -12,6 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 public class BatchStatsDTO {
 
+    @JsonProperty("id")
+    private String id;
     @JsonProperty("soilBatches")
     private SoilBatchDTO soilBatchDTOList;
     @JsonProperty("outdoorBatches")

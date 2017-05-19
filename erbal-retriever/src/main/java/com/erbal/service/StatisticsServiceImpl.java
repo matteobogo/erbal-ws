@@ -8,10 +8,7 @@ import domain.dto.MessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class StatisticsServiceImpl implements StatisticsService {
@@ -46,6 +43,10 @@ public class StatisticsServiceImpl implements StatisticsService {
                 List<NodeData> soilNodeDataList = new ArrayList<>();
                 List<NodeData> indoorNodeDataList = new ArrayList<>();
                 List<NodeData> outdoorNodeDataList = new ArrayList<>();
+
+                int hashcode = 0;
+                if(sinkDataList.size() > 0)
+                    hashcode = sinkDataList.get(sinkDataList.size()-1).hashCode();
 
                 sinkDataList.forEach(s -> {
 
@@ -144,10 +145,13 @@ public class StatisticsServiceImpl implements StatisticsService {
                         });
 
                 BatchStatsDTO batchStatsDTO = new BatchStatsDTO(
+                        hashcode+"",
                         soilBatchDTO,
                         outdoorBatchDTO,
                         indoorBatchDTO
                 );
+
+
 
                 return batchStatsDTO;
             }
