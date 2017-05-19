@@ -55,19 +55,13 @@ public class SinkDataServiceImpl implements SinkDataService {
     List<SinkData> sinkDataList = sinkDataRepository.findTop100BySinkIdOrderByCreatedAt(
             sinkId,
             new Sort(Sort.Direction.DESC, "CreatedAt")
-    );
-
-
-
-    List<SinkData> ret =  sinkDataList
+    )
             .stream()
             .limit(nBatch)
             .collect(Collectors.toList());
 
-    reverse(ret);
-
-    return ret;
-
+    reverse(sinkDataList);
+    return sinkDataList;
   }
 
   @Override
