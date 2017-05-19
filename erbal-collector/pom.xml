@@ -24,12 +24,6 @@
     </properties>
 
     <dependencies>
-        <!-- Logstash ELK Stack -->
-        <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
-            <version>1.1.6</version>
-        </dependency>
         <!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
