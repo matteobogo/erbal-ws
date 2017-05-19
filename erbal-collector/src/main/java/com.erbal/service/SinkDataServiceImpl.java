@@ -11,8 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static java.util.Collections.reverse;
 
 @Service
 public class SinkDataServiceImpl implements SinkDataService {
@@ -54,10 +57,17 @@ public class SinkDataServiceImpl implements SinkDataService {
             new Sort(Sort.Direction.DESC, "CreatedAt")
     );
 
-    return sinkDataList
+
+
+    List<SinkData> ret =  sinkDataList
             .stream()
             .limit(nBatch)
             .collect(Collectors.toList());
+
+    reverse(ret);
+
+    return ret;
+
   }
 
   @Override
