@@ -23,4 +23,7 @@ public class IncomingBaseAlert {
     @NotNull(message = "Node Type is compulsory")
     @NotBlank(message = "Node Type is compulsory")
     private String type;
+
+    private String greenhouseName;
+    private String sectorId;
 }

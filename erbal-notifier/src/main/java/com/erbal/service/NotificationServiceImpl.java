@@ -1,8 +1,6 @@
 package com.erbal.service;
 
 import com.erbal.clients.GreenhouseManagementClient;
-import com.erbal.domain.dto.ForwardedAlertWithSectorId;
-import com.erbal.domain.dto.ForwardedBaseAlert;
 import com.erbal.domain.dto.IncomingBaseAlert;
 import com.erbal.domain.shared.MessageDTO;
 import com.erbal.domain.shared.Node;
@@ -42,43 +40,30 @@ public class NotificationServiceImpl implements NotificationService {
 
         if(sinkExist.getEntity() != null && nodeExist.getEntity() != null) {
 
-            ForwardedBaseAlert forwardedBaseAlert;
+            if()
 
             switch(type) {
 
                 case NotifierParams.ALERT_ITS_ME:
-                    if(nodeExist.getEntity().getSink() != null)
-                        return;
-                    forwardedBaseAlert = new ForwardedBaseAlert(
-                            genericAlert.getSinkId(),
-                            genericAlert.getNodeId(),
-                            sinkExist.getEntity().getGreenhouseName(),
-                            genericAlert.getType());
 
-                    simpMessagingTemplate.convertAndSend("/topic/notifications/itsme/"+sinkExist.getEntity().getUserId(), forwardedBaseAlert);
+                    //already paired ?
+                    if(nodeExist.getEntity().getSink() != null) return;
+
+                    simpMessagingTemplate.convertAndSend("/topic/notifications/itsme/"+sinkExist.getEntity().getUserId(), genericAlert);
                     break;
 
                 case NotifierParams.ALERT_MISSING_NODE:
 
-                    forwardedBaseAlert = new ForwardedAlertWithSectorId(
-                            genericAlert.getSinkId(),
-                            genericAlert.getNodeId(),
-                            sinkExist.getEntity().getGreenhouseName(),
-                            genericAlert.getType(),
-                            nodeExist.getEntity().getSectorId());
+                    //paired ?
+                    if(nodeExist.getEntity().getSink() == null) return;
 
-                    //simpMessagingTemplate.convertAndSend("/topic/notifications/missingNode/"+sinkExist.getEntity().getUserId(), genericAlert);
-                    simpMessagingTemplate.convertAndSend("/topic/notifications/missingNode/"+sinkExist.getEntity().getUserId(), forwardedBaseAlert);
+                    simpMessagingTemplate.convertAndSend("/topic/notifications/missingNode/"+sinkExist.getEntity().getUserId(), genericAlert);
                     break;
 
                 case NotifierParams.ALERT_LOW_BATTERY:
 
-                    forwardedBaseAlert = new ForwardedAlertWithSectorId(
-                            genericAlert.getSinkId(),
-                            genericAlert.getNodeId(),
-                            sinkExist.getEntity().getGreenhouseName(),
-                            genericAlert.getType(),
-                            nodeExist.getEntity().getSectorId());
+                    //paired ?
+                    if(nodeExist.getEntity().getSink() == null) return;
 
                     simpMessagingTemplate.convertAndSend("/topic/notifications/lowBattery/"+sinkExist.getEntity().getUserId(), genericAlert);
                     break;
