@@ -40,8 +40,6 @@ public class NotificationServiceImpl implements NotificationService {
 
         if(sinkExist.getEntity() != null && nodeExist.getEntity() != null) {
 
-            if()
-
             switch(type) {
 
                 case NotifierParams.ALERT_ITS_ME:
