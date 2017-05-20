@@ -104,6 +104,11 @@ zuul:
         serviceId: erbal-notifier
         stripPrefix: false
         sensitiveHeaders:
+      erbal-retriever:
+        path: /erbal-retriever/**
+        serviceId: erbal-retriever
+        stripPrefix: false
+        sensitiveHeaders:
 
 #erbal:
 #  cors:
