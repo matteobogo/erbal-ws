@@ -67,7 +67,8 @@ public class NotificationServiceImpl implements NotificationService {
                             genericAlert.getType(),
                             nodeExist.getEntity().getSectorId());
 
-                    simpMessagingTemplate.convertAndSend("/topic/notifications/missingNode/"+sinkExist.getEntity().getUserId(), genericAlert);
+                    //simpMessagingTemplate.convertAndSend("/topic/notifications/missingNode/"+sinkExist.getEntity().getUserId(), genericAlert);
+                    simpMessagingTemplate.convertAndSend("/topic/notifications/missingNode/"+sinkExist.getEntity().getUserId(), forwardedBaseAlert);
                     break;
 
                 case NotifierParams.ALERT_LOW_BATTERY:
