@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AirSampleData extends SampleData {
 
-  private int airTemperatureData;
-  private int airHumidityData;
-  private int airPhotoData;
-  private int airRadiationData;
+  private double airTemperatureData;
+  private double airHumidityData;
+  private double airPhotoData;
+  private double airRadiationData;
 }

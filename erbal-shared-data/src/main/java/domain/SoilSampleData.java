@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SoilSampleData extends SampleData {
 
-  private int soilTemperatureData;
-  private int soilMoistureData;
+  private double soilTemperatureData;
+  private double soilMoistureData;
 }
