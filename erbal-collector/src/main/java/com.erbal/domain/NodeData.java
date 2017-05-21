@@ -24,7 +24,7 @@ public class NodeData {
   private String sectorId;
 
   @Field(SensorsDataParams.NODE_VOLTAGE)
-  private int voltage;
+  private double voltage;
 
   @Field(SensorsDataParams.NODE_SAMPLE)
   private SampleData sample;
