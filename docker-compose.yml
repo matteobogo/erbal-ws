@@ -1,0 +1,6 @@
+version: '1.0'
+services:
+  erbal-config:
+    build: .
+    ports:
+      - "8888:8888"

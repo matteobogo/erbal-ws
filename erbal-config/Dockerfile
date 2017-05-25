@@ -1,7 +1,5 @@
-FROM java:8-jre
+FROM frolvlad/alpine-oraclejdk8
 MAINTAINER Matteo Bogo
-
-ADD ./erbal-config.jar /app/
-CMD ["java", "-Xmx200m", "-jar", "/app/erbal-config.jar"]
-
+ADD target/erbal-config.jar erbal-config.jar
 EXPOSE 8888
+ENTRYPOINT ["java","-jar","/erbal-config.jar"]
