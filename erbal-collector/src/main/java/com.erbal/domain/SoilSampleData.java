@@ -16,8 +16,8 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class SoilSampleData extends SampleData {
 
   @Field(SensorsDataParams.SOIL_TEMPERATURE)
-  private int soilTemperatureData;
+  private double soilTemperatureData;
 
   @Field(SensorsDataParams.SOIL_MOISTURE)
-  private int soilMoistureData;
+  private double soilMoistureData;
 }

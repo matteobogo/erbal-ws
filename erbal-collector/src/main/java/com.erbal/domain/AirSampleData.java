@@ -16,14 +16,14 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class AirSampleData extends SampleData {
 
   @Field(SensorsDataParams.AIR_TEMPERATURE)
-  private int airTemperatureData;
+  private double airTemperatureData;
 
   @Field(SensorsDataParams.AIR_HUMIDITY)
-  private int airHumidityData;
+  private double airHumidityData;
 
   @Field(SensorsDataParams.AIR_PHOTO)
-  private int airPhotoData;
+  private double airPhotoData;
 
   @Field(SensorsDataParams.AIR_RADIATION)
-  private int airRadiationData;
+  private double airRadiationData;
 }

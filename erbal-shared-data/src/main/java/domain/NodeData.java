@@ -13,6 +13,6 @@ public class NodeData {
   private String timestamp;
   private String type;
   private String sectorId;
-  private int voltage;
+  private double voltage;
   private SampleData sample;
 }
